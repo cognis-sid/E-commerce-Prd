@@ -204,7 +204,7 @@ public class RoutingDetailsRowMappers extends JdbcRowMapper{
         	System.out.println("q1 : "+q1);
         	picuser= jdbcTemplate.query(q1, new MailRowMapper() );
         	if(picuser.size()==0) {
-        		String q2="select pic.recipient_email as MAIL,pic.recipient_type as TYPE from pic_mail pic  where pic.E_NOTICE_DESC='ERCL - eSI Submission' and pic.FK_FSC_ID='"+rs.getString(8).substring(2, 5)+"'";
+        		String q2="select pic.recipient_email as MAIL,pic.recipient_type as TYPE from pic_mail pic  where pic.E_NOTICE_DESC='ERCL - eSI Submission' and pic.FK_FSC_ID=(select PIOFFC from itp040 where picode='"+rs.getString(8)+"')";
         		System.out.println("q2 : "+q2);
         		picuser= jdbcTemplate.query(q2, new MailRowMapper() );
         		if(picuser.size()==0) {

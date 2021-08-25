@@ -65,12 +65,12 @@ public class PRE_GET_ESERVICE_ONLOAD_DATA extends AncestorJdbcDao{
             try {
             	String q1="select recipient_email as MAIL,recipient_type as TYPE from pic_mail where E_NOTICE_DESC='ERCL - Web BKG Submission' and fk_customer_id='"+rs.getString("ORG_CODE")+"'";
             	System.out.println("q1 : "+q1);
-            	picuser= jdbcTemplate.query(q1, new MailRowMapper() );
+            	picuser= jdbcTemplate.query(q1, new MailRowMapper());
             	if(picuser.size()==0) {
             		String q2="select pic.recipient_email as MAIL,pic.recipient_type as TYPE from pic_mail pic  where pic.E_NOTICE_DESC='ERCL - Web BKG Submission' and "
             				+ "			pic.FK_FSC_ID=(select PIOFFC from itp040 where picode= '"+rs.getString("POL")+"')";
             		System.out.println("q2 : "+q2);
-            		picuser= jdbcTemplate.query(q2, new MailRowMapper() );
+            		picuser= jdbcTemplate.query(q2, new MailRowMapper());
             		if(picuser.size()==0) {
             			System.out.println("No pic mail.....");
             		}
