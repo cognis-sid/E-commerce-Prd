@@ -35,7 +35,7 @@
 			</li>
 			       </c:if>
 			       
-			 <c:if test="${sessionScope.sUserAccountBean.getRate == 'Y'}" >        	 	
+			 <c:if test="${sessionScope.sUserAccountBean.getRate == 'Y' || sessionScope.sUserAccountBean.webBooking=='Y'}" >        	 	
         	 	  <li class="nav-item " id="GetRateModifier">
 					<a class="nav-link" href="#" onclick="callGetrate()"><bean:message key="Get_Rate.rate_Inquiries"/></a>
 				 </li>        
