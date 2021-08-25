@@ -1,0 +1,1215 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+    <!-- ========== Data Source Configuration =============================== -->
+    <data-sources />
+
+    <!-- ========== Form Bean Definitions ================================== -->
+    <form-beans>
+        <form-bean name="feserv01" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EserviceNewWebBookingUim"></form-bean>
+        <form-bean name="feserv02" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EserviceBookingNumberPopupUim"></form-bean>
+        <form-bean name="feserv03" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EserviceInquiryWebBookingUim"></form-bean>
+        <form-bean name="feserv04" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EserviceCommodityPopupUim"></form-bean>
+        <form-bean name="feserv05" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EshippingCargoDescUim"></form-bean>
+        <form-bean name="feserv06" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EshippingInstructionUim"></form-bean>
+        <form-bean name="feserv07" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EshippingCustomerPopupUim"></form-bean>
+        <form-bean name="feserv08" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EshippingBookingNumberPopupUim"></form-bean>
+        <!-- ############## YOSSAWAT Modified START ############## -->
+        <form-bean name="feserv09" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EshippingPackagePopupUim"></form-bean>
+        <form-bean name="feserv10" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EshippingInstructionPrintReportUim"></form-bean>
+        <form-bean name="feserv11" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EshippingCommodityPopupUim"></form-bean>
+        <form-bean name="feserv12" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EserviceRegistrationUim"></form-bean>
+        <form-bean name="feserv13" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EserviceMRESUim"></form-bean>
+        <form-bean name="feserv14" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EserviceForgetPasswordUim"></form-bean>
+        <form-bean name="feserv15" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EshippingBookingNumberPopupUim"></form-bean>
+        <form-bean name="feserv16" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EserviceCustomerPopupUim"></form-bean>
+        <form-bean name="feserv17" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EserviceCustRegistReqUim"></form-bean>
+        <form-bean name="feserv18" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EserviceCustomerTypePopupUim"></form-bean>
+        <form-bean name="feserv19" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EserviceReferCommoditiesUim"></form-bean>
+        <form-bean name="feserv20" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EserviceDGCommoditiesUim"></form-bean>
+        <form-bean name="feserv21" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EserviceOOGCommoditiesUim"></form-bean>
+        <form-bean name="feserv22" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EservicePortClassUim"></form-bean>
+        <form-bean name="feserv23" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EserviceUploadUim"></form-bean>
+        <form-bean name="feserv24" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EservicePdfUim"></form-bean>
+        <form-bean name="feserv25" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EservicePreviewUploadedDocUim"></form-bean>
+        <!-- <form-bean name="feserv26" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EserviceProductCatalogueUim"></form-bean> -->
+	<form-bean name="feserv27" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EserviceSailingSchedulePopupUim"></form-bean>
+        <form-bean name="feserv28" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EserviceEquipmentTypePopUpUim"></form-bean>
+        <form-bean name="feserv29" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EserviceManagePortPairUim"></form-bean>
+        <form-bean name="feserv30" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EserviceUserPortPairLookUpUim"></form-bean>
+        <form-bean name="fecm002" type="com.rclgroup.dolphin.ezl.web.ecm.actionform.EcmMasterLookupUim"></form-bean>
+        
+        <form-bean name="fevgm001" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EvgmDeclarationUim"></form-bean>
+        <form-bean name="fevgm002" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EvgmDeclarationPDFReportUim"></form-bean>
+    
+    <form-bean name="fesexn03" type="com.rclgroup.dolphin.rcl.web.eservice.actionform.EserviceInquiryWebBookingNewUim">
+    
+    </form-bean>
+    <form-bean name="userUim" type="com.rclgroup.dolphin.rcl.web.eservice.vo.UserMod"></form-bean>
+    </form-beans>
+
+    <!-- ========== Global Exception Definitions ============================== -->
+    <global-exceptions>
+        <!--   <exception
+            handler="org.apache.struts.action.ExceptionHandler"
+            key="global.error.invalidlogin"
+            path="/login.jsp"
+            scope="request"
+            type="com.oreilly.struts.framework.exceptions.InvalidLoginException" />-->
+    </global-exceptions>
+
+    <!-- ========== Global Forward Definitions =============================== -->
+    <global-forwards>
+        <forward name="failure" path="/pages/common/error/error.jsp" redirect="false" contextRelative="false" />
+        <forward name="SYSTEM_ERROR" path="/pages/common/error/error.jsp" redirect="false" contextRelative="false" />
+    </global-forwards>
+
+     <!-- ========== Action Mapping Definitions =============================== -->
+    <action-mappings>
+    
+    	<!-- new login Chandu start-->
+    
+    	
+		<action path="/serv00111"
+			type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceRegistrationSvc"
+			parameter="Login" name="feserv12" validate="false" scope="session">
+			<forward name="success" path="rcl.ezl.serv00111.page"></forward>
+			<forward name="failure" path="rcl.ezl.serv00111.page"></forward>
+		</action>
+
+		<action path="/logout"
+			type="com.rclgroup.dolphin.rcl.web.eservice.action.LoginSvc"
+			parameter="logout"  name="userUim" validate="false" scope="session">
+			<forward name="success" path="rcl.ezl.serv00111.page"></forward>
+			<forward name="failure" path="rcl.ezl.serv00111.page"></forward>
+		</action>
+		
+		
+		<action path="/serv00222"
+			type="com.rclgroup.dolphin.rcl.web.eservice.action.LanguageSelectAction"
+			parameter="chaines" name="feserv12" validate="false" scope="session">
+			<forward name="success" path="rcl.ezl.serv00222.page"></forward>
+			<forward name="failure" path="rcl.ezl.serv00222.page"></forward>
+		</action>
+		
+		<action path="/serv00444"
+			type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceRegistrationSvc"
+			parameter="openWebBooking" name="feserv12" validate="false" scope="session">
+			<forward name="success" path="rcl.ezl.serv00444.page"></forward>
+			<forward name="failure" path="rcl.ezl.serv00444.page"></forward>
+		</action>
+		
+		<action path="/serv00111"
+			type="com.rclgroup.dolphin.rcl.web.eservice.action.LoginSvc"
+			parameter="openWebBooking" name="userUim" validate="false" scope="session">
+			<forward name="success" path="../do/sexn002" redirect="true" />
+			<forward name="failure" path="rcl.ezl.serv00111.page"></forward>
+		</action>
+		
+		<action path="/serv0555"
+			type="com.rclgroup.dolphin.rcl.web.eservice.action.ContrySvc"
+			parameter="getContry" name="feserv12" validate="false" scope="session">
+			<forward name="success" path="rcl.ezl.serv00444.page"></forward>
+			<forward name="failure" path="rcl.ezl.serv00444.page"></forward>
+		</action>
+		
+		<action path="/serv00666"
+			type="com.rclgroup.dolphin.rcl.web.eservice.action.LoginSvc"
+			parameter="forget" name="userUim" validate="false" scope="session">
+			<forward name="success" path="rcl.ezl.serv00666.page"></forward>
+			<forward name="failure" path="rcl.ezl.serv00666.page"></forward>
+		</action>
+    
+    	<!-- new log in Chandu end -->
+    	
+        <!-- new web Booking sid -->
+        
+        <action path="/sexn001"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceNewWebBookingSvc" parameter="onload"
+                name="feserv01" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.sexn001.page"></forward>
+                <forward name="failure" path="rcl.ezl.sexn001.page"></forward>
+        </action>
+        
+        <action path="/sexn001Edit"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceNewWebBookingSvc" parameter="editBooking"
+                name="feserv01" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.sexn001Edit.page"></forward>
+                <forward name="failure" path="rcl.ezl.sexn001Edit.page"></forward>
+        </action>
+        
+        <action path="/sexn001Copy"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceNewWebBookingSvc" parameter="copyBooking"
+                name="feserv01" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.sexn001.page"></forward>
+                <forward name="failure" path="rcl.ezl.sexn001.page"></forward>
+        </action>
+        
+         <action path="/sexn001CheckQuotationSize"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceNewWebBookingSvc" parameter="checkQuotationSize"
+                name="feserv01" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.sexn001.page"></forward>
+                <forward name="failure" path="rcl.ezl.sexn001.page"></forward>
+        </action>
+        
+         <action path="/sexn001ChangeCountryCode"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceNewWebBookingSvc" parameter="changeCountryCode"
+                name="feserv01" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.sexn001.page"></forward>
+                <forward name="failure" path="rcl.ezl.sexn001.page"></forward>
+        </action>
+        
+        <action path="/sexn001CheckQuotation"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceNewWebBookingSvc" parameter="checkQuotation"
+                name="feserv01" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.sexn001.page"></forward>
+                <forward name="failure" path="rcl.ezl.sexn001.page"></forward>
+        </action>
+        
+        <action path="/sexn001updateCommodity"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceNewWebBookingSvc" parameter="updateCommodity"
+                name="feserv01" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.sexn001.page"></forward>
+                <forward name="failure" path="rcl.ezl.sexn001.page"></forward>
+        </action>
+        
+       <action path="/sexn004"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceCommodityPopupSvc" parameter="onload"
+                name="feserv04" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.sexn004.commodity.popup"></forward>
+                <forward name="failure" path="rcl.ezl.sexn004.commodity.popup"></forward>
+        </action>
+        
+         <action path="/sexn004LookupData"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceCommodityPopupSvc" parameter="lookUpData"
+                name="feserv04" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.sexn004.commodity.popup"></forward>
+                <forward name="failure" path="rcl.ezl.sexn004.commodity.popup"></forward>
+        </action>
+        
+        <action path="/sexn001addSizeType"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceNewWebBookingSvc" parameter="addEqSizeType"
+                name="feserv01" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.sexn001.page"></forward>
+                <forward name="failure" path="rcl.ezl.sexn001.page"></forward>
+        </action>
+        
+        <action path="/sexn001delSizeType"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceNewWebBookingSvc" parameter="deleleEqSizeType"
+                name="feserv01" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv001.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv001.page"></forward>
+        </action>
+        
+        <action path="/sexn001addCommodity"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceNewWebBookingSvc" parameter="addCommodity"
+                name="feserv01" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.sexn001.page"></forward>
+                <forward name="failure" path="rcl.ezl.sexn001.page"></forward>
+        </action>
+        
+         <action path="/sexn001delCommodity"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceNewWebBookingSvc" parameter="deleleCommodity"
+                name="feserv01" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.sexn001.page"></forward>
+                <forward name="failure" path="rcl.ezl.sexn001.page"></forward>
+        </action>
+        
+        <action path="/sexn001GetDefaultByQuotationNo"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceNewWebBookingSvc" parameter="getQuotationData"
+                name="feserv01" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.sexn001.page"></forward>
+                <forward name="failure" path="rcl.ezl.sexn001.page"></forward>
+                <forward name="search" path="rcl.ezl.sexn001.popup"></forward>
+        </action>
+        
+        <action path="/sexn001SaveBooking"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceNewWebBookingSvc" parameter="saveBooking"
+                name="feserv01" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.sexn001.page"></forward>
+                <forward name="failure" path="rcl.ezl.sexn001.page"></forward>
+        </action>
+        
+         <action path="/sexn001updateSizeType"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceNewWebBookingSvc" parameter="updateEqSizeType"
+                name="feserv01" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.sexn001.page"></forward>
+                <forward name="failure" path="rcl.ezl.sexn001.page"></forward>
+        </action>
+        
+        <action path="/sexn001changeRateType"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceNewWebBookingSvc" parameter="onChangeRateType"
+                name="feserv01" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.sexn001.page"></forward>
+                <forward name="failure" path="rcl.ezl.sexn001.page"></forward>
+        </action>
+        <!-- new web Booking sid end -->
+    
+    
+        <action path="/serv001"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceNewWebBookingSvc" parameter="onload"
+                name="feserv01" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv001.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv001.page"></forward>
+        </action>
+        <action path="/serv001ChangeCountryCode"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceNewWebBookingSvc" parameter="changeCountryCode"
+                name="feserv01" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv001.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv001.page"></forward>
+        </action>
+        <action path="/serv001SaveBooking"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceNewWebBookingSvc" parameter="saveBooking"
+                name="feserv01" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv001.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv001.page"></forward>
+        </action>
+        <action path="/serv001CheckQuotation"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceNewWebBookingSvc" parameter="checkQuotation"
+                name="feserv01" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv001.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv001.page"></forward>
+        </action>
+        
+        
+        <action path="/serv001CheckQuotationSize"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceNewWebBookingSvc" parameter="checkQuotationSize"
+                name="feserv01" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv001.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv001.page"></forward>
+        </action>
+        
+        
+        <action path="/serv001GetDefaultByQuotationNo"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceNewWebBookingSvc" parameter="getQuotationData"
+                name="feserv01" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv001.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv001.page"></forward>
+                <forward name="search" path="rcl.ezl.serv001.popup"></forward>
+        </action>
+        <action path="/serv001SetQuotationRoutingData"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceNewWebBookingSvc" parameter="setQuotationRoutingData"
+                name="feserv01" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv001.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv001.page"></forward>
+        </action>
+        <action path="/serv001GetTemplateData"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceNewWebBookingSvc" parameter="templateData"
+                name="feserv01" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv001.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv001.page"></forward>
+        </action>
+
+        <action path="/serv001delSizeType"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceNewWebBookingSvc" parameter="deleleEqSizeType"
+                name="feserv01" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv001.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv001.page"></forward>
+        </action>
+
+        <action path="/serv001addSizeType"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceNewWebBookingSvc" parameter="addEqSizeType"
+                name="feserv01" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv001.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv001.page"></forward>
+        </action>
+
+        <action path="/serv001updateSizeType"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceNewWebBookingSvc" parameter="updateEqSizeType"
+                name="feserv01" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv001.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv001.page"></forward>
+        </action>
+
+        <action path="/serv001delCommodity"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceNewWebBookingSvc" parameter="deleleCommodity"
+                name="feserv01" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv001.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv001.page"></forward>
+        </action>
+
+        <action path="/serv001addCommodity"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceNewWebBookingSvc" parameter="addCommodity"
+                name="feserv01" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv001.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv001.page"></forward>
+        </action>
+
+        <action path="/serv001updateCommodity"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceNewWebBookingSvc" parameter="updateCommodity"
+                name="feserv01" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv001.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv001.page"></forward>
+        </action>
+
+        <action path="/serv001changeRateType"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceNewWebBookingSvc" parameter="onChangeRateType"
+                name="feserv01" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv001.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv001.page"></forward>
+        </action>
+        
+        
+
+        <action path="/serv001ChangeRepComp"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceNewWebBookingSvc" parameter="changeRepComp"
+                name="feserv01" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv001.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv001.page"></forward>
+        </action>
+
+        <action path="/serv002"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceInquiryWebBookingSvc" parameter="onload"
+                name="feserv03" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.serv002.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv002.page"></forward>
+        </action>
+        
+       <!--  sid Inquiry Web Booking mappring started -->
+        
+        <action path="/sexn002"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceInquiryWebBookingNewSvc" parameter="onload"
+                name="feserv03" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.sexn002.page"></forward>
+                <forward name="failure" path="rcl.ezl.sexn002.page"></forward>
+        </action>
+        
+        <action path="/sexn002BrowseBookingNumber"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceInquiryWebBookingNewSvc" parameter="browseBookingNumber"
+                name="feserv02" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.sexn002.booking.popup"></forward>
+                <forward name="failure" path="rcl.ezl.sexn002.booking.popup"></forward>
+        </action>
+        
+        <action path="/sexn002GetData"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceInquiryWebBookingNewSvc" parameter="getData"
+                name="feserv03" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.sexn002.page"></forward>
+                <forward name="failure" path="rcl.ezl.sexn002.page"></forward>
+        </action>
+        
+        <action path="/sexn002MoreGetData"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceInquiryWebBookingNewSvc" parameter="getmoredata"
+                name="feserv03" validate="false" scope="session">
+        </action>
+        
+         <action path="/sexn003"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceAcknowledgementSvc" parameter="onload"
+                name="feserv01" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.sexn003.popup"></forward>
+                <forward name="failure" path="rcl.ezl.sexn003.popup"></forward>
+        </action>
+        
+       <!--  sid Inquiry Web Booking mappring ended --> 
+       
+       
+       
+        <action path="/serv002BrowseBookingNumber"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceInquiryWebBookingSvc" parameter="browseBookingNumber"
+                name="feserv02" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.serv002.booking.popup"></forward>
+                <forward name="failure" path="rcl.ezl.serv002.booking.popup"></forward>
+        </action>
+         <action path="/serv002GetData"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceInquiryWebBookingSvc" parameter="getData"
+                name="feserv03" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.serv002.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv002.page"></forward>
+        </action>
+
+
+
+        <action path="/serv003"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceAcknowledgementSvc" parameter="onload"
+                name="feserv01" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.serv003.popup"></forward>
+                <forward name="failure" path="rcl.ezl.serv003.popup"></forward>
+        </action>
+
+        <action path="/serv004"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceCommodityPopupSvc" parameter="onload"
+                name="feserv04" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.serv004.commodity.popup"></forward>
+                <forward name="failure" path="rcl.ezl.serv004.commodity.popup"></forward>
+        </action>
+
+        <action path="/serv004LookupData"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceCommodityPopupSvc" parameter="lookUpData"
+                name="feserv04" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.serv004.commodity.popup"></forward>
+                <forward name="failure" path="rcl.ezl.serv004.commodity.popup"></forward>
+        </action>
+
+        <action path="/serv006"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EshippingInstructionSvc" parameter="onload"
+                name="feserv06" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv006.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv006.page"></forward>
+        </action>
+
+        <action path="/serv006AfterSave"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EshippingInstructionSvc" parameter="onload"
+                name="feserv06" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.serv006.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv006.page"></forward>
+        </action>
+
+        <action path="/serv006InputCargoDescription"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EshippingInstructionSvc" parameter="inputCargoDescription"
+                name="feserv06" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.serv006.popup"></forward>
+                <forward name="failure" path="rcl.ezl.serv006.popup"></forward>
+        </action>
+
+        <action path="/serv006GetData"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EshippingInstructionSvc" parameter="getData"
+                name="feserv06" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv006.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv006.page"></forward>
+
+        </action>
+        
+        
+        
+        <!-- sid Eshipping dtl start-->
+        
+        <action path="/sexn006GetData"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EshippingInstructionSvc" parameter="getData"
+                name="feserv06" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.sexn006.page"></forward>
+                <forward name="failure" path="rcl.ezl.sexn006.page"></forward>
+
+        </action>
+        
+         <action path="/sexn006addCommodity"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EshippingInstructionSvc" parameter="addCommodity"
+                name="feserv06" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.sexn006.page"></forward>
+                <forward name="failure" path="rcl.ezl.sexn006.page"></forward>
+
+        </action>
+        
+        <action path="/sexn006delCommodity"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EshippingInstructionSvc" parameter="deleteCommodity"
+                name="feserv06" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.sexn006.page"></forward>
+                <forward name="failure" path="rcl.ezl.sexn006.page"></forward>
+        </action>
+        
+         <action path="/sexn006PreviewPDFReport"
+        type="com.rclgroup.dolphin.rcl.web.eservice.action.EshippingInstructionPDFReportSvc" parameter="previewPDFReport"
+            name="feserv10" validate="false" scope="session">
+            <forward name="success" path="rcl.ezl.sexn006.popup.previewPDFReport"></forward>
+            <forward name="failure" path="rcl.ezl.sexn006.page"></forward>
+        </action>
+        
+        <action path="/sexn006validateData"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EshippingInstructionSvc" parameter="validateData"
+                name="feserv06" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.sexn006.page"></forward>
+                <forward name="failure" path="rcl.ezl.sexn006.page"></forward>
+        </action>
+        
+        <!-- sid Eshipping dtl end-->
+
+<!-- sid shipping Instruction -->
+
+ <action path="/sexn006SaveAsDraft"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EshippingInstructionSvc" parameter="saveAsDraft"
+                name="feserv06" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.sexn006.page"></forward>
+                <forward name="failure" path="rcl.ezl.sexn006.page"></forward>
+        </action>
+
+<!-- end -->
+
+        <action path="/serv006SaveAsDraft"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EshippingInstructionSvc" parameter="saveAsDraft"
+                name="feserv06" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.serv006.pages"></forward>
+                <forward name="failure" path="rcl.ezl.serv006.pages"></forward>
+        </action>
+
+        <action path="/serv006SubmitEsi"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EshippingInstructionSvc" parameter="submitEsi"
+                name="feserv06" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv006.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv006.page"></forward>
+        </action>
+
+        <action path="/serv006Acknowledgement"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EshippingInstructionSvc" parameter="acknowledgement"
+                name="feserv06" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv006.acknowledgement.popup"></forward>
+                <forward name="failure" path="rcl.ezl.serv006.acknowledgement.popup"></forward>
+        </action>
+
+        <action path="/serv006SetCommodityData"
+        type="com.rclgroup.dolphin.rcl.web.eservice.action.EshippingInstructionSvc" parameter="setCommodityData"
+            name="feserv06" validate="false" scope="session">
+            <forward name="success" path="rcl.ezl.serv006.page"></forward>
+            <forward name="failure" path="rcl.ezl.serv006.page"></forward>
+        </action>
+		
+		<action path="/serv006validateData"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EshippingInstructionSvc" parameter="validateData"
+                name="feserv06" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv006.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv006.page"></forward>
+        </action>
+        
+        <action path="/serv006clearESIData"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EshippingInstructionSvc" parameter="clearESIData"
+                name="feserv06" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv006.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv006.page"></forward>
+        </action>
+		
+        <action path="/serv006delCommodity"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EshippingInstructionSvc" parameter="deleteCommodity"
+                name="feserv06" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv006.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv006.page"></forward>
+        </action>
+
+        <action path="/serv006addCommodity"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EshippingInstructionSvc" parameter="addCommodity"
+                name="feserv06" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv006.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv006.page"></forward>
+        </action>
+
+        <action path="/serv006PreviewPDFReport"
+        type="com.rclgroup.dolphin.rcl.web.eservice.action.EshippingInstructionPDFReportSvc" parameter="previewPDFReport"
+            name="feserv10" validate="false" scope="session">
+            <forward name="success" path="rcl.ezl.serv006.popup.previewPDFReport"></forward>
+            <forward name="failure" path="rcl.ezl.serv006.page"></forward>
+        </action>
+        
+        <!-- sid -->
+        
+        <action path="/sexn007"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceRegistrationSvc" parameter="onload"
+                name="feserv12" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.sexn007.page"></forward>
+                <forward name="failure" path="rcl.ezl.sexn007.page"></forward>
+        </action>
+        
+        <action path="/sexn007CheckAvailableUserId"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceRegistrationSvc" parameter="checkAvailableUserId"
+                name="feserv12" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.sexn007.page"></forward>
+                <forward name="failure" path="rcl.ezl.sexn007.page"></forward>
+        </action>
+        
+        <action path="/sexn007Registration"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceRegistrationSvc" parameter="registration"
+                name="feserv12" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.sexn007.page"></forward>
+                <forward name="failure" path="rcl.ezl.sexn007.page"></forward>
+                <forward name="registRequest" path="/serv015"></forward>
+        </action>
+        
+       <!-- sid --> 
+       
+        <action path="/serv007"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceRegistrationSvc" parameter="onload"
+                name="feserv12" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv007.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv007.page"></forward>
+        </action>
+        
+        
+        <action path="/serv007CheckAvailableUserId"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceRegistrationSvc" parameter="checkAvailableUserId"
+                name="feserv12" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv007.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv007.page"></forward>
+        </action>
+        <action path="/serv007Registration"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceRegistrationSvc" parameter="registration"
+                name="feserv12" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv007.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv007.page"></forward>
+                <forward name="registRequest" path="/serv015"></forward>
+        </action>
+        <action path="/serv007Reject"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceRegistrationSvc" parameter="rejectReason"
+                name="feserv12" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv007.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv007.page"></forward>
+        </action>
+        <action path="/serv007CreateCRMCustomer"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceRegistrationSvc" parameter="createCRMCustomer"
+                name="feserv12" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv007.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv007.page"></forward>
+        </action>
+        <action path="/serv007CreateCRMCustomerForContractParty"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceRegistrationSvc" parameter="createCRMCustomerForContractParty"
+                name="feserv12" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv007.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv007.page"></forward>
+        </action>
+        <action path="/serv007ManageAccount"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceRegistrationSvc" parameter="manageAccount"
+                name="feserv12" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv007.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv007.page"></forward>
+        </action>
+        <action path="/serv007GenerateCaptcha"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceRegistrationSvc" parameter="generateCaptcha"
+                name="feserv12" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv007.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv007.page"></forward>
+        </action>
+        <action path="/serv007OpenAcknowledge"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceRegistrationSvc" parameter="openAcknowledge"
+                name="feserv12" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.serv007.popup"></forward>
+                <forward name="failure" path="rcl.ezl.serv007.popup"></forward>
+        </action>
+
+        <action path="/serv007addContractPartyCompany"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceRegistrationSvc" parameter="addContractPartyCompany"
+                name="feserv12" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv007.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv007.page"></forward>
+        </action>
+
+        <action path="/serv007updContractPartyCompany"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceRegistrationSvc" parameter="updContractPartyCompany"
+                name="feserv12" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv007.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv007.page"></forward>
+        </action>
+
+        <action path="/serv007delContractPartyCompany"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceRegistrationSvc" parameter="delContractPartyCompany"
+                name="feserv12" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv007.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv007.page"></forward>
+        </action>
+        <action path="/serv007activateRepresentedCompany"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceRegistrationSvc" parameter="activateRepresentedCompany"
+          name="feserv12" validate="false" scope="session">
+          <forward name="success" path="rcl.ezl.serv007.page"></forward>
+          <forward name="failure" path="rcl.ezl.serv007.page"></forward>
+        </action>
+        <action path="/serv007filterContractParty"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceRegistrationSvc" parameter="filterContractParty"
+          name="feserv12" validate="false" scope="session">
+          <forward name="success" path="rcl.ezl.serv007.page"></forward>
+          <forward name="failure" path="rcl.ezl.serv007.page"></forward>
+        </action>
+
+        <action path="/serv008"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceMRESSvc" parameter="onload"
+                name="feserv13" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv008.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv008.page"></forward>
+        </action>
+        <action path="/serv008LookupData"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceMRESSvc" parameter="lookUpData"
+                name="feserv13" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv008.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv008.page"></forward>
+        </action>
+        <action path="/serv008LogOut"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceMRESSvc" parameter="logOut"
+                name="feserv13" validate="false" scope="session">
+                <forward name="failure" path="rcl.ezl.serv008.page"></forward>
+        </action>
+        <action path="/serv009"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceForgetPasswordSvc" parameter="onload"
+                name="userUim" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv009.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv009.page"></forward>
+        </action>
+        <action path="/serv009ForgetPassword"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceForgetPasswordSvc" parameter="forgetPassword"
+                name="feserv14" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv009.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv009.page"></forward>
+        </action>
+        <action path="/serv010"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EshippingCustomerPopupSvc" parameter="onload"
+                name="feserv07" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv010.popup.customer"></forward>
+                <forward name="failure" path="rcl.ezl.serv010.popup.customer"></forward>
+        </action>
+        <action path="/serv010LookUpData"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EshippingCustomerPopupSvc" parameter="lookUpData"
+                name="feserv07" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv010.popup.customer"></forward>
+                <forward name="failure" path="rcl.ezl.serv010.popup.customer"></forward>
+        </action>
+        <action path="/serv011"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EshippingPackageKindPopupSvc" parameter="onload"
+                name="feserv09" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv011.package.popup"></forward>
+                <forward name="failure" path="rcl.ezl.serv011.package.popup"></forward>
+        </action>
+        <action path="/serv011LookUpData"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EshippingPackageKindPopupSvc" parameter="lookUpData"
+                name="feserv09" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv011.package.popup"></forward>
+                <forward name="failure" path="rcl.ezl.serv011.package.popup"></forward>
+        </action>
+        <action path="/serv012"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EshippingBookingNumberPopupSvc" parameter="onload"
+                name="feserv15" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv012.booking.popup"></forward>
+                <forward name="failure" path="rcl.ezl.serv012.booking.popup"></forward>
+        </action>
+        <action path="/serv012LookUpData"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EshippingBookingNumberPopupSvc" parameter="lookUpData"
+                name="feserv15" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv012.booking.popup"></forward>
+                <forward name="failure" path="rcl.ezl.serv012.booking.popup"></forward>
+        </action>
+        <action path="/serv013"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EshippingCommodityPopupSvc" parameter="onload"
+                name="feserv11" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv013.commodity.popup"></forward>
+                <forward name="failure" path="rcl.ezl.serv013.commodity.popup"></forward>
+        </action>
+        <action path="/serv013LookUpData"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EshippingCommodityPopupSvc" parameter="lookUpData"
+                name="feserv11" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv013.commodity.popup"></forward>
+                <forward name="failure" path="rcl.ezl.serv013.commodity.popup"></forward>
+        </action>
+        <action path="/serv014"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceCustomerPopupSvc" parameter="onload"
+                name="feserv16" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv014.popup.customer"></forward>
+                <forward name="failure" path="rcl.ezl.serv014.popup.customer"></forward>
+        </action>
+        <action path="/serv014LookUpData"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceCustomerPopupSvc" parameter="lookUpData"
+                name="feserv16" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv014.popup.customer"></forward>
+                <forward name="failure" path="rcl.ezl.serv014.popup.customer"></forward>
+        </action>
+
+         <action path="/serv015"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceCustRegistReqSvc" parameter="onload"
+                name="feserv17" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv015.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv015.page"></forward>
+        </action>
+        <action path="/serv016"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceCustomerTypePopupSvc" parameter="onload"
+                name="feserv18" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv016.popup.customerType"></forward>
+                <forward name="failure" path="rcl.ezl.serv016.popup.customerType"></forward>
+        </action>
+        <action path="/serv016LookUpData"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceCustomerTypePopupSvc" parameter="lookUpData"
+                name="feserv18" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv016.popup.customerType"></forward>
+                <forward name="failure" path="rcl.ezl.serv016.popup.customerType"></forward>
+        </action>
+
+        <!--Begin Reefer Commodities screen -->
+        <action path="/serv019"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceReferCommoditiesSvc" parameter="onload"
+                name="feserv19" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv017.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv017.page"></forward>
+        </action>
+
+        <action path="/serv019getData"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceReferCommoditiesSvc" parameter="getData"
+                name="feserv19" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv017.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv017.page"></forward>
+        </action>
+
+        <action path="/serv019OnSubmit"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceReferCommoditiesSvc" parameter="onSubmit"
+                name="feserv19" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv017.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv017.page"></forward>
+        </action>
+        <!--End Reefer Commodities screen -->
+
+        <!--Begin DG Commodity screen -->
+        <action path="/serv020"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceDGCommoditiesSvc" parameter="onload"
+                name="feserv20" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv018.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv018.page"></forward>
+        </action>
+
+        <action path="/serv020getData"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceDGCommoditiesSvc" parameter="getData"
+                name="feserv20" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv018.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv018.page"></forward>
+        </action>
+
+        <action path="/serv020onSubmit"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceDGCommoditiesSvc" parameter="onSubmit"
+                name="feserv20" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv018.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv018.page"></forward>
+        </action>
+        <action path="/serv020validateDG"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceDGCommoditiesSvc" parameter="validateDG"
+                name="feserv20" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv018.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv018.page"></forward>
+        </action>
+        <!--End DG Commodity screen -->
+
+        <!--Begin OOG Commodity screen -->
+        <action path="/serv021"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceOOGCommoditiesSvc" parameter="onload"
+                name="feserv21" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv019.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv019.page"></forward>
+        </action>
+
+        <action path="/serv021getData"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceOOGCommoditiesSvc" parameter="getData"
+                name="feserv21" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv019.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv019.page"></forward>
+        </action>
+
+        <action path="/serv021onSubmit"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceOOGCommoditiesSvc" parameter="onSubmit"
+                name="feserv21" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv019.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv019.page"></forward>
+        </action>
+
+        <action path="/serv022"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EservicePortClassSvc" parameter="onload"
+                name="feserv22" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.serv018.portclass.popup"></forward>
+                <forward name="failure" path="rcl.ezl.serv018.portclass.popup"></forward>
+        </action>
+        <action path="/serv022LookupData"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EservicePortClassSvc" parameter="lookUpData"
+                name="feserv22" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.serv018.portclass.popup"></forward>
+                <forward name="failure" path="rcl.ezl.serv018.portclass.popup"></forward>
+        </action>
+        <!--End OOG Commodity screen -->
+
+        <!--Begin Eservice upload screen -->
+        <action path="/serv023"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceUploadSvc" parameter="onload"
+                name="feserv23" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv020.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv020.page"></forward>
+        </action>
+        <action path="/serv023sendFileToTemp"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceUploadSvc" parameter="sendFileToTemp"
+                name="feserv23" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv020.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv020.page"></forward>
+        </action>
+        <action path="/serv023onSubmit"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceUploadSvc" parameter="onSubmit"
+                name="feserv23" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv020.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv020.page"></forward>
+        </action>
+        <action path="/serv023getData"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceUploadSvc" parameter="getData"
+                name="feserv23" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv020.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv020.page"></forward>
+        </action>
+        <action path="/serv023onDelete"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceUploadSvc" parameter="onDelete"
+                name="feserv23" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv020.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv020.page"></forward>
+        </action>
+        <!--End Eservice upload screen -->
+
+        <action path="/serv024"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EservicePdfSvc" parameter="onload"
+                name="feserv24" validate="false" scope="session">
+        </action>
+
+        <!--Begin Web Booking - Preview uploaded document -->
+        <action path="/serv025"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EservicePreviewUploadedDocSvc" parameter="onload"
+                name="feserv25" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv021.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv021.page"></forward>
+        </action>
+
+        <action path="/serv025searchData"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EservicePreviewUploadedDocSvc" parameter="searchData"
+                name="feserv25" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv021.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv021.page"></forward>
+        </action>
+        <!--End Web Booking - Preview uploaded document -->
+
+        <!--
+        <action path="/serv026"
+                type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceProductCatalogueSvc" parameter="onload"
+                name="feserv26" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv023.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv023.page"></forward>
+        </action>
+
+        <action path="/serv026search"
+                type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceProductCatalogueSvc" parameter="search"
+                name="feserv26" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.serv023.page"></forward>
+                <forward name="failure" path="rcl.ezl.serv023.page"></forward>
+        </action>
+         -->
+
+        <action path="/serv027hualageLookUp"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceSailingSchedulePopupSvc" parameter="hualageLookUp"
+                name="feserv27" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv023.hualage.popup"></forward>
+                <forward name="failure" path="rcl.ezl.serv023.hualage.popup"></forward>
+        </action>
+
+        <action path="/serv027portLookUpOnload"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceSailingSchedulePopupSvc" parameter="portLookUpOnload"
+                name="feserv27" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv023.port.popup"></forward>
+                <forward name="failure" path="rcl.ezl.serv023.port.popup"></forward>
+        </action>
+
+        <action path="/serv027portLookUp"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceSailingSchedulePopupSvc" parameter="portLookUp"
+                name="feserv27" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv023.port.popup"></forward>
+                <forward name="failure" path="rcl.ezl.serv023.port.popup"></forward>
+        </action>
+
+        <action path="/serv027placeLookUp"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceSailingSchedulePopupSvc" parameter="placeLookUp"
+                name="feserv27" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv023.place.popup"></forward>
+                <forward name="failure" path="rcl.ezl.serv023.place.popup"></forward>
+        </action>
+
+        <action path="/serv028equipTypeLookUp"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceEquipmentTypePopUpSvc" parameter="equipTypeLookUp"
+                name="feserv28" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv024.popup"></forward>
+                <forward name="failure" path="rcl.ezl.serv024.popup"></forward>
+        </action>
+
+        <!--Begin Manage Port Pair - Contract Party -->
+        <action path="/serv029"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceManagePortPairSvc" parameter="onload"
+                name="feserv29" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv025"></forward>
+                <forward name="failure" path="rcl.ezl.serv025"></forward>
+        </action>
+
+        <action path="/serv029add"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceManagePortPairSvc" parameter="add"
+                name="feserv29" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv025"></forward>
+                <forward name="failure" path="rcl.ezl.serv025"></forward>
+        </action>
+
+        <action path="/serv029upd"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceManagePortPairSvc" parameter="upd"
+                name="feserv29" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv025"></forward>
+                <forward name="failure" path="rcl.ezl.serv025"></forward>
+        </action>
+
+        <action path="/serv029del"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceManagePortPairSvc" parameter="del"
+                name="feserv29" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv025"></forward>
+                <forward name="failure" path="rcl.ezl.serv025"></forward>
+        </action>
+
+        <action path="/serv029save"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceManagePortPairSvc" parameter="save"
+                name="feserv29" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv025"></forward>
+                <forward name="failure" path="rcl.ezl.serv025"></forward>
+        </action>
+
+        <action path="/serv029find"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceManagePortPairSvc" parameter="find"
+                name="feserv29" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv025"></forward>
+                <forward name="failure" path="rcl.ezl.serv025"></forward>
+        </action>
+
+        <action path="/serv029addPortPair"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceManagePortPairSvc" parameter="addPortPair"
+                name="feserv29" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv025"></forward>
+                <forward name="failure" path="rcl.ezl.serv025"></forward>
+        </action>
+
+        <action path="/serv029updPortPair"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceManagePortPairSvc" parameter="updPortPair"
+                name="feserv29" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv025"></forward>
+                <forward name="failure" path="rcl.ezl.serv025"></forward>
+        </action>
+
+        <action path="/serv029delPortPair"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceManagePortPairSvc" parameter="delPortPair"
+                name="feserv29" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv025"></forward>
+                <forward name="failure" path="rcl.ezl.serv025"></forward>
+        </action>
+
+        <action path="/serv029savePortPair"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceManagePortPairSvc" parameter="savePortPair"
+                name="feserv29" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv025"></forward>
+                <forward name="failure" path="rcl.ezl.serv025"></forward>
+        </action>
+
+        <action path="/serv029findPortPair"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceManagePortPairSvc" parameter="findPortPair"
+                name="feserv29" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv025"></forward>
+                <forward name="failure" path="rcl.ezl.serv025"></forward>
+        </action>
+        <action path="/serv029genUniqPwd"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceManagePortPairSvc" parameter="genUniqPwd"
+                name="feserv29" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv025"></forward>
+                <forward name="failure" path="rcl.ezl.serv025"></forward>
+        </action>
+        <action path="/serv029suspendCon"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceManagePortPairSvc" parameter="suspendCon"
+                name="feserv29" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv025"></forward>
+                <forward name="failure" path="rcl.ezl.serv025"></forward>
+        </action>
+        <action path="/serv029suspendPortPair"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceManagePortPairSvc" parameter="suspendPortPair"
+                name="feserv29" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv025"></forward>
+                <forward name="failure" path="rcl.ezl.serv025"></forward>
+        </action>
+        <action path="/serv029findUserDetail"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceManagePortPairSvc" parameter="findUserDetail"
+                name="feserv29" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv025"></forward>
+                <forward name="failure" path="rcl.ezl.serv025"></forward>
+        </action>
+        <!--End Manage Port Pair - Contract Party -->
+
+        <!--Begin User Port Pair Lookup -->
+        <action path="/serv030"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceUserPortPairLookUpSvc" parameter="onload"
+                name="feserv30" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv026"></forward>
+                <forward name="failure" path="rcl.ezl.serv026"></forward>
+        </action>
+
+        <action path="/serv030lookUp"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EserviceUserPortPairLookUpSvc" parameter="lookUp"
+                name="feserv30" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.serv026"></forward>
+                <forward name="failure" path="rcl.ezl.serv026"></forward>
+        </action>
+        <!--End User Port Pair Lookup -->
+
+        <action path="/secm002"
+                type="com.rclgroup.dolphin.ezl.web.ecm.action.EcmMasterLookupSvc" parameter="onload"
+                name="fecm002" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.secm002.page"></forward>
+                <forward name="failure" path="rcl.ezl.secm002.page"></forward>
+        </action>
+        <action path="/secm002search"
+                type="com.rclgroup.dolphin.ezl.web.ecm.action.EcmMasterLookupSvc" parameter="search"
+                name="fecm002" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.secm002.page"></forward>
+                <forward name="failure" path="rcl.ezl.secm002.page"></forward>
+        </action>
+        
+        <action path="/svgm001"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EvgmDeclarationSvc" parameter="onload"
+                name="fevgm001" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.svgm001"></forward>
+                <forward name="failure" path="rcl.ezl.svgm001"></forward>
+        </action>
+        <action path="/svgm001change"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EvgmDeclarationSvc" parameter="changeCreate"
+                name="fevgm001" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.svgm001"></forward>
+                <forward name="failure" path="rcl.ezl.svgm001"></forward>
+        </action>
+        <action path="/svgm001export"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EvgmDeclarationSvc" parameter="createExcelTemplate"
+                name="fevgm001" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.svgm001"></forward>
+                <forward name="failure" path="rcl.ezl.svgm001"></forward>
+        </action>
+        <action path="/svgm001upload"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EvgmDeclarationSvc" parameter="uploadExcel"
+                name="fevgm001" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.svgm001"></forward>
+                <forward name="failure" path="rcl.ezl.svgm001"></forward>
+        </action>
+        <action path="/svgm001find"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EvgmDeclarationSvc" parameter="findDetail"
+                name="fevgm001" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.svgm001"></forward>
+                <forward name="failure" path="rcl.ezl.svgm001"></forward>
+        </action>
+        <action path="/svgm001paging"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EvgmDeclarationSvc" parameter="paging"
+                name="fevgm001" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.svgm001"></forward>
+                <forward name="failure" path="rcl.ezl.svgm001"></forward>
+        </action>
+        <action path="/svgm001validate"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EvgmDeclarationSvc" parameter="validateDetail"
+                name="fevgm001" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.svgm001"></forward>
+                <forward name="failure" path="rcl.ezl.svgm001"></forward>
+        </action>
+        <action path="/svgm001save"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EvgmDeclarationSvc" parameter="save"
+                name="fevgm001" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.svgm001"></forward>
+                <forward name="failure" path="rcl.ezl.svgm001"></forward>
+        </action>
+        <action path="/svgm001del"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EvgmDeclarationSvc" parameter="delete"
+                name="fevgm001" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.svgm001"></forward>
+                <forward name="failure" path="rcl.ezl.svgm001"></forward>
+        </action>
+        
+        <action path="/svgm001PreviewPDFReport"
+        type="com.rclgroup.dolphin.rcl.web.eservice.action.EvgmDeclarationPDFReportSvc" parameter="previewPDFReport"
+            name="fevgm002" validate="false" scope="session">
+            <forward name="success" path="rcl.ezl.svgm001.popup.previewPDFReport"></forward>
+            <forward name="failure" path="rcl.ezl.svgm001"></forward>
+        </action>
+
+    </action-mappings>
+
+    <!-- ========== Controller Configuration ================================ -->
+    <controller bufferSize="4096" contentType="text/html;charset=UTF-8" debug="1" locale="true" maxFileSize="250M" multipartClass="org.apache.struts.upload.CommonsMultipartRequestHandler" nocache="true" processorClass="org.apache.struts.action.RequestProcessor" inputForward="false" />
+
+    <!-- ========== Message Resources Definitions ============================ -->
+    <message-resources parameter="com.rclgroup.dolphin.rcl.resource.ApplicationResources"/>
+
+    <!-- ========== Plug Ins Configuration ================================= -->
+    <plug-in className="org.apache.struts.tiles.TilesPlugin">
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />
+    </plug-in>
+
+</struts-config>

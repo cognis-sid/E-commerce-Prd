@@ -1,0 +1,23 @@
+div.custom-chart {
+    position:relative;
+    width:60px; 
+    height:60px;
+    display: block;
+    margin: 0 auto;
+}
+.custom-chart canvas {
+    display: block;
+    position:absolute;
+    top:0;
+    left:0;
+}
+.custom-chart span {
+    color:#555;
+    display:block;
+    line-height:60px;
+    text-align:center;
+    width:60px;
+    font-size:18px;
+    font-weight:600;
+    margin-left:2px;
+}

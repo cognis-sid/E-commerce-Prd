@@ -1,0 +1,657 @@
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<!-- Definitions for Tiles documentation   -->
+<tiles-definitions>
+
+    <!-- ========================================================== -->
+    <!-- Master definition                                          -->
+    <!-- ========================================================== -->
+    <!-- Main page layout used as a root for other page definitions -->
+
+	<definition name="rcl.ezl.serverSetting.page"
+		extends="rcl.childlayout">
+		<put name="formId" value="userUim" />
+		<put name="title" value="Eservice Sercer Setting Page" />
+		<put name="screenHeading" value="none" />
+		<put name="screenVersion" value="none" />
+		<put name="body" value="/pages/eservice/serverRestart.jsp" />
+	</definition>
+
+  <definition name="rcl.ezl.serv00666.page"
+		extends="rcl.childlayout">
+		<put name="formId" value="userUim" />
+		<put name="title" value="Eservice Login New" />
+		<put name="screenHeading" value="none" />
+		<put name="screenVersion" value="none" />
+		<put name="body" value="/pages/eservice/EserviceForgetPasswordNew.jsp" />
+	</definition>
+	
+	<definition name="rcl.ezl.serv00111.page"
+		extends="rcl.childlayout">
+		<put name="formId" value="feserv12" />
+		<put name="title" value="Eservice Login New" />
+		<put name="screenHeading" value="none" />
+		<put name="screenVersion" value="none" />
+		<put name="body" value="/pages/eservice/EcmENoticesLoginNew.jsp" />
+	</definition>
+
+    <definition name="rcl.ezl.serv00Admin.page"
+		extends="rcl.childlayout">
+		<put name="formId" value="feserv31" />
+		<put name="title" value="Eservice admin Login New" />
+		<put name="screenHeading" value="none" />
+		<put name="screenVersion" value="none" />
+		<put name="body" value="/pages/eservice/LoginAdmin.jsp" />
+	</definition>
+	 
+	<definition name="rcl.ezl.serv00222.page"
+		extends="rcl.childlayout">
+		<put name="formId" value="feserv12" />
+		<put name="title" value="Eservice Login New" />
+		<put name="screenHeading" value="none" />
+		<put name="screenVersion" value="none" />
+		<put name="body" value="/pages/eservice/EcmENoticesLoginNew.jsp" />
+	</definition>
+
+	<definition name="rcl.ezl.serv00333.page"
+		extends="rcl.childlayout">
+		<put name="formId" value="userUim" />
+		<put name="title" value="Eservice UserProfile" />
+		<put name="screenHeading" value="none" />
+		<put name="screenVersion" value="none" />
+		<put name="body" value="/pages/eservice/EserviceUserProfile.jsp"/>
+	</definition>
+	
+	<definition name="rcl.ezl.sexn007usePassword.page"
+		extends="rcl.childlayout">
+		<put name="formId" value="userUim" />
+		<put name="title" value="Eservice User Password Reset" />
+		<put name="screenHeading" value="none" />
+		<put name="screenVersion" value="none" />
+		<put name="body" value="/pages/eservice/UpdatePassword.jsp"/>
+	</definition>
+
+	<definition name="rcl.ezl.serv00444.page"
+		extends="rcl.childlayout">
+		<put name="formId" value="feserv12" />
+		<put name="title" value="Eservice Web Booking" />
+		<put name="screenHeading" value="none" />
+		<put name="screenVersion" value="none" />
+		<put name="body"
+			value="/pages/eservice/EserviceWebBookingSearchAPI.jsp" />
+	</definition>
+	
+	
+
+
+<!-- login end -->
+    
+    <definition name="rcl.mainlayout" path="/pages/common/layout/rcllayout.jsp">
+            <put name="header" value="/pages/common/tiles/header.jsp" />
+            <put name="progId" value="Default Program ID..Please Override" />
+            <put name="formId" value="Default form bean ID..Please Override" />
+            <put name="title" value="Default Tile..Please Override" />
+            <put name="screenHeading" value="Default Screen heading..Please Override" />
+            <put name="screenVersion" value="Default Screen Version..Please Override" />
+            <put name="body" value="/pages/common/tiles/body.jsp" />
+            <put name="footer" value="/pages/common/tiles/footer.jsp" />
+    </definition>
+
+    <!-- Child page layout used as a root for other child page definitions -->
+    <definition name="rcl.childlayout" path="/pages/common/layout/rclchild.jsp">
+            <put name="header" value="/pages/common/tiles/headerchild.jsp" />
+            <put name="progId" value="Default Program ID..Please Override" />
+            <put name="formId" value="Default form bean ID..Please Override" />
+            <put name="title" value="Default Tile..Please Override" />
+            <put name="screenHeading" value="Default Screen heading..Please Override" />
+            <put name="screenVersion" value="Default Screen Version..Please Override" />
+            <put name="body" value="/pages/common/tiles/body.jsp" />
+            <put name="footer" value="/pages/common/tiles/footerchild.jsp" />
+    </definition>
+
+	<definition name="rcl.ezl.serv025" extends="rcl.mainlayout">
+        <put name="progId" value="serv029" />
+        <put name="formId" value="feserv29" />
+        <put name="title" value="Manage Port Pair - Contract Party" />
+        <put name="screenHeading" value="Manage Port Pair - Contract Party" />
+        <put name="screenVersion" value="2.11" />
+        <put name="body" value="/pages/eservice/EserviceManagePortPairScn.jsp" />
+    </definition>
+
+	<definition name="rcl.ezl.serv025" extends="rcl.childlayout">
+        <put name="progId" value="serv029" />
+        <put name="formId" value="feserv29" />
+        <put name="title" value="Manage Port Pair - Contract Party" />
+        <put name="screenHeading" value="Manage Port Pair - Contract Party" />
+        <put name="screenVersion" value="2.11" />
+        <put name="body" value="/pages/eservice/EserviceManagePortPairScn.jsp" />
+    </definition>
+     
+    <!-- ========================================================== -->
+    <!-- Individual Screen definition starts here for EZL             -->
+    <!-- ========================================================== -->
+    <definition name="rcl.ezl.secm010t.page" extends="rcl.mainlayout">
+        <put name="progId" value="SECM010t" />
+        <put name="formId" value="fecm010t" />
+        <put name="title" value="ENotice Service Maintenance testing" />
+        <put name="screenHeading" value="ENotice Service Maintenance" />
+        <put name="screenVersion" value="2.10" />
+        <put name="body" value="/pages/eservice/EcmENoticeServiceMaintenanceTScn.jsp" />
+    </definition>
+    
+    <!-- added by sid Booking dtl -->
+    
+    <definition name="rcl.ezl.sexn001.page" extends="rcl.mainlayout">
+        <put name="progId" value="/sexn001" />
+        <put name="formId" value="feserv01" />
+        <put name="title" value="Web Booking New" />
+        <put name="screenHeading" value="Web Booking New" />
+        <put name="screenVersion" value="2.11" />
+        <put name="body" value="/pages/eservice/EserviceNewWebBookingNew.jsp" />
+    </definition>
+    
+    <!-- booking dtl end -->
+    
+    <definition name="rcl.ezl.serv001.page" extends="rcl.mainlayout">
+        <put name="progId" value="serv001" />
+        <put name="formId" value="feserv01" />
+        <put name="title" value="Web Booking" />
+        <put name="screenHeading" value="Web Booking" />
+        <put name="screenVersion" value="2.11" />
+        <put name="body" value="/pages/eservice/EserviceNewWebBooking.jsp" />
+    </definition>
+    <definition name="rcl.ezl.serv001.popup" extends="rcl.childlayout">
+        <put name="progId" value="serv001" />
+        <put name="formId" value="feserv01" />
+        <put name="title" value="Quatation Routing" />
+        <put name="screenHeading" value="Quatation Routing" />
+        <put name="screenVersion" value="2.10" />
+        <put name="body" value="/pages/eservice/EserviceQuatationRoutingPopup.jsp" />
+    </definition>
+    
+    <definition name="rcl.ezl.sexn003.popup" extends="rcl.childlayout">
+        <put name="progId" value="sexn003" />
+        <put name="formId" value="feserv01" />
+        <put name="title" value="Web Booking Acknowledgement" />
+        <put name="screenHeading" value="Web Booking Acknowledgement" />
+        <put name="screenVersion" value="2.10" />
+        <put name="body" value="/pages/eservice/EserviceAcknowledgementPopup.jsp" />
+    </definition>
+    
+    
+     <definition name="rcl.ezl.serch.popup" path="/pages/eservice/EserviceSearchResponse.jsp">
+        <put name="progId" value="sexn003" />
+        <put name="formId" value="feserv01" />
+        <put name="title" value="Web Booking Acknowledgement" />
+        <put name="screenHeading" value="Web Booking Acknowledgement" />
+        <put name="screenVersion" value="2.10" />
+         
+    </definition>
+
+<!--    sid web booking inquiery started  -->
+
+	<definition name="rcl.ezl.sexn002.page" extends="rcl.mainlayout">
+        <put name="progId" value="sexn002" />
+        <put name="formId" value="feserv03" />
+        <put name="title" value="Web Booking Inquiry" />
+        <put name="screenHeading" value="Web Booking Inquiry" />
+        <put name="screenVersion" value="2.10" />
+        <put name="body" value="/pages/eservice/EserviceInquiryWebBookingNew.jsp" />
+    </definition>
+		
+   <definition name="rcl.ezl.sexn002.booking.popup" extends="rcl.childlayout">
+        <put name="progId" value="sexn002" />
+        <put name="formId" value="feserv02" />
+        <put name="title" value="Booking Number Lookup" />
+        <put name="screenHeading" value="Booking Number Lookup" />
+        <put name="screenVersion" value="2.10" />
+        <put name="body" value="/pages/eservice/EserviceBookingNumberPopup.jsp" />
+    </definition>
+    
+    <definition name="rcl.ezl.sexn004.commodity.popup" extends="rcl.childlayout">
+        <put name="progId" value="sexn004" />
+        <put name="formId" value="feserv04" />
+        <put name="title" value="Commodity Lookup" />
+        <put name="screenHeading" value="Commodity Lookup" />
+        <put name="screenVersion" value="2.10" />
+        <put name="body" value="/pages/eservice/EserviceCommodityPopupNew.jsp" />
+    </definition>
+    
+<!--    sid web booking inquiery ended  -->
+
+    <definition name="rcl.ezl.serv002.page" extends="rcl.mainlayout">
+        <put name="progId" value="serv002" />
+        <put name="formId" value="feserv03" />
+        <put name="title" value="Web Booking Inquiry" />
+        <put name="screenHeading" value="Web Booking Inquiry" />
+        <put name="screenVersion" value="2.10" />
+        <put name="body" value="/pages/eservice/EserviceInquiryWebBooking.jsp" />
+    </definition>
+    <definition name="rcl.ezl.serv002.booking.popup" extends="rcl.childlayout">
+        <put name="progId" value="serv002" />
+        <put name="formId" value="feserv02" />
+        <put name="title" value="Booking Number Lookup" />
+        <put name="screenHeading" value="Booking Number Lookup" />
+        <put name="screenVersion" value="2.10" />
+        <put name="body" value="/pages/eservice/EserviceBookingNumberPopup.jsp" />
+    </definition>
+    <definition name="rcl.ezl.serv003.popup" extends="rcl.childlayout">
+        <put name="progId" value="serv003" />
+        <put name="formId" value="feserv01" />
+        <put name="title" value="Web Booking Acknowledgement" />
+        <put name="screenHeading" value="Web Booking Acknowledgement" />
+        <put name="screenVersion" value="2.10" />
+        <put name="body" value="/pages/eservice/EserviceAcknowledgementPopup.jsp" />
+    </definition>
+
+    <definition name="rcl.ezl.serv004.commodity.popup" extends="rcl.childlayout">
+        <put name="progId" value="serv004" />
+        <put name="formId" value="feserv04" />
+        <put name="title" value="Commodity Lookup" />
+        <put name="screenHeading" value="Commodity Lookup" />
+        <put name="screenVersion" value="2.10" />
+        <put name="body" value="/pages/eservice/EserviceCommodityPopup.jsp" />
+    </definition>
+
+    <!-- ################ YOSSAWAT Modified START ################## -->
+    <definition name="rcl.ezl.serv006.page" extends="rcl.mainlayout">
+        <put name="progId" value="serv006" />
+        <put name="formId" value="feserv06" />
+        <put name="title" value="eShipping Instruction" />
+        <put name="screenHeading" value="eShipping Instruction" />
+        <put name="screenVersion" value="2.11" />
+        <put name="body" value="/pages/eshipping/EshippingInstruction.jsp" />
+    </definition>
+    
+    <!-- sid open new eshipping page start-->
+    
+     <definition name="rcl.ezl.sexn006.page" extends="rcl.mainlayout">
+        <put name="progId" value="sexn006" />
+        <put name="formId" value="feserv06" />
+        <put name="title" value="eShipping Instruction" />
+        <put name="screenHeading" value="eShipping Instruction" />
+        <put name="screenVersion" value="2.11" />
+        <put name="body" value="/pages/eshipping/EshippingInstructionNew.jsp" />
+    </definition>
+     
+     
+     <definition name="rcl.ezl.sexn010.page" extends="rcl.mainlayout">
+        <put name="progId" value="sexn010" />
+        <put name="formId" value="feserv06" />
+        <put name="title" value="eShipping Instruction Inquery" />
+        <put name="screenHeading" value="eShipping Instruction Inquery" />
+        <put name="screenVersion" value="2.11" />
+        <put name="body" value="/pages/eservice/EshippinginquiryNew.jsp" />
+    </definition>
+    <!-- sid open new eshipping page end-->
+    
+    <definition name="rcl.ezl.serv006.popup" extends="rcl.childlayout">
+        <put name="progId" value="serv006" />
+        <put name="formId" value="feserv05" />
+        <put name="title" value="Marks &amp; Description" />
+        <put name="screenHeading" value="Marks &amp; Description" />
+        <put name="screenVersion" value="2.10" />
+        <put name="body" value="/pages/eshipping/EshippingCargoDescriptionPopup.jsp" />
+    </definition>
+
+    <definition name="rcl.ezl.serv006.acknowledgement.popup" extends="rcl.childlayout">
+        <put name="progId" value="serv006" />
+        <put name="formId" value="feserv06" />
+        <put name="title" value="e-Shipping Instruction Acknowledgement" />
+        <put name="screenHeading" value="e-Shipping Instruction Acknowledgement" />
+        <put name="screenVersion" value="2.10" />
+        <put name="body" value="/pages/eshipping/EshippingAcknowledgementPopup.jsp" />
+    </definition>
+
+    <definition name="rcl.ezl.serv006.popup.previewPDFReport" extends="rcl.childlayout">
+        <put name="progId" value="serv006" />
+        <put name="formId" value="feserv10" />
+        <put name="title" value="eSI BL Preview" />
+        <put name="screenHeading" value="eSI BL Preview" />
+        <put name="screenVersion" value="2.10" />
+        <put name="body" value="/pages/eshipping/EshippingInstructionPriPDFReportPopup.jsp" />
+        <put name="footer" value="/pages/common/tiles/footer.jsp" />
+    </definition>
+    <!-- ========================================================== -->
+    <!-- Individual Screen definition Ends here for EZL             -->
+    <!-- ========================================================== -->
+
+	<definition name="rcl.ezl.sexn007.page" extends="rcl.childlayout">
+        <put name="formId" value="feserv12" />
+        <put name="title" value="Eservice Registration" />
+        <put name="screenHeading" value="none" />
+        <put name="screenVersion" value="none" />
+        <put name="body" value="/pages/eservice/EserviceRegistrationNew.jsp" />
+    </definition>
+
+
+    <definition name="rcl.ezl.serv007.page" extends="rcl.childlayout">
+        <put name="formId" value="feserv12" />
+        <put name="title" value="Eservice Registration" />
+        <put name="screenHeading" value="none" />
+        <put name="screenVersion" value="none" />
+        <put name="body" value="/pages/eservice/EserviceRegistration.jsp" />
+    </definition>
+
+    <definition name="rcl.ezl.serv007.popup" extends="rcl.childlayout">
+        <put name="formId" value="feserv12" />
+        <put name="title" value="Registration Acknowledgement" />
+        <put name="screenHeading" value="Registration Acknowledgement" />
+        <put name="screenVersion" value="2.07" />
+        <put name="body" value="/pages/eservice/EserviceRegisterAcknowledgePopup.jsp" />
+    </definition>
+
+	
+    <definition name="rcl.ezl.sexn001Edit.page" extends="rcl.mainlayout">
+        <put name="progId" value="/sexn001" />
+        <put name="formId" value="feserv01" />
+        <put name="title" value="Web Booking Edit" />
+        <put name="screenHeading" value="Web Booking Edit" />
+        <put name="screenVersion" value="2.11" />
+        <put name="body" value="/pages/eservice/EserviceNewWebBookingEdit.jsp" />
+    </definition>
+	
+    <definition name="rcl.ezl.serv008.page" extends="rcl.childlayout">
+        <put name="progId" value="serv008" />
+        <put name="formId" value="feserv13" />
+        <put name="title" value="Eservice MRES" />
+        <put name="screenHeading" value="none" />
+        <put name="screenVersion" value="none" />
+        <put name="body" value="/pages/eservice/EserviceMRES.jsp" />
+    </definition>
+
+    <definition name="rcl.ezl.serv009.page" extends="rcl.childlayout">
+        <put name="progId" value="serv009" />
+        <put name="formId" value="userUim" />
+        <put name="title" value="Eservice Forget Password" />
+        <put name="screenHeading" value="none" />
+        <put name="screenVersion" value="none" />
+        <put name="body" value="/pages/eservice/EserviceForgetPasswordNew.jsp" />
+    </definition>
+
+    <definition name="rcl.ezl.serv010.popup.customer" extends="rcl.childlayout">
+        <put name="progId" value="serv010" />
+        <put name="formId" value="feserv07" />
+        <put name="title" value="Customer Lookup" />
+        <put name="screenHeading" value="Customer Lookup" />
+        <put name="screenVersion" value="2.10" />
+        <put name="body" value="/pages/eshipping/EshippingCustomerPopup.jsp" />
+    </definition>
+
+    <definition name="rcl.ezl.serv011.package.popup" extends="rcl.childlayout">
+        <put name="progId" value="serv011" />
+        <put name="formId" value="feserv09" />
+        <put name="title" value="Package Kind Lookup" />
+        <put name="screenHeading" value="Package Kind Lookup" />
+        <put name="screenVersion" value="2.10" />
+        <put name="body" value="/pages/eshipping/EshippingPackageKindPopup.jsp" />
+    </definition>
+    <definition name="rcl.ezl.serv012.booking.popup" extends="rcl.childlayout">
+        <put name="progId" value="serv012" />
+        <put name="formId" value="feserv15" />
+        <put name="title" value="Booking Number Lookup" />
+        <put name="screenHeading" value="Booking Number Lookup" />
+        <put name="screenVersion" value="2.10" />
+        <put name="body" value="/pages/eshipping/EshippingBookingNumberPopup.jsp" />
+    </definition>
+    <definition name="rcl.ezl.serv013.commodity.popup" extends="rcl.childlayout">
+        <put name="progId" value="serv013" />
+        <put name="formId" value="feserv11" />
+        <put name="title" value="Commodity Lookup" />
+        <put name="screenHeading" value="Commodity Lookup" />
+        <put name="screenVersion" value="2.10" />
+        <put name="body" value="/pages/eshipping/EshippingCommodityPopup.jsp" />
+    </definition>
+
+    <definition name="rcl.ezl.serv014.popup.customer" extends="rcl.childlayout">
+        <put name="progId" value="serv014" />
+        <put name="formId" value="feserv16" />
+        <put name="title" value="Customer Lookup" />
+        <put name="screenHeading" value="Customer Lookup" />
+        <put name="screenVersion" value="2.10" />
+        <put name="body" value="/pages/eservice/EserviceCustomerPopup.jsp" />
+    </definition>
+
+    <definition name="rcl.ezl.serv015.page" extends="rcl.mainlayout">
+        <put name="progId" value="serv015" />
+        <put name="formId" value="feserv17" />
+        <put name="title" value="Customer's Registration Requested" />
+        <put name="screenHeading" value="Customer's Registration Requested" />
+        <put name="screenVersion" value="2.10" />
+        <put name="body" value="/pages/eservice/EserviceCustRegistReq.jsp" />
+    </definition>
+
+    <definition name="rcl.ezl.serv016.popup.customerType" extends="rcl.childlayout">
+        <put name="progId" value="serv016" />
+        <put name="formId" value="feserv18" />
+        <put name="title" value="Customer Type Lookup" />
+        <put name="screenHeading" value="Customer Type Lookup" />
+        <put name="screenVersion" value="2.10" />
+        <put name="body" value="/pages/eservice/EserviceCustomerTypePopup.jsp" />
+    </definition>
+
+    <definition name="rcl.ezl.serv017.page" extends="rcl.childlayout">
+        <put name="progId" value="serv019" />
+        <put name="formId" value="feserv19" />
+        <put name="title" value="Reefer Details" />
+        <put name="screenHeading" value="Reefer Details" />
+        <put name="screenVersion" value="2.10" />
+        <put name="body" value="/pages/eservice/EserviceReferCommoditiesScn.jsp" />
+    </definition>
+
+    <definition name="rcl.ezl.serv018.page" extends="rcl.childlayout">
+        <put name="progId" value="serv020" />
+        <put name="formId" value="feserv20" />
+        <put name="title" value="Dangerous Goods Details" />
+        <put name="screenHeading" value="Dangerous Goods Details" />
+        <put name="screenVersion" value="2.10" />
+        <put name="body" value="/pages/eservice/EserviceDGCommoditiesScn.jsp" />
+    </definition>
+
+    <definition name="rcl.ezl.serv019.page" extends="rcl.childlayout">
+        <put name="progId" value="serv021" />
+        <put name="formId" value="feserv21" />
+        <put name="title" value="Out of Gauge Cargo Dimension" />
+        <put name="screenHeading" value="Out of Gauge Cargo Dimension" />
+        <put name="screenVersion" value="2.10" />
+        <put name="body" value="/pages/eservice/EserviceOOGCommoditiesScn.jsp" />
+    </definition>
+
+    <definition name="rcl.ezl.serv020.page" extends="rcl.childlayout">
+        <put name="progId" value="serv023" />
+        <put name="formId" value="feserv23" />
+        <put name="title" value="Document Upload/View" />
+        <put name="screenHeading" value="Document Upload/View" />
+        <put name="screenVersion" value="2.10" />
+        <put name="body" value="/pages/eservice/EserviceUploadScn.jsp" />
+    </definition>
+
+    <definition name="rcl.ezl.serv021.page" extends="rcl.mainlayout">
+        <put name="progId" value="serv025" />
+        <put name="formId" value="feserv25" />
+        <put name="title" value="Web Booking - Preview Uploaded Document" />
+        <put name="screenHeading" value="Web Booking - Preview Uploaded Document" />
+        <put name="screenVersion" value="2.10" />
+        <put name="body" value="/pages/eservice/EservicePreviewUploadedDocScn.jsp" />
+    </definition>
+
+    <definition name="rcl.ezl.serv018.portclass.popup" extends="rcl.childlayout">
+        <put name="progId" value="serv022" />
+        <put name="formId" value="feserv22" />
+        <put name="title" value="Port Class Lookup" />
+        <put name="screenHeading" value="Port Class Lookup" />
+        <put name="screenVersion" value="2.10" />
+        <put name="body" value="/pages/eservice/EservicePortClass.jsp" />
+    </definition>
+
+    <!--
+    <definition name="rcl.ezl.serv023.page" extends="rcl.mainlayout">
+        <put name="progId" value="serv026" />
+        <put name="formId" value="feserv26" />
+        <put name="title" value="Sailing Schedule" />
+        <put name="screenHeading" value="Sailing Schedule" />
+        <put name="screenVersion" value="2.07" />
+        <put name="body" value="/pages/eservice/EserviceProductCatalogueScn.jsp" />
+    </definition>
+    -->
+
+    <definition name="rcl.ezl.serv023.hualage.popup" extends="rcl.childlayout">
+        <put name="progId" value="serv027" />
+        <put name="formId" value="feserv27" />
+        <put name="title" value="Haulage Lookup" />
+        <put name="screenHeading" value="Haulage Lookup" />
+        <put name="screenVersion" value="2.11" />
+        <put name="body" value="/pages/eservice/EserviceSailingSchedulePopupScn.jsp" />
+    </definition>
+
+    <definition name="rcl.ezl.serv023.port.popup" extends="rcl.childlayout">
+        <put name="progId" value="serv027" />
+        <put name="formId" value="feserv27" />
+        <put name="title" value="Port Lookup" />
+        <put name="screenHeading" value="Port Lookup" />
+        <put name="screenVersion" value="2.11" />
+        <put name="body" value="/pages/eservice/EserviceSailingSchedulePopupScn.jsp" />
+    </definition>
+
+    <definition name="rcl.ezl.serv023.place.popup" extends="rcl.childlayout">
+        <put name="progId" value="serv027" />
+        <put name="formId" value="feserv27" />
+        <put name="title" value="Place Lookup" />
+        <put name="screenHeading" value="Place Lookup" />
+        <put name="screenVersion" value="2.11" />
+        <put name="body" value="/pages/eservice/EserviceSailingSchedulePopupScn.jsp" />
+    </definition>
+
+    <definition name="rcl.ezl.serv024.popup" extends="rcl.childlayout">
+        <put name="progId" value="serv028" />
+        <put name="formId" value="feserv28" />
+        <put name="title" value="Equipment Type Lookup" />
+        <put name="screenHeading" value="Equipment Type Lookup" />
+        <put name="screenVersion" value="2.10" />
+        <put name="body" value="/pages/eservice/EserviceEquipmentTypePopUpScn.jsp" />
+    </definition>
+ 
+    <definition name="rcl.ezl.serv025" extends="rcl.childlayout">
+        <put name="progId" value="serv029" />
+        <put name="formId" value="feserv29" />
+        <put name="title" value="Manage Port Pair - Contract Party" />
+        <put name="screenHeading" value="Manage Port Pair - Contract Party" />
+        <put name="screenVersion" value="2.11" />
+        <put name="body" value="/pages/eservice/EserviceManagePortPairScn.jsp" />
+    </definition>
+ 
+    <definition name="rcl.ezl.serv026" extends="rcl.childlayout">
+        <put name="progId" value="serv030" />
+        <put name="formId" value="feserv30" />
+        <put name="title" value="User Port Pair Lookup" />
+        <put name="screenHeading" value="User Port Pair Lookup" />
+        <put name="screenVersion" value="2.11" />
+        <put name="body" value="/pages/eservice/EserviceUserPortPairLookUpScn.jsp" />
+    </definition>
+
+    <definition name="rcl.ezl.secm002.page" extends="rcl.childlayout" >
+            <put name="progId" value="SECM002" />
+            <put name="formId" value="fecm002" />
+            <put name="title" value="FSC Lookup" />
+            <put name="screenHeading" value="FSC Lookup" />
+            <put name="screenVersion" value="2.10" />
+            <put name="body" value="/pages/ecm/EcmMasterLookupScn.jsp" />
+     </definition>
+     
+     <definition name="rcl.ezl.svgm001" extends="rcl.mainlayout">
+        <put name="progId" value="svgm001" />
+        <put name="formId" value="fevgm001" />
+        <put name="title" value="VGM Declaration" />
+        <put name="screenHeading" value="VGM Declaration" />
+        <put name="screenVersion" value="1.00" />
+        <put name="body" value="/pages/evgm/EvgmDeclarationScn.jsp" />
+    </definition>
+    
+    <definition name="rcl.ezl.svgm001.popup.previewPDFReport" extends="rcl.childlayout">
+        <put name="progId" value="svgm001" />
+        <put name="formId" value="fevgm002" />
+        <put name="title" value="EVGM Declaration Preview" />
+        <put name="screenHeading" value="EVGM Declaration Preview" />
+        <put name="screenVersion" value="1.00" />
+        <put name="body" value="/pages/evgm/EvgmDeclarationPDFReportPopup.jsp" />
+        <put name="footer" value="/pages/common/tiles/footer.jsp" />
+    </definition>
+	
+	<definition name="rcl.ezl.getRates.page"
+		extends="rcl.childlayout">
+		<put name="formId" value="rateInquiryUim" />
+		<put name="title" value="Eservice Sercer Setting Page" />
+		<put name="screenHeading" value="none" />
+		<put name="screenVersion" value="none" />
+		<put name="body" value="/pages/getRate/RateInquiry.jsp" />
+	</definition>
+	
+	 <definition name="rcl.ezl.rate.response" path="/pages/getRate/EserviceRateResponse.jsp">
+        <put name="progId" value="sexn003" />
+        <put name="formId" value="feserv12" />
+        <put name="title" value="Web Booking Acknowledgement" />
+        <put name="screenHeading" value="Web Booking Acknowledgement" />
+        <put name="screenVersion" value="2.10" />         
+    </definition>
+    
+    
+     <definition name="rcl.ezl.customerCode.response" path="/pages/getRate/EserviceCheckCustomerResponseAPI.jsp">
+        <put name="progId" value="sexn003" />
+        <put name="formId" value="rateInquiryUim" />
+        <put name="title" value="Web Booking Acknowledgement" />
+        <put name="screenHeading" value="Web Booking Acknowledgement" />
+        <put name="screenVersion" value="2.10" />         
+    </definition>
+    
+    <definition name="rcl.ezl.sexn333.page" extends="rcl.childlayout">
+        <put name="formId" value="feserv333" />
+        <put name="title" value="Ebooking Priority" />
+        <put name="screenHeading" value="none" />
+        <put name="screenVersion" value="none" />
+        <put name="body" value="/pages/eservice/EbookingPriority.jsp" />
+    </definition>
+	
+	<definition name="rcl.ezl.serv0031.page" extends="rcl.childlayout">
+        <put name="formId" value="feserv31" />
+        <put name="title" value="Eservice Internal User Registration" />
+        <put name="body" value="/pages/eservice/EserviceInternalUserRegistration.jsp" />
+    </definition>
+
+
+ 	<definition name="rcl.ezl.serv0031.userprofilepage" extends="rcl.childlayout">
+        <put name="formId" value="internaluserUim" />
+        <put name="title" value="Eservice Internal User Registration" />
+        <put name="body" value="/pages/eservice/EserviceInternalUserProfileRegistration.jsp" />
+    </definition>
+    
+     <definition name="rcl.ezl.serv009.admin.page" extends="rcl.childlayout">
+        <put name="progId" value="adminserv009" />
+        <put name="formId" value="userUim" />
+        <put name="title" value="Eservice Forget Password" />
+        <put name="screenHeading" value="none" />
+        <put name="screenVersion" value="none" />
+        <put name="body" value="/pages/eservice/EserviceAdminForgetPassword.jsp" />
+    </definition>
+    
+    
+	<definition name="rcl.ezl.admin.serv00666.page" extends="rcl.childlayout">
+        <put name="formId" value="internaluserUim" />
+        <put name="title" value="Eservice Forget Password" />
+        <put name="screenHeading" value="none" />
+        <put name="screenVersion" value="none" />
+        <put name="body" value="/pages/eservice/EserviceAdminForgetPassword.jsp" />
+    </definition>
+	
+	
+	<definition name="rcl.ezl.admin.bookingLog.page" extends="rcl.childlayout">
+        <put name="formId" value="adminBookingLogUim" />
+        <put name="title" value="Eservice Booking admi log" />
+        <put name="screenHeading" value="none" />
+        <put name="screenVersion" value="none" />
+        <put name="body" value="/pages/admin/adminBookingLog.jsp" />
+    </definition>
+
+
+</tiles-definitions>

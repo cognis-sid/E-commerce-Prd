@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE struts-config PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN" "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+<struts-config>
+    <!-- ========== Data Source Configuration =============================== -->
+    <data-sources />
+
+    <!-- ========== Form Bean Definitions ================================== -->
+    <form-beans>
+        <form-bean name="fedl001" type="com.rclgroup.dolphin.ezl.web.edl.actionform.EdlDischargeListOverviewUim"></form-bean>    
+        <form-bean name="fedl002" type="com.rclgroup.dolphin.ezl.web.edl.actionform.EdlDischargeListMaintenanceUim"></form-bean>        		
+        <form-bean name="fecm002" type="com.rclgroup.dolphin.ezl.web.ecm.actionform.EcmMasterLookupUim"></form-bean>
+        <form-bean name="fecm004" type="com.rclgroup.dolphin.ezl.web.ecm.actionform.EcmSaveSettingsUim"></form-bean>
+        <form-bean name="fecm001" type="com.rclgroup.dolphin.ezl.web.ecm.actionform.EcmErrorMessageUim"></form-bean>
+        <form-bean name="fell001" type="com.rclgroup.dolphin.ezl.web.ell.actionform.EllLoadListOverviewUim"></form-bean>
+        <form-bean name="fell002" type="com.rclgroup.dolphin.ezl.web.ell.actionform.EllLoadListMaintenanceUim"></form-bean>
+        <form-bean name="fedl011" type="com.rclgroup.dolphin.ezl.web.edl.actionform.EdlExcelDownloadUim" /> 
+        <form-bean name="fedl009" type="com.rclgroup.dolphin.ezl.web.edl.actionform.EdlExcelUploadUim" />        
+
+    </form-beans>
+    
+    <!-- ========== Global Exception Definitions ============================== -->
+    <global-exceptions>
+        <!--   <exception
+            handler="org.apache.struts.action.ExceptionHandler"
+            key="global.error.invalidlogin"
+            path="/login.jsp"
+            scope="request"
+            type="com.oreilly.struts.framework.exceptions.InvalidLoginException" />-->
+    </global-exceptions>
+
+    <!-- ========== Global Forward Definitions =============================== -->
+    <global-forwards>
+        <forward name="failure" path="/pages/common/error/error.jsp" redirect="false" contextRelative="false" />
+        <forward name="SYSTEM_ERROR" path="/pages/common/error/error.jsp" redirect="false" contextRelative="false" />
+    </global-forwards>
+    
+     <!-- ========== Action Mapping Definitions =============================== -->
+    <action-mappings>
+    
+        <!--EZL Entries Start -->
+        <action path="/secm002"
+                type="com.rclgroup.dolphin.ezl.web.ecm.action.EcmMasterLookupSvc" parameter="onload"
+                name="fecm002" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.secm002.page"></forward>
+                <forward name="failure" path="rcl.ezl.secm002.page"></forward>
+        </action>
+        <action path="/secm002search"
+                type="com.rclgroup.dolphin.ezl.web.ecm.action.EcmMasterLookupSvc" parameter="search"
+                name="fecm002" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.secm002.page"></forward>
+                <forward name="failure" path="rcl.ezl.secm002.page"></forward>
+        </action>
+        <action path="/secm004"
+            type="com.rclgroup.dolphin.ezl.web.ecm.action.EcmSaveSettingsSvc" parameter="onload"
+            name="fecm004" validate="false" scope="request">
+            <forward name="success" path="rcl.ezl.secm004.page"></forward>
+            <forward name="failure" path="rcl.ezl.secm004.page"></forward>
+        </action>
+        <action path="/secm004save"
+            type="com.rclgroup.dolphin.ezl.web.ecm.action.EcmSaveSettingsSvc" parameter="save"
+             name="fecm004" validate="false" scope="request">
+            <forward name="success" path="rcl.ezl.secm004.page"></forward>
+            <forward name="failure" path="rcl.ezl.secm004.page"></forward>
+        </action>
+        
+        <action path="/secm004back"
+                type="com.rclgroup.dolphin.ezl.web.ecm.action.EcmSaveSettingsSvc" parameter="back"
+                name="fecm004" validate="false" scope="request">
+                <forward name="success" path="/do/sedl001"></forward>
+                <forward name="success_load_list_overview" path="/do/sell001"></forward>
+                <forward name="success_discharge_list_maintenance" path="/do/sedl002"></forward>
+                <forward name="failure" path="/do/secm004"></forward>
+        </action>
+
+        <action path="/sedl001"
+                type="com.rclgroup.dolphin.ezl.web.edl.action.EdlDischargeListOverviewSvc" parameter="onload"
+                name="fedl001" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.sedl001.page"></forward>
+                <forward name="failure" path="rcl.ezl.sedl001.page"></forward>
+        </action>
+        
+        <action path="/sedl001search"
+                type="com.rclgroup.dolphin.ezl.web.edl.action.EdlDischargeListOverviewSvc" parameter="search"
+                name="fedl001" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.sedl001.page"></forward>
+                <forward name="failure" path="rcl.ezl.sedl001.page"></forward>
+        </action>
+        
+        <action path="/sedl002"
+                type="com.rclgroup.dolphin.ezl.web.edl.action.EdlDischargeListMaintenanceSvc" parameter="onload"
+                name="fedl002" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.sedl002.page"></forward>
+                <forward name="failure" path="rcl.ezl.sedl002.page"></forward>
+        </action>
+
+
+        <action path="/sedl002find"
+                type="com.rclgroup.dolphin.ezl.web.edl.action.EdlDischargeListMaintenanceSvc" parameter="find"
+                name="fedl002" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.sedl002.page"></forward>
+                <forward name="failure" path="rcl.ezl.sedl002.page"></forward>
+        </action>
+        <action path="/sedl002tab"
+                type="com.rclgroup.dolphin.ezl.web.edl.action.EdlDischargeListMaintenanceSvc" parameter="tab"
+                name="fedl002" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.sedl002.page"></forward>
+                <forward name="failure" path="rcl.ezl.sedl002.page"></forward>
+        </action>
+        <action path="/sedl002save"
+                type="com.rclgroup.dolphin.ezl.web.edl.action.EdlDischargeListMaintenanceSvc" parameter="save"
+                name="fedl002" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.sedl002.page"></forward>
+                <forward name="failure" path="rcl.ezl.sedl002.page"></forward>
+        </action>
+        <action path="/sedl002delete"
+                type="com.rclgroup.dolphin.ezl.web.edl.action.EdlDischargeListMaintenanceSvc" parameter="delete"
+                name="fedl002" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.sedl002.page"></forward>
+                <forward name="failure" path="rcl.ezl.sedl002.page"></forward>
+        </action>
+        <action path="/sedl002refresh"
+                type="com.rclgroup.dolphin.ezl.web.edl.action.EdlDischargeListMaintenanceSvc" parameter="onload"
+                name="fedl002" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.sedl002.page"></forward>
+                <forward name="failure" path="rcl.ezl.sedl002.page"></forward>
+        </action>
+        <action path="/sedl002back"
+                type="com.rclgroup.dolphin.ezl.web.edl.action.EdlDischargeListMaintenanceSvc" parameter="back"
+                name="fedl002" validate="false" scope="request">
+                <forward name="success" path="/do/sedl001"></forward>
+                <forward name="failure" path="rcl.ezl.sedl002.page"></forward>
+        </action>
+        <action path="/sedl002close"
+                type="com.rclgroup.dolphin.ezl.web.edl.action.EdlDischargeListMaintenanceSvc" parameter="close"
+                name="fedl002" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.sedl002.page"></forward>
+                <forward name="failure" path="rcl.ezl.sedl002.page"></forward>
+        </action>
+        <action path="/sedl002match"
+                type="com.rclgroup.dolphin.ezl.web.edl.action.EdlDischargeListMaintenanceSvc" parameter="match"
+                name="fedl002" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.sedl002.page"></forward>
+                <forward name="failure" path="rcl.ezl.sedl002.page"></forward>
+        </action>        
+        <action path="/secm001"
+                type="com.rclgroup.dolphin.ezl.web.ecm.action.EcmErrorMessageSvc" parameter="onload"
+                name="fecm001" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.secm001.page"></forward>
+                <forward name="failure" path="rcl.ezl.secm001.page"></forward>
+        </action>
+        
+        <action path="/sedl011" type="com.rclgroup.dolphin.ezl.web.edl.action.EdlExcelDownloadSvc" parameter="onload" name="fedl011" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.sedl011.page" /> 
+                <forward name="failure" path="rcl.ezl.sedl011.page" /> 
+        </action>
+        <action path="/sedl011download" type="com.rclgroup.dolphin.ezl.web.edl.action.EdlExcelDownloadSvc" parameter="download" name="fedl011" validate="false" scope="request">
+            <forward name="success" path="/DownloadServlet" /> 
+            <forward name="failure" path="rcl.ezl.sedl011.page" /> 
+        </action>
+        
+         <action path="/sell001"
+                type="com.rclgroup.dolphin.ezl.web.ell.action.EllLoadListOverviewSvc" parameter="onload"
+                name="fell001" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.sell001.page"></forward>
+                <forward name="failure" path="rcl.ezl.sell001.page"></forward>
+        </action>
+        
+        <action path="/sell001search"
+                type="com.rclgroup.dolphin.ezl.web.ell.action.EllLoadListOverviewSvc" parameter="search"
+                name="fell001" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.sell001.page"></forward>
+                <forward name="failure" path="rcl.ezl.sell001.page"></forward>
+        </action>
+        
+        <action path="/sedl009" type="com.rclgroup.dolphin.ezl.web.edl.action.EdlExcelUploadSvc" parameter="onload" name="fedl009" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.sedl009.page" /> 
+                <forward name="failure" path="rcl.ezl.sedl009.page" /> 
+         </action>
+        <action path="/sedl009upload" type="com.rclgroup.dolphin.ezl.web.edl.action.EdlExcelUploadSvc" parameter="upload" name="fedl009" validate="false" scope="request">
+                <forward name="success" path="rcl.ezl.sedl009.page" /> 
+                <forward name="failure" path="rcl.ezl.sedl009.page" /> 
+         </action>
+
+    </action-mappings>
+    
+    <!-- ========== Controller Configuration ================================ -->
+    <controller bufferSize="4096" contentType="text/html;charset=UTF-8" debug="1" locale="true" maxFileSize="250M" multipartClass="org.apache.struts.upload.CommonsMultipartRequestHandler" nocache="true" processorClass="org.apache.struts.action.RequestProcessor" inputForward="false" />
+
+    <!-- ========== Message Resources Definitions ============================ -->
+    <message-resources parameter="com.rclgroup.dolphin.ezl.resource.ApplicationResources"/>
+    
+    <!-- ========== Plug Ins Configuration ================================= -->
+    <plug-in className="org.apache.struts.tiles.TilesPlugin">
+        <set-property property="definitions-config" value="/WEB-INF/tiles-defs.xml" />
+    </plug-in>
+    
+</struts-config>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans.dtd"-->
+		  
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop" xmlns:tx="http://www.springframework.org/schema/tx" 
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.0.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd">
+
+    <!--<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/> 
+        <property name="url" value="jdbc:oracle:thin:@//10.0.3.36:1532/SGUDOL24.rclgroup.com"/>
+        <property name="username" value="JIRBUN1"/>
+        <property name="password" value="BunyaJ89"/>
+    </bean>-->
+    
+
+   <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+        <property name="jndiName" value="jdbc/vasconn"/>
+    </bean>
+    
+    <!-- ========================= BUSINESS OBJECT DEFINITIONS ========================= -->
+    <!-- Ioc to Create the DAO objects and set the datasource into that e.g. UserDAO-->
+    <!-- Common Module -->
+    <bean id="baseDao" abstract="true">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    
+     <bean id="baseDaoRcl" abstract="true">
+        <property name="dataSourceRcl" ref="dataSourceRcl"/>
+    </bean>
+    
+<!-- ######## START === ESERVICE === START ######## -->
+    <bean id="EserviceNewWebBookingDao" 
+        class="com.rclgroup.dolphin.rcl.web.eservice.dao.EserviceNewWebBookingDaoImpl" 
+        parent="baseDao"/>
+        
+    <bean id="EserviceInquiryWebBookingDao" 
+        class="com.rclgroup.dolphin.rcl.web.eservice.dao.EserviceInquiryWebBookingDaoImpl" 
+        parent="baseDao"/>
+   
+    <bean id="EserviceCommodityPopupDao" 
+        class="com.rclgroup.dolphin.rcl.web.eservice.dao.EserviceCommodityPopupDaoImpl" 
+        parent="baseDao"/>
+        
+    <bean id="EserviceRegistrationDao" 
+        class="com.rclgroup.dolphin.rcl.web.eservice.dao.EserviceRegistrationDaoImpl" 
+        parent="baseDao"/>  
+        
+    <bean id="EserviceMRESDao" 
+        class="com.rclgroup.dolphin.rcl.web.eservice.dao.EserviceMRESDaoImpl" 
+        parent="baseDao"/>  
+        
+    <bean id="EserviceForgetPasswordDao" 
+        class="com.rclgroup.dolphin.rcl.web.eservice.dao.EserviceForgetPasswordDaoImpl" 
+        parent="baseDao"/>  
+<!-- ######## END === ESERVICE === END ######## -->
+<!-- ######## START === ESHIPPING === START ######## -->
+    <bean id="EshippingInstructionDao" 
+    class="com.rclgroup.dolphin.rcl.web.eservice.dao.EshippingInstructionDaoImpl" 
+    parent="baseDao"/> 
+        
+    <bean id="commonDAO" class="com.niit.control.eut.dao.EutCommonDaoImpl" 
+        parent="baseDao"/>
+        
+    <bean id="EshippingInstructionPrintDao" class="com.rclgroup.dolphin.rcl.web.eservice.dao.EshippingInstructionPrintDaoImp" 
+        parent="baseDao"/>
+        
+    <bean id="EshippingCommodityPopupDao" 
+        class="com.rclgroup.dolphin.rcl.web.eservice.dao.EshippingCommodityPopupDaoImpl" 
+        parent="baseDao"/>
+        
+    <bean id="EserviceCustomerPopupDao" 
+    class="com.rclgroup.dolphin.rcl.web.eservice.dao.EserviceCustomerPopupDaoImpl" 
+    parent="baseDao"/>
+    
+    <bean id="EserviceCustRegistReqDao" 
+        class="com.rclgroup.dolphin.rcl.web.eservice.dao.EserviceCustRegistReqDaoImpl" 
+        parent="baseDao"/>
+        
+    <bean id="EserviceBookingNoPopupDao" 
+    class="com.rclgroup.dolphin.rcl.web.eservice.dao.EserviceBookingNoPopupDaoImpl" 
+    parent="baseDao"/>
+    
+    <bean id="EservicePackagePopupDao" 
+    class="com.rclgroup.dolphin.rcl.web.eservice.dao.EservicePackagePopupDaoImpl" 
+    parent="baseDao"/>
+    
+    <bean id="masterLookupDAO" 
+    class="com.rclgroup.dolphin.ezl.web.ecm.dao.EcmMasterLookupDaoImpl" 
+    parent="baseDao"/>
+    
+    <bean id="EservicePortClassDao" 
+        class="com.rclgroup.dolphin.rcl.web.eservice.dao.EservicePortClassDaoImpl" 
+        parent="baseDao"/>
+    
+    <bean id="EservicePreviewUploadedDocDao" 
+        class="com.rclgroup.dolphin.rcl.web.eservice.dao.EservicePreviewUploadedDocDaoImpl" 
+        parent="baseDao"/>   
+    
+    <bean id="EserviceManagePortPairDao" 
+        class="com.rclgroup.dolphin.rcl.web.eservice.dao.EserviceManagePortPairDaoImpl" 
+        parent="baseDao"/>
+    
+    <!--<bean id="EserviceProductCatalogueDao" 
+        class="com.rclgroup.dolphin.rcl.web.eservice.dao.EserviceProductCatalogueDaoImpl" 
+        parent="baseDao"/>-->
+    
+    <bean id="EserviceSailingSchedulePopupDao" 
+        class="com.rclgroup.dolphin.rcl.web.eservice.dao.EserviceSailingSchedulePopupDaoImpl" 
+        parent="baseDao"/>
+    
+    <bean id="EserviceEquipmentTypePopUpDao" 
+        class="com.rclgroup.dolphin.rcl.web.eservice.dao.EserviceEquipmentTypePopUpDaoImpl" 
+        parent="baseDao"/>
+        
+    <bean id="EserviceUserPortPairLookUpDao" 
+        class="com.rclgroup.dolphin.rcl.web.eservice.dao.EserviceUserPortPairLookUpDaoImpl" 
+        parent="baseDao"/>
+    
+<!-- ######## END === ESHIPPING === END ######## -->        
+	    <!-- 
+    <bean id="txManager" class="org.springframework.transaction.jta.OC4JJtaTransactionManager" />    
+    < ========================= TRANSACTIONS MANAGEMENT =========================>
+    <tx:advice id="txAdvice" transaction-manager="txManager">
+        <tx:attributes>
+            <tx:method name="*" propagation="REQUIRED" rollback-for="Throwable"/>
+        </tx:attributes>
+    </tx:advice>
+    -->
+</beans>
+

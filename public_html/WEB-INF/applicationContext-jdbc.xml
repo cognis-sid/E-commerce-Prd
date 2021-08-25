@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Application context definition for RCL Web Application. -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+			http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+	<!-- ========================= RESOURCE DEFINITIONS ========================= -->
+	<!-- Simple local DataSource that works in any environment. This uses the 
+		JDBC DriverManager to obtain connections, and does NOT perform connection 
+		pooling. Connection pooling is essential to all real-world applications. 
+		This definition is good for testing in local machine, as it introduces no 
+		dependencies beyond the JDK, but DriverManagerDataSource is not intended 
+		for production usage. -->
+	<!-- home port:1521, company port:1522 -->
+	<!-- <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/> 
+		<property name="url" value="jdbc:oracle:thin:@//localhost:1521/XE"/> <property 
+		name="username" value="hr"/> <property name="password" value="hr"/> </bean> -->
+
+	<!-- JNDI DataSource for J2EE environments -->
+	<!-- <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean"> 
+		<property name="jndiName" value="java:comp/env/jdbc/RCLJNDI"/> </bean> <bean 
+		id="dataSourceTsi" class="org.springframework.jndi.JndiObjectFactoryBean"> 
+		<property name="jndiName" value="java:comp/env/jdbc/vasconn"/> </bean> -->
+
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<property name="host" value="172.30.1.67" />
+		<property name="username" value="rclvas" />
+		<property name="password" value="rclvas" />
+		<property name="javaMailProperties">
+			<props>
+				<prop key="mail.smtp.auth">true</prop>
+				<prop key="mail.smtp.socketFactory.port">25</prop>
+				<prop key="mail.smtp.socketFactory.class">javax.net.ssl.SSLSocketFactory</prop>
+				<prop key="mail.smtp.port">25</prop>
+			</props>
+		</property>
+	</bean>
+
+   <bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+      <property name="velocityProperties">
+         <value>
+          resource.loader=class
+          class.resource.loader.class=org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+         </value>
+      </property>
+   </bean>
+   
+	<bean id="mailMail" class="com.rclgroup.dolphin.ezl.email.EZLMail">
+		<property name="mailSender" ref="mailSender" />
+		<property name="adminEmail" value="eservice@rclgroup.com"></property>
+		<property name="javaMailSender" ref="mailSender" />
+		<property name="velocityEngine" ref="velocityEngine"/>
+	</bean>
+
+ 	<bean id="ftpConfig" class="com.rclgroup.dolphin.rcl.web.eservice.vo.FtpConfig">
+		<property name="ip" value="10.24.230.91" />
+		<property name="userId" value="COGSOL2"></property>
+		<property name="password" value="64myV8CJcyRc" />
+		<property name="bookingIn" value="ECommerce/Booking/IN/"/>
+		<property name="bookingIn_Bkup" value="ECommerce/Booking/IN_BKUP/"/>
+		<property name="bookingOut" value="ECommerce/Booking/OUT/"/>
+		<property name="outBkup" value="/ECommerce/Booking/OUT_BKUP/"/>
+		<property name="shiipingIn" value="ECommerce/BL/IN/"/>
+		<property name="shiipingIn_Bkup" value="ECommerce/BL/IN_BKUP/"/>
+		<property name="shiipingOut" value="ECommerce/BL/OUT/"/>	
+		<property name="outBkupSI" value="/ECommerce/BL/OUT_BKUP/"/>
+		<property name="fileuploadlocation" value="/ApplTop/ESV/ATTACHMENT"/>
+		<property name="urlForSeach" value="http://zebra-ce9.rclgroup.com/RWSWebApp/rclws/productcatalog/getproductcatalog"/>
+	</bean>
+	
+</beans>

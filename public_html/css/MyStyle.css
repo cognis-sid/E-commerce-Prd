@@ -1,0 +1,117 @@
+FONT.Names_01
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 10pt;
+    COLOR: #0000ff;
+    FONT-FAMILY: 'Microsoft Sans Serif'
+}
+FONT.ALink_01
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 8pt;
+    COLOR: #0000ff;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    TEXT-ALIGN: left
+}
+FONT.Names_Ctr_01
+{
+    FONT-SIZE: 9pt;
+    COLOR: #00ff00;
+    FONT-FAMILY: Verdana;
+    TEXT-ALIGN: center
+}
+FONT.Year_01
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 9pt;
+    COLOR: #a52a2a;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    FONT-VARIANT: small-caps
+}
+FONT.Country_01
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 16pt;
+    TEXT-TRANSFORM: uppercase;
+    COLOR: #b22222;
+    FONT-FAMILY: 'Arial Narrow';
+    FONT-VARIANT: small-caps
+}
+FONT.Sty2
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 9pt;
+    COLOR: #333366;
+    FONT-FAMILY: 'Microsoft Sans Serif'
+}
+FONT.Sty1
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 9pt;
+    COLOR: #4f56ab;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    TEXT-ALIGN: left
+}
+FONT.Sty3
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 8pt;
+    COLOR: #000000;
+    FONT-FAMILY: Verdana
+}
+FONT.StySmall_01
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 7pt;
+    COLOR: #336699;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    TEXT-ALIGN: left
+}
+FONT.POLPOD_01
+{
+    FONT-SIZE: 9pt;
+    COLOR: #336699;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    FONT-VARIANT: small-caps
+}
+FONT.StySmall_01B
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 7pt;
+    COLOR: #0000ff;
+    FONT-FAMILY: 'Microsoft Sans Serif'
+}
+FONT.StySmall_01W
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 8pt;
+    COLOR: #ffffff;
+    FONT-FAMILY: 'Microsoft Sans Serif'
+}
+FONT.StySmall_01Y
+{
+    FONT-SIZE: 9pt;
+    COLOR: #ffd569;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    FONT-VARIANT: small-caps
+}
+FONT.Sty1_R
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 9pt;
+    COLOR: #ff0000;
+    FONT-FAMILY: 'Microsoft Sans Serif'
+}
+FONT.Sty4
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 8pt;
+    COLOR: navy;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    FONT-VARIANT: small-caps
+}
+FONT.StySmall_01_R
+{
+    FONT-SIZE: 7pt;
+    COLOR: #ff0000
+}

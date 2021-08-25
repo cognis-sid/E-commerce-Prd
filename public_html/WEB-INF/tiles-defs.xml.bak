@@ -1,0 +1,126 @@
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration//EN"
+       "http://jakarta.apache.org/struts/dtds/tiles-config_1_1.dtd">
+
+<!-- Definitions for Tiles documentation   -->
+<tiles-definitions>
+
+    <!-- ========================================================== -->
+    <!-- Master definition                                          -->
+    <!-- ========================================================== -->
+
+    <!-- Main page layout used as a root for other page definitions -->
+    <definition name="rcl.mainlayout" path="/pages/common/layout/rcllayout.jsp">
+            <put name="header" value="/pages/common/tiles/header.jsp" />
+            <put name="progId" value="Default Program ID..Please Override" />
+            <put name="formId" value="Default form bean ID..Please Override" />
+            <put name="title" value="Default Tile..Please Override" />
+            <put name="screenHeading" value="Default Screen heading..Please Override" />
+            <put name="screenVersion" value="Default Screen Version..Please Override" />
+            <put name="body" value="/pages/common/tiles/body.jsp" />
+            <put name="footer" value="/pages/common/tiles/footer.jsp" />
+    </definition>
+
+    <!-- Child page layout used as a root for other child page definitions -->
+    <definition name="rcl.childlayout" path="/pages/common/layout/rclchild.jsp">
+            <put name="header" value="/pages/common/tiles/headerchild.jsp" />
+            <put name="progId" value="Default Program ID..Please Override" />
+            <put name="formId" value="Default form bean ID..Please Override" />
+            <put name="title" value="Default Tile..Please Override" />
+            <put name="screenHeading" value="Default Screen heading..Please Override" />
+            <put name="screenVersion" value="Default Screen Version..Please Override" />
+            <put name="body" value="/pages/common/tiles/body.jsp" />
+            <put name="footer" value="/pages/common/tiles/footerchild.jsp" />
+    </definition>
+
+
+    <definition name="rcl.home.page" path="/pages/Welcome.jsp" >
+    </definition>
+
+
+    <!-- ========================================================== -->
+    <!-- Individual Screen definition starts here for EZL             -->
+    <!-- ========================================================== -->
+    
+     <definition name="rcl.ezl.secm002.page" path="/pages/ecm/EcmMasterLookupScn.jsp" >
+            <put name="progId" value="SECM002" />
+            <put name="formId" value="fecm002" />
+            <put name="title" value="Master Lookup" />
+            <put name="screenHeading" value="Master Lookup" />
+            <put name="screenVersion" value="v0.19" />
+            <put name="body" value="/pages/ecm/EcmMasterLookupScn.jsp" />
+             
+     </definition>
+   
+    <definition name="rcl.ezl.secm004.page" extends="rcl.mainlayout">
+        <put name="progId" value="SECM004" />
+        <put name="formId" value="fecm004" />
+        <put name="title" value="Save Settings" />
+        <put name="screenHeading" value="Save Settings" />
+        <put name="screenVersion" value="v0.19" />
+        <put name="body" value="/pages/ecm/EcmSaveSettingsScn.jsp" />
+    </definition>
+         
+     <definition name="rcl.ezl.sedl001.page"  extends="rcl.mainlayout">
+            <put name="progId" value="SEDL001" />
+            <put name="formId" value="fedl001" />
+            <put name="title" value="Discharge List Overview" />
+            <put name="screenHeading" value="Discharge List Overview" />
+            <put name="screenVersion" value="v0.01" />
+            <put name="body" value="/pages/edl/EdlDischargeListOverviewScn.jsp" />
+    </definition>
+    
+    
+    <definition name="rcl.ezl.sedl002.page" extends="rcl.mainlayout">
+        <put name="progId" value="SEDL002" />
+        <put name="formId" value="fedl002" />
+        <put name="title" value="Create/Modify Booking" />
+        <put name="screenHeading" value="Discharge List Maintenance" />
+        <put name="screenVersion" value="v0.19" />
+        <put name="body" value="/pages/edl/EdlDischargeListMaintenanceScn.jsp" />
+    </definition>
+
+    <definition name="rcl.ezl.secm001.page" extends="rcl.childlayout" >
+            <put name="progId" value="SECM001" />
+            <put name="formId" value="fecm001" />
+            <put name="title" value="Error Messages" />
+            <put name="screenHeading" value="Error Messages" />
+            <put name="screenVersion" value="v0.19" />
+            <put name="body" value="/pages/ecm/EcmErrorMessageScn.jsp" />
+    </definition>	
+    
+    <definition name="rcl.ezl.sedl011.page" extends="rcl.childlayout">
+            <put name="progId" value="EDL011" /> 
+            <put name="formId" value="fedl011" /> 
+            <put name="title" value="Excel Download" /> 
+            <put name="screenHeading" value="Excel Download" /> 
+            <put name="screenVersion" value="v0.19" /> 
+            <put name="body" value="/pages/edl/EdlExcelDownloadScn.jsp" /> 
+    </definition>
+    
+    <definition name="rcl.ezl.sedl009.page" extends="rcl.childlayout">
+            <put name="progId" value="EDL009" /> 
+            <put name="formId" value="fedl009" /> 
+            <put name="title" value="Excel Upload" /> 
+            <put name="screenHeading" value="Excel Upload" /> 
+            <put name="screenVersion" value="v0.19" /> 
+            <put name="body" value="/pages/edl/EdlExcelUploadScn.jsp" /> 
+     </definition>
+    
+     <definition name="rcl.ezl.sell001.page"  extends="rcl.mainlayout">
+            <put name="progId" value="SELL001" />
+            <put name="formId" value="fell001" />
+            <put name="title" value="Load List Overview" />
+            <put name="screenHeading" value="Load List Overview" />
+            <put name="screenVersion" value="v0.01" />
+            <put name="body" value="/pages/ell/EllLoadListOverviewScn.jsp" />
+    </definition>
+    
+
+    
+    <!-- ========================================================== -->
+    <!-- Individual Screen definition Ends here for EZL             -->
+    <!-- ========================================================== -->
+    
+        
+</tiles-definitions>

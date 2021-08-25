@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8">
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>RCL ER-Rate</title>
+      <link rel="stylesheet" href="${bootstrap}">
+       
+   </head>
+   
+   
+    <style>
+      .layout{
+      margin-left: 5px;
+      }
+      .borderless th {
+      border: none;
+    }
+	html {
+	font-family: "Calibri (body)";
+    height: 100%;
+    width:100%;
+}
+
+body {
+  margin: 0;
+  font-family: "Calibri (Body)";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+  height: auto;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+
+.order-summary {
+   
+    margin-top: 0.85rem;
+    padding: 5px;
+}
+
+.card {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+}
+
+.mt-3, .my-3 {
+    margin-top: 1rem !important;
+}
+
+ 
+ .table th, .table td {
+    
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+			.table {
+     
+    	margin-bottom: 0px;  
+}
+ 
+   </style>
+   
+   <body>
+      <div class="layout">
+      
+         <div class=".topright">
+            <h3 class="">Regional Container Lines</h3>
+            <img src="${rcl_logo}" alt="mastercard" style="float:right;margin-top:-50px;margin-right:10px;"/>
+         </div>
+         <br>
+         
+         <div>
+            <strong>Quotation</h3> :${rateUIInput.quotationRef}</strong>
+            <strong  style="margin-left:60px;">Validity : ${rateUIInput.currentDate} - ${rateUIInput.loadingTo}</strong>
+         </div>
+         
+	
+	<div class="card2 show js-result-div">
+                           
+                          <hr />
+                          <div class="order-summary">
+                             
+                            <div class="row">
+                              <div class="col-12">
+                                <div class="card">
+                                  <div class="card-body">
+                                    <div class="row" style="line-height: 1.9;margin-left:2px">
+                                      <div class="col-md-4">
+                                        <div class="d-flex">
+                                          <strong>From</strong> <span class="text-muted">(Port Of
+                                            Loading)</span>
+                                        </div>
+                                        <div class="d-flex">${rateUIInput.portOfLoading}</div>
+                                        <div class="d-flex">
+                                          <strong>Shipment Term</strong>
+                                        </div>
+                                        <div class="d-flex">CYCY</div>
+                                        <div class="d-flex">
+                                          <strong>Expected Loading Period</strong>
+                                        </div>
+                                        <div class="d-flex">${rateUIInput.loadingFrom} - ${rateUIInput.loadingTo}</div>
+                                      </div>
+                                      <div class="col-md-3">
+                                        <div class="d-flex">
+                                          <strong>To</strong> <span class="text-muted">(Port Of
+                                            Discharge)</span>
+                                        </div>
+                                        <div class="d-flex">${rateUIInput.portOfDeparture}</div>
+                                        <div class="d-flex">
+                                          <strong>Cargo Type</strong>
+                                        </div>
+                                        <div class="d-flex">${rateUIInput.cargoType}</div>
+                                      </div>
+                                      <div class="col-md-3">
+                                      <div class="d-flex">   <strong>&nbsp;</strong></div>
+                                      <div class="d-flex">   <strong>&nbsp;</strong></div>
+                                        <div class="d-flex">
+                                          <strong>Expected Volume</strong>
+                                        </div>
+                                        <div class="d-flex">${rateUIInput.expectedVolume}</div>
+                                      </div>
+                                      <div class="col-md-1">
+                                      <div class="d-flex">   <strong>&nbsp;</strong></div>
+                                      <div class="d-flex">   <strong>&nbsp;</strong></div>
+                                        <div class="d-flex">
+                                          <strong>Commodity</strong>
+                                        </div>
+                                        <div class="d-flex">
+                                        	${rateUIInput.commodity}</div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="row mt-3">
+                              <div class="col-12">
+                                <div class="card">
+                                  <div class="card-body">
+                                    <div class="row" >
+                                      
+                                      <div class="col-md-1">
+									  <div style="left:20px;font-weight: 800;top:10px;;position:absolute;width:300px;">
+                                         	
+                                         	 Total Price (Freight + Surcharge)
+                                        
+                                      </div>
+                                      </div>
+									  <div class="col-md-11" style="float:right;margin-top:5px;">  
+									  
+									  
+										 ${payload}
+									  </div>
+														  
+									  
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row mt-3">
+                              <div class="col-12">
+                                <div class="card" >
+                                  <div class="card-body" style="margin-left:25px;">
+                                     ${rateUIInput.freeDays}
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                             
+							
+                          </div>
+	
+	</div>
+
+
+   </body>
+</html>

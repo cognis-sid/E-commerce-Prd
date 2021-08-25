@@ -1,0 +1,23 @@
+/* CSS Document */
+html, body { background-color: #fff; margin: 0 0 0 0; font-family: Arial; font-size: 12px; } 
+
+#headerbox { background: #FFF; height: 100%; width: 100%; text-align: center; }
+
+#headermain { min-width: 910px; margin-left: auto; margin-right: auto; text-align: center; width: 910px; height: 69px; }
+
+.rcl_countries { 
+    position: absolute; 
+    top: 27px; 
+    right: 30px; 
+    width: 190px; 
+    height: 20px; 
+    z-index: 1000; 
+    cursor: pointer; 
+    display: block;
+    background-image: url('#'); }
+.rcl_countries ul { display: none; visibility: collapse; margin: 15px 0 0 0; padding: 0px; background-color: White; text-align: left; }
+.rcl_countries:hover ul { display: block; visibility: visible; }
+.rcl_countries ul li { margin: 0px; padding: 4px 4px 4px 17px; border: 1px solid #E2E2E2; list-style-type: none; }
+.rcl_countries ul li:hover { background-color: #F0F0F0; }
+.rcl_countries ul li a { color: #666666; text-decoration: none; }
+.rcl_countries ul li:hover a { color: #0086CF; }

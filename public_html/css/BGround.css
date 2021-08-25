@@ -1,0 +1,1538 @@
+TABLE.Main_01
+{
+    BORDER-RIGHT: #b0e0e6 thin solid;
+    BACKGROUND-POSITION: center top;
+    BORDER-TOP: #b0e0e6 thin;
+    BACKGROUND-IMAGE: url(../Images/BGrounds/Top_Grey_10.jpg);
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 750px;
+    BORDER-BOTTOM: #b0e0e6 thin solid;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 440px;
+    BACKGROUND-COLOR: #ffffff;
+    TEXT-ALIGN: justify
+}
+BODY.Main_01_backup
+{
+    FLOAT: right;
+    WIDTH: 90pc;
+    POSITION: static;
+    TOP: 0pt;
+    HEIGHT: 100pc;
+    BACKGROUND-COLOR: #000000;
+    TEXT-ALIGN: center
+}
+
+BODY.Main_01
+{
+    WIDTH: 90pc;
+    COLOR: #0000ff;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    HEIGHT: 100pc;
+    BACKGROUND-COLOR: #000000;
+    TEXT-ALIGN: center;
+    FONT-VARIANT: small-caps
+}
+
+BODY.Main_02
+{
+    WIDTH: 90pc;
+    COLOR: #0000ff;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    HEIGHT: 100pc;
+    BACKGROUND-COLOR: #000000;
+    TEXT-ALIGN: center;
+    FONT-VARIANT: small-caps
+}
+TABLE.Main_02
+{
+    BORDER-RIGHT: #b0e0e6 thin;
+    BORDER-TOP: #b0e0e6 thin;
+    BORDER-LEFT: #b0e0e6 thin;
+    WIDTH: 300px;
+    BORDER-BOTTOM: #b0e0e6 thin;
+    POSITION: relative;
+    BACKGROUND-COLOR: transparent
+}
+TABLE.Main_03
+{
+    BORDER-RIGHT: #b0e0e6 thin solid;
+    PADDING-RIGHT: 1px;
+    BORDER-TOP: #b0e0e6 thin solid;
+    PADDING-LEFT: 1px;
+    PADDING-BOTTOM: 1px;
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 740px;
+    PADDING-TOP: 0px;
+    BORDER-BOTTOM: #b0e0e6 thin solid;
+    HEIGHT: 420px;
+    BACKGROUND-COLOR: #ffffff;
+    TEXT-ALIGN: left
+}
+TABLE.VslSch_01
+{
+    BORDER-RIGHT: #b0e0e6 thin solid;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin solid;
+    BACKGROUND-IMAGE: url(../Images/Headers/VslSch_06.jpg);
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 750px;
+    BORDER-BOTTOM: #b0e0e6 thin solid;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 445px;
+    BACKGROUND-COLOR: #f5f5fa;
+    TEXT-ALIGN: left
+}
+TABLE.Reflect_01
+{
+    BORDER-RIGHT: #b0e0e6 thin solid;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin solid;
+    BACKGROUND-IMAGE: url(../Images/Headers/Reflect_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 750px;
+    BORDER-BOTTOM: #b0e0e6 thin solid;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 445px;
+    BACKGROUND-COLOR: #f5f5fa;
+    TEXT-ALIGN: left
+}
+TABLE.TimeLine_01
+{
+    BORDER-RIGHT: #b0e0e6 thin solid;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin solid;
+    BACKGROUND-IMAGE: url(../Images/Headers/TimeLine_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 750px;
+    BORDER-BOTTOM: #b0e0e6 thin solid;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 445px;
+    BACKGROUND-COLOR: #f5f5fa;
+    TEXT-ALIGN: left
+}
+TABLE.VslSch_LT_01
+{
+    BORDER-RIGHT: #b0e0e6 thin solid;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin solid;
+    BACKGROUND-IMAGE: url(../Images/Headers/VslSch_LT_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 750px;
+    BORDER-BOTTOM: #b0e0e6 thin solid;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 445px;
+    BACKGROUND-COLOR: #f5f5fa;
+    TEXT-ALIGN: left
+}
+TABLE.CrgTrack_01
+{
+    BORDER-RIGHT: #b0e0e6 thin solid;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin solid;
+    BACKGROUND-IMAGE: url(../Images/Headers/CrgTrack_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 750px;
+    BORDER-BOTTOM: #b0e0e6 thin solid;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 445px;
+    BACKGROUND-COLOR: #f5f5fa;
+    TEXT-ALIGN: left
+}
+TABLE.RateEnq_01
+{
+    BORDER-RIGHT: #b0e0e6 thin solid;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin solid;
+    BACKGROUND-IMAGE: url(../Images/Headers/RateEnq_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 750px;
+    BORDER-BOTTOM: #b0e0e6 thin solid;
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-COLOR: #f5f5fa;
+    TEXT-ALIGN: left
+}
+TABLE.BhumLogin_01
+{
+    BORDER-RIGHT: #b0e0e6 thin solid;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin solid;
+    BACKGROUND-IMAGE: url(../Images/Headers/BhumLogin_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 750px;
+    BORDER-BOTTOM: #b0e0e6 thin solid;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 445px;
+    BACKGROUND-COLOR: #f5f5fa;
+    TEXT-ALIGN: left
+}
+TABLE.BhumLogin_03
+{
+    BORDER-RIGHT: #b0e0e6 thin solid;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin solid;
+    BACKGROUND-IMAGE: url(../Images/Headers/BhumLogin_03.jpg);
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 750px;
+    BORDER-BOTTOM: #b0e0e6 thin solid;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 445px;
+    BACKGROUND-COLOR: #f5f5fa;
+    TEXT-ALIGN: left
+}
+TABLE.NewBkg_01
+{
+    BORDER-RIGHT: #b0e0e6 thin solid;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin solid;
+    BACKGROUND-IMAGE: url(../Images/Headers/NewBkg_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 750px;
+    BORDER-BOTTOM: #b0e0e6 thin solid;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 445px;
+    BACKGROUND-COLOR: #f5f5fa;
+    TEXT-ALIGN: left
+}
+TABLE.BkgSED_01
+{
+    BORDER-RIGHT: #b0e0e6 thin solid;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin solid;
+    BACKGROUND-IMAGE: url(../Images/Headers/BkgSED_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 750px;
+    BORDER-BOTTOM: #b0e0e6 thin solid;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 445px;
+    BACKGROUND-COLOR: #f5f5fa;
+    TEXT-ALIGN: left
+}
+TABLE.BLDraft_01
+{
+    BORDER-RIGHT: #b0e0e6 thin solid;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin solid;
+    BACKGROUND-IMAGE: url(../Images/Headers/BLDraft_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 750px;
+    BORDER-BOTTOM: #b0e0e6 thin solid;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 445px;
+    BACKGROUND-COLOR: #f5f5fa;
+    TEXT-ALIGN: left
+}
+TABLE.BLCopy_01
+{
+    BORDER-RIGHT: #b0e0e6 thin solid;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin solid;
+    BACKGROUND-IMAGE: url(../Images/Headers/BLCopy_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 750px;
+    BORDER-BOTTOM: #b0e0e6 thin solid;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 445px;
+    BACKGROUND-COLOR: #f5f5fa;
+    TEXT-ALIGN: left
+}
+TABLE.ExchgRate_01
+{
+    BORDER-RIGHT: #b0e0e6 thin solid;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin solid;
+    BACKGROUND-IMAGE: url(../Images/Headers/ExchgRate_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 750px;
+    BORDER-BOTTOM: #b0e0e6 thin solid;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 445px;
+    BACKGROUND-COLOR: #f5f5fa;
+    TEXT-ALIGN: left
+}
+TABLE.CrgLftRpt_01
+{
+    BORDER-RIGHT: #b0e0e6 thin solid;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin solid;
+    BACKGROUND-IMAGE: url(../Images/Headers/CrgLftRpt_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 750px;
+    BORDER-BOTTOM: #b0e0e6 thin solid;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 445px;
+    BACKGROUND-COLOR: #f5f5fa;
+    TEXT-ALIGN: left
+}
+TABLE.BhumReg_01
+{
+    BORDER-RIGHT: #b0e0e6 thin solid;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin solid;
+    BACKGROUND-IMAGE: url(../Images/Headers/BhumReg_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 750px;
+    BORDER-BOTTOM: #b0e0e6 thin solid;
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-COLOR: #f5f5fa;
+    TEXT-ALIGN: left
+}
+TABLE.ChgPwd_01
+{
+    BORDER-RIGHT: #b0e0e6 thin solid;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin solid;
+    BACKGROUND-IMAGE: url(../Images/Headers/ChgPwd_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 750px;
+    BORDER-BOTTOM: #b0e0e6 thin solid;
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-COLOR: #f5f5fa;
+    TEXT-ALIGN: left
+}
+TABLE.Error_01
+{
+    BORDER-RIGHT: #b0e0e6 thin solid;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin solid;
+    BACKGROUND-IMAGE: url(../Images/Headers/Error_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 750px;
+    BORDER-BOTTOM: #b0e0e6 thin solid;
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-COLOR: #f5f5fa;
+    TEXT-ALIGN: left
+}
+TABLE.FrgPwd_01
+{
+    BORDER-RIGHT: #b0e0e6 thin solid;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin solid;
+    BACKGROUND-IMAGE: url(../Images/Headers/FrgPwd_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 750px;
+    BORDER-BOTTOM: #b0e0e6 thin solid;
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-COLOR: #f5f5fa;
+    TEXT-ALIGN: left
+}
+TABLE.EditProf_01
+{
+    BORDER-RIGHT: #b0e0e6 thin solid;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin solid;
+    BACKGROUND-IMAGE: url(../Images/Headers/EditProf_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 750px;
+    BORDER-BOTTOM: #b0e0e6 thin solid;
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-COLOR: #f5f5fa;
+    TEXT-ALIGN: left
+}
+TABLE.ThankYou_01
+{
+    BORDER-RIGHT: #b0e0e6 thin solid;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin solid;
+    BACKGROUND-IMAGE: url(../Images/Headers/ThankYou_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 750px;
+    BORDER-BOTTOM: #b0e0e6 thin solid;
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-COLOR: #f5f5fa;
+    TEXT-ALIGN: left
+}
+TABLE.Blank_01
+{
+    BORDER-RIGHT: #b0e0e6 thin solid;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin solid;
+    BACKGROUND-IMAGE: url(../Images/Headers/Blank_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 750px;
+    BORDER-BOTTOM: #b0e0e6 thin solid;
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-COLOR: #f5f5fa;
+    TEXT-ALIGN: left
+}
+TABLE.AboutUs_01
+{
+    BORDER-RIGHT: #b0e0e6 thin solid;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin solid;
+    BACKGROUND-IMAGE: url(../Images/Headers/AboutUs_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 750px;
+    BORDER-BOTTOM: #b0e0e6 thin solid;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 445px;
+    BACKGROUND-COLOR: #ffffff;
+    TEXT-ALIGN: left
+}
+TABLE.AboutUs_Left_01
+{
+    BORDER-RIGHT: #b0e0e6;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin;
+    BACKGROUND-IMAGE: url(../Images/headers/AboutUs_02.jpg);
+    BORDER-LEFT: aqua;
+    WIDTH: 150px;
+    BORDER-BOTTOM: #b0e0e6 thin;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 400px;
+    BACKGROUND-COLOR: #ffffff;
+    TEXT-ALIGN: left
+}
+TABLE.Overview_01
+{
+    BORDER-RIGHT: #b0e0e6 thin;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin;
+    PADDING-LEFT: 0pc;
+    BACKGROUND-IMAGE: url(../Images/Headers/Overview_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin outset;
+    WIDTH: 585px;
+    PADDING-TOP: 0pc;
+    BORDER-BOTTOM: #b0e0e6 thin;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 420px;
+    BACKGROUND-COLOR: #f3f9ff;
+    TEXT-ALIGN: left
+}
+TABLE.InsTrdg_01
+{
+    BORDER-RIGHT: #b0e0e6 thin;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin;
+    PADDING-LEFT: 0pc;
+    BACKGROUND-IMAGE: url(../Images/Headers/InsTrdg_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin outset;
+    WIDTH: 585px;
+    PADDING-TOP: 0pc;
+    BORDER-BOTTOM: #b0e0e6 thin;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 420px;
+    BACKGROUND-COLOR: #f3f9ff;
+    TEXT-ALIGN: left
+}
+TABLE.RiskMgt_01
+{
+    BORDER-RIGHT: #b0e0e6 thin;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin;
+    PADDING-LEFT: 0pc;
+    BACKGROUND-IMAGE: url(../Images/Headers/RiskMgt_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin outset;
+    WIDTH: 585px;
+    PADDING-TOP: 0pc;
+    BORDER-BOTTOM: #b0e0e6 thin;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 420px;
+    BACKGROUND-COLOR: #f3f9ff;
+    TEXT-ALIGN: left
+}
+TABLE.OurMission_01
+{
+    BORDER-RIGHT: #b0e0e6 thin;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin;
+    BACKGROUND-IMAGE: url(../Images/Headers/OurMission_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 585px;
+    BORDER-BOTTOM: #b0e0e6 thin;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 445px;
+    BACKGROUND-COLOR: #f3f9ff;
+    TEXT-ALIGN: left
+}
+TABLE.Management_01
+{
+    BORDER-RIGHT: #b0e0e6 thin;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin;
+    BACKGROUND-IMAGE: url(../Images/Headers/Management_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin outset;
+    WIDTH: 585px;
+    BORDER-BOTTOM: #b0e0e6 thin;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 445px;
+    BACKGROUND-COLOR: #ffffff;
+    TEXT-ALIGN: left
+}
+TABLE.Events_01
+{
+    BORDER-RIGHT: #b0e0e6 thin;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin;
+    BACKGROUND-IMAGE: url(../Images/Headers/Events_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin outset;
+    WIDTH: 585px;
+    BORDER-BOTTOM: #b0e0e6 thin;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 445px;
+    BACKGROUND-COLOR: #ffffff;
+    TEXT-ALIGN: left
+}
+TABLE.Investor_01
+{
+    BORDER-RIGHT: #b0e0e6 thin;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin;
+    BACKGROUND-IMAGE: url(../Images/Headers/FunCurFinPer_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin outset;
+    WIDTH: 580px;
+    BORDER-BOTTOM: #b0e0e6 thin;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 425px;
+    BACKGROUND-COLOR: #f3f9ff;
+    TEXT-ALIGN: left
+}
+TABLE.Investor_Left_01
+{
+    BORDER-RIGHT: #b0e0e6;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin;
+    BACKGROUND-IMAGE: url(../Images/Headers/Investor_02.jpg);
+    BORDER-LEFT: aqua;
+    WIDTH: 150px;
+    BORDER-BOTTOM: #b0e0e6 thin;
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-COLOR: #ffffff;
+    TEXT-ALIGN: left
+}
+TABLE.AnalystView_01
+{
+    BORDER-RIGHT: #b0e0e6 thin;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin;
+    BACKGROUND-IMAGE: url(../Images/Headers/AnalystView_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin outset;
+    WIDTH: 580px;
+    BORDER-BOTTOM: #b0e0e6 thin;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 445pt;
+    BACKGROUND-COLOR: #ffffff;
+    TEXT-ALIGN: left
+}
+TABLE.FinReports_01
+{
+    BORDER-RIGHT: #b0e0e6 thin;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin;
+    BACKGROUND-IMAGE: url(../Images/Headers/FinReports_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin outset;
+    WIDTH: 580px;
+    BORDER-BOTTOM: #b0e0e6 thin;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 445px;
+    TEXT-ALIGN: left;
+    BACKGROUND-COLOR: #f5f5fa;
+}
+TABLE.AnReports_01
+{
+    BORDER-RIGHT: #b0e0e6 thin;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin;
+    BACKGROUND-IMAGE: url(../Images/Headers/AnReports_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin outset;
+    WIDTH: 580px;
+    BORDER-BOTTOM: #b0e0e6 thin;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 445px;
+    BACKGROUND-COLOR: #f5f5fa;
+    TEXT-ALIGN: left
+}
+TABLE.Offices_01
+{
+    BORDER-RIGHT: #b0e0e6 thin;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin solid;
+    BACKGROUND-IMAGE: url(../Images/Headers/Offices_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 580px;
+    BORDER-BOTTOM: #b0e0e6 thin;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 445px;
+    BACKGROUND-COLOR: #ffffff;
+    TEXT-ALIGN: left
+}
+TABLE.RCLOffices_01
+{
+    BORDER-RIGHT: #b0e0e6 thin;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin solid;
+    BACKGROUND-IMAGE: url(../Images/Headers/RCLOffices_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 750px;
+    BORDER-BOTTOM: #b0e0e6 thin;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 445px;
+    BACKGROUND-COLOR: #ffffff;
+    TEXT-ALIGN: left
+}
+TABLE.EquSpec_01
+{
+    BORDER-RIGHT: #b0e0e6 thin solid;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin solid;
+    BACKGROUND-IMAGE: url(../Images/Headers/EquSpec_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 750px;
+    BORDER-BOTTOM: #b0e0e6 thin solid;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 445px;
+    BACKGROUND-COLOR: #ffffff;
+    TEXT-ALIGN: left
+}
+TABLE.VslDtls_01
+{
+    BORDER-RIGHT: #b0e0e6 thin solid;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin solid;
+    BACKGROUND-IMAGE: url(../Images/Headers/VslDtls_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 750px;
+    BORDER-BOTTOM: #b0e0e6 thin solid;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 445px;
+    BACKGROUND-COLOR: #ffffff;
+    TEXT-ALIGN: left
+}
+TABLE.SvcPtrn_01
+{
+    BORDER-RIGHT: #b0e0e6 thin solid;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin solid;
+    BACKGROUND-IMAGE: url(../Images/Headers/SvcPtrn_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 750px;
+    BORDER-BOTTOM: #b0e0e6 thin solid;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 445px;
+    BACKGROUND-COLOR: #f5f5fa;
+    TEXT-ALIGN: center
+}
+TABLE.PressRls_01
+{
+    BORDER-RIGHT: #b0e0e6 thin solid;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin solid;
+    BACKGROUND-IMAGE: url(../Images/Headers/PressRls_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 750px;
+    BORDER-BOTTOM: #b0e0e6 thin solid;
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-COLOR: #ffffff;
+    TEXT-ALIGN: left
+}
+TABLE.Press_01
+{
+    BORDER-RIGHT: #b0e0e6 thin;
+    PADDING-RIGHT: 2px;
+    BORDER-TOP: #b0e0e6 thin;
+    PADDING-LEFT: 2px;
+    BORDER-LEFT: #b0e0e6 thin;
+    WIDTH: 300px;
+    PADDING-TOP: 2px;
+    BORDER-BOTTOM: #b0e0e6 thin;
+    HEIGHT: 150px
+}
+TABLE.NewsArchive_01
+{
+    BORDER-RIGHT: #b0e0e6 thin;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin;
+    BACKGROUND-IMAGE: url(../Images/Headers/News_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin outset;
+    WIDTH: 585px;
+    BORDER-BOTTOM: #b0e0e6 thin;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 445px;
+    BACKGROUND-COLOR: #f3f9ff;
+    TEXT-ALIGN: left
+}
+TABLE.Bottom_00
+{
+    BORDER-TOP: silver thin ridge;
+    FONT-SIZE: 7pt;
+    TEXT-TRANSFORM: none;
+    WIDTH: 750px;
+    COLOR: #fff0f5;
+    FONT-STYLE: normal;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    BACKGROUND-COLOR: #0000bb;
+    TEXT-ALIGN: center;
+    FONT-VARIANT: normal
+}
+TABLE.Bottom_01
+{
+    BORDER-TOP: silver thin ridge;
+    FONT-SIZE: 7pt;
+    TEXT-TRANSFORM: none;
+    WIDTH: 750px;
+    COLOR: #fff0f5;
+    FONT-STYLE: normal;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    BACKGROUND-COLOR: #ffffff;
+    TEXT-ALIGN: center;
+    FONT-VARIANT: normal
+}
+TABLE.Career_01
+{
+    BORDER-RIGHT: #b0e0e6 thin;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin;
+    BACKGROUND-IMAGE: url(../Images/Headers/Career_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin outset;
+    WIDTH: 750px;
+    BORDER-BOTTOM: #b0e0e6 thin;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 445px;
+    BACKGROUND-COLOR: #f5f5fa;
+    TEXT-ALIGN: left
+}
+TABLE.Top_01
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 9pt;
+    TEXT-TRANSFORM: none;
+    WIDTH: 740px;
+    COLOR: blue;
+    FONT-STYLE: normal;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    TEXT-ALIGN: right;
+    FONT-VARIANT: normal
+}
+TH.FreeText_01
+{
+    PADDING-LEFT: 5px;
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 9pt;
+    COLOR: #4f56ab;
+    PADDING-TOP: 5px;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    TEXT-ALIGN: justify
+}
+TH.Names_Ctr_01
+{
+    FONT-SIZE: 9pt;
+    COLOR: #a52a2a;
+    FONT-FAMILY: Verdana;
+    TEXT-ALIGN: center
+}
+TABLE.Alter_01_M
+{
+    BORDER-RIGHT: #d3d3d3 thin;
+    BORDER-TOP: #b0e0e6 thin;
+    PADDING-LEFT: 2px;
+    WIDTH: 570px;
+    BORDER-BOTTOM: #d3d3d3 thin solid;
+    BACKGROUND-COLOR: #ffffff;
+    TEXT-ALIGN: left
+}
+TABLE.Alter_02_M
+{
+    BORDER-RIGHT: #b0e0e6 thin;
+    PADDING-LEFT: 0px;
+    WIDTH: 570px;
+    BORDER-BOTTOM: #b0e0e6 thin solid;
+    BACKGROUND-COLOR: #f3f9ff;
+    TEXT-ALIGN: left
+}
+TABLE.Alter_01_C
+{
+    BORDER-RIGHT: #d3d3d3 thin;
+    BORDER-TOP: #b0e0e6 thin;
+    PADDING-LEFT: 2px;
+    WIDTH: 480px;
+    BORDER-BOTTOM: #d3d3d3 thin solid;
+    BACKGROUND-COLOR: #ffffff;
+    TEXT-ALIGN: left
+}
+TABLE.Alter_02_C
+{
+    BORDER-RIGHT: #b0e0e6 thin;
+    PADDING-LEFT: 0px;
+    WIDTH: 480px;
+    BORDER-BOTTOM: #b0e0e6 thin solid;
+    BACKGROUND-COLOR: #f3f9ff;
+    TEXT-ALIGN: left
+}
+TH.Header_01
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 10pt;
+    COLOR: #000000;
+    FONT-FAMILY: Verdana;
+    BACKGROUND-COLOR: #d9e8ef
+}
+TH.NewsArchive_01
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 8pt;
+    COLOR: #a52a2a;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    TEXT-ALIGN: right
+}
+TH.FreeText_02
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 9pt;
+    COLOR: #dd0000;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    TEXT-ALIGN: justify
+}
+TABLE.Offices_Left_01
+{
+    BORDER-RIGHT: medium none;
+    BORDER-TOP: medium none;
+    BORDER-LEFT: medium none;
+    WIDTH: 150px;
+    BORDER-BOTTOM: medium none;
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-COLOR: #ffffff;
+    TEXT-ALIGN: left
+}
+TH.Offices_01
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 7pt;
+    COLOR: #a52a2a;
+    FONT-FAMILY: Verdana;
+    TEXT-ALIGN: left;
+    FONT-VARIANT: small-caps
+}
+TH.Offices_02
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 9pt;
+    COLOR: #a52a2a;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    TEXT-ALIGN: left;
+    FONT-VARIANT: small-caps
+}
+TABLE.Offices_02
+{
+    BORDER-TOP: #b0c4de thin solid;
+    BORDER-LEFT: medium none;
+    WIDTH: 577px;
+    COLOR: #a52a2a;
+    BORDER-BOTTOM: #b0c4de thick;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    TEXT-ALIGN: left
+}
+TH.Offices_03
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 9pt;
+    COLOR: #000080;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    BACKGROUND-COLOR: #f4f7fb;
+    FONT-VARIANT: small-caps
+}
+TH.Offices_04
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 9pt;
+    COLOR: #0000ff;
+    FONT-FAMILY: Verdana;
+    FONT-VARIANT: small-caps
+}
+INPUT.Sty_01
+{
+    BORDER-RIGHT: #add8e6 1px groove;
+    BORDER-TOP: #add8e6 1px groove;
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 9pt;
+    TEXT-TRANSFORM: uppercase;
+    BORDER-LEFT: #add8e6 1px groove;
+    COLOR: #000000;
+    BORDER-BOTTOM: #add8e6 1px groove;
+    FONT-FAMILY: Verdana;
+    BACKGROUND-COLOR: #f3f9ff;
+    TEXT-ALIGN: left;
+    FONT-VARIANT: small-caps
+}
+TABLE.VslSch_02
+{
+    BORDER-RIGHT: #96b1cf thin;
+    BORDER-TOP: #96b1cf thin;
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 10pt;
+    BORDER-LEFT: #96b1cf thin;
+    WIDTH: 743px;
+    COLOR: #006699;
+    BORDER-BOTTOM: #96b1cf thin;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    BACKGROUND-COLOR: #f5f5fa;
+    TEXT-ALIGN: left
+}
+TH.VslSch_01
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 8pt;
+    COLOR: #006699;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    TEXT-ALIGN: left
+}
+TABLE.VslSch_03
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 9pt;
+    WIDTH: 743px;
+    COLOR: #b22222;
+    FONT-FAMILY: Verdana;
+    BACKGROUND-COLOR: #cbd5ee;
+    TEXT-ALIGN: left
+}
+TABLE.VslSch_04
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 8pt;
+    WIDTH: 730px;
+    COLOR: #b22222;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    TEXT-ALIGN: center
+}
+TABLE.VslSch_05
+{
+    WIDTH: 650px;
+    BACKGROUND-COLOR: #ffd569
+}
+TH.VslSch_02
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 8pt;
+    COLOR: #ffffff;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    BACKGROUND-COLOR: #336699
+}
+TABLE.Overview_01A
+{
+    BACKGROUND-COLOR: #f3f9ff
+}
+TABLE.OurMission_01A
+{
+    HEIGHT: 400pt
+}
+TABLE.NewsArchive_01A
+{
+    WIDTH: 570px;
+    TEXT-ALIGN: left
+}
+TABLE.VslSch_01A
+{
+    BORDER-RIGHT: thin;
+    BORDER-TOP: thin;
+    BORDER-LEFT: thin;
+    BORDER-BOTTOM: thin;
+    TEXT-ALIGN: center
+}
+
+TABLE.Main_05
+{
+    BACKGROUND-COLOR: #0000bb
+}
+TABLE.Main_02_A
+{
+    BORDER-RIGHT: thin;
+    BACKGROUND-POSITION: center top;
+    BORDER-TOP: thin;
+    BACKGROUND-IMAGE: url(../Images/BGrounds/Main_01_A.gif);
+    BORDER-LEFT: thin;
+    WIDTH: 310px;
+    BORDER-BOTTOM: thin;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 310px;
+    BACKGROUND-COLOR: #ffffff;
+    TEXT-ALIGN: justify
+}
+TABLE.Main_02_B
+{
+    BACKGROUND-POSITION: center top;
+    BACKGROUND-IMAGE: url(../Images/HomePage/Image_01.gif);
+    WIDTH: 220px;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 108px;
+    BACKGROUND-COLOR: #fffafa
+}
+TABLE.Main_02_C
+{
+    BORDER-RIGHT: thin;
+    BORDER-TOP: thin;
+    BORDER-LEFT: thin;
+    WIDTH: 160px;
+    BORDER-BOTTOM: thin;
+    HEIGHT: 280px;
+    BACKGROUND-COLOR: #ffffff
+}
+TABLE.EquSpec_01A
+{
+    BORDER-RIGHT: thin;
+    PADDING-RIGHT: 2px;
+    BORDER-TOP: thin;
+    PADDING-LEFT: 2px;
+    FONT-SIZE: 8pt;
+    PADDING-BOTTOM: 2px;
+    BORDER-LEFT: thin;
+    WIDTH: 700px;
+    COLOR: #b22222;
+    PADDING-TOP: 2px;
+    BORDER-BOTTOM: thin;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    TEXT-ALIGN: center
+}
+TABLE.EquSpec_01B
+{
+    BORDER-RIGHT: thin;
+    PADDING-RIGHT: 1px;
+    BORDER-TOP: thin;
+    PADDING-LEFT: 1px;
+    PADDING-BOTTOM: 0px;
+    BORDER-LEFT: thin;
+    WIDTH: 700px;
+    COLOR: #b22222;
+    PADDING-TOP: 0px;
+    BORDER-BOTTOM: thin;
+    TEXT-ALIGN: center
+}
+TH.EquSpec_01A
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 8pt;
+    COLOR: #000000;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    HEIGHT: 25px;
+    BACKGROUND-COLOR: #cbd5ee;
+    FONT-VARIANT: small-caps
+}
+TH.EquSpec_01B
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 8pt;
+    COLOR: #000000;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    HEIGHT: 25px;
+    BACKGROUND-COLOR: #e9eff5;
+    FONT-VARIANT: small-caps
+}
+TH.EquSpec_02A
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 7pt;
+    COLOR: #000000;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    HEIGHT: 14px;
+    BACKGROUND-COLOR: #cbd5ee
+}
+TH.EquSpec_02B
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 7pt;
+    COLOR: #000000;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    HEIGHT: 14px;
+    BACKGROUND-COLOR: #e9eff5
+}
+TABLE.Investor_01A
+{
+}
+TABLE.VslDtls_01A
+{
+    WIDTH: 700px
+}
+TH.VslDtls_01A
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 7pt;
+    TEXT-TRANSFORM: capitalize;
+    COLOR: #000000;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    HEIGHT: 30px;
+    BACKGROUND-COLOR: #cbd5ee
+}
+TH.VslDtls_01B
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 7pt;
+    COLOR: #000000;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    HEIGHT: 30px;
+    BACKGROUND-COLOR: #e9eff5
+}
+TABLE.SvcPtrn_01A
+{
+    BORDER-RIGHT: #ffffff thin solid;
+    BORDER-TOP: #ffffff thin solid;
+    FONT-WEIGHT: lighter;
+    BORDER-LEFT: #ffffff thin solid;
+    WIDTH: 500px;
+    COLOR: #000000;
+    BORDER-BOTTOM: #ffffff thin solid;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    HEIGHT: 200px;
+    BACKGROUND-COLOR: #cbd5ee
+}
+TH.SvcPtrn_01
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 9pt;
+    COLOR: #ffffff;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    HEIGHT: 25px;
+    BACKGROUND-COLOR: #336699
+}
+TH.SvcPtrn_02
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 8pt;
+    WIDTH: 570px;
+    COLOR: #000000;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    HEIGHT: 25px;
+    BACKGROUND-COLOR: #e9eff5;
+    TEXT-ALIGN: left;
+    FONT-VARIANT: small-caps
+}
+TH.SvcPtrn_03
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 8pt;
+    COLOR: #000000;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    BACKGROUND-COLOR: #e9eff5
+}
+TABLE.Recommend_01
+{
+    BACKGROUND-IMAGE: url(../Images/Headers/Recommend_01.jpg);
+    WIDTH: 750px;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 445px;
+    BACKGROUND-COLOR: #f5f5fa
+}
+TABLE.ContactUs_01
+{
+    BACKGROUND-POSITION: center top;
+    BACKGROUND-IMAGE: url(../Images/Headers/ContactUs_01.jpg);
+    WIDTH: 750px;
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-COLOR: #f5f5fa
+}
+TABLE.Terms_01
+{
+    BACKGROUND-POSITION: center top;
+    BACKGROUND-IMAGE: url(../Images/Headers/Terms_01.jpg);
+    WIDTH: 750px;
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-COLOR: #f5f5fa
+}
+TABLE.ContactUs_01A
+{
+    BACKGROUND-POSITION: left 2px;
+    BACKGROUND-IMAGE: url(../Images/BGrounds/Bhum_01_C.jpg);
+    WIDTH: 700px;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 300pt;
+    BACKGROUND-COLOR: transparent;
+    TEXT-ALIGN: center
+}
+TABLE.ContactUs_01B
+{
+    BORDER-RIGHT: #6699cc;
+    BORDER-TOP: #6699cc;
+    BORDER-LEFT: #6699cc;
+    WIDTH: 500px;
+    BORDER-BOTTOM: #6699cc;
+    HEIGHT: 300px;
+    BACKGROUND-COLOR: #ffffff;
+    TEXT-ALIGN: left
+}
+TABLE.ContactUs_01C
+{
+    WIDTH: 490px;
+    HEIGHT: 250px;
+    TEXT-ALIGN: left
+}
+TABLE.CrgTrack_02
+{
+    WIDTH: 480px;
+    HEIGHT: 180px;
+    TEXT-ALIGN: center
+}
+TABLE.Common_01A
+{
+    BACKGROUND-POSITION: left 2px;
+    BACKGROUND-IMAGE: url(../Images/BGrounds/Bhum_01_C.jpg);
+    WIDTH: 700px;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 300pt;
+    BACKGROUND-COLOR: transparent;
+    TEXT-ALIGN: center
+}
+TABLE.Common_01B
+{
+    BORDER-RIGHT: #6699cc;
+    BORDER-TOP: #6699cc;
+    BORDER-LEFT: #6699cc;
+    WIDTH: 500px;
+    BORDER-BOTTOM: #6699cc;
+    HEIGHT: 300px;
+    BACKGROUND-COLOR: #ffffff;
+    TEXT-ALIGN: left
+}
+TABLE.Common_01C
+{
+    WIDTH: 490px;
+    HEIGHT: 250px;
+    TEXT-ALIGN: justify
+}
+TH.Sty1_L
+{
+    PADDING-LEFT: 2px;
+    TEXT-ALIGN: left
+}
+TABLE.SendMail_01
+{
+    BACKGROUND-IMAGE: url(../Images/Headers/SendMail_01.jpg);
+    WIDTH: 450px;
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-COLOR: #f5f5fa
+}
+TABLE.SendMail_01A
+{
+    WIDTH: 450px;
+    BACKGROUND-COLOR: transparent
+}
+TABLE.SendMail_01B
+{
+    WIDTH: 450px;
+    BACKGROUND-COLOR: #ffffff;
+    TEXT-ALIGN: left
+}
+INPUT.Btn_01
+{
+    BORDER-RIGHT: thin outset;
+    BORDER-TOP: thin outset;
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 8pt;
+    BORDER-LEFT: thin outset;
+    COLOR: #333366;
+    BORDER-BOTTOM: thin outset;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    HEIGHT: 20px;
+    BACKGROUND-COLOR: #dde7f1;
+    FONT-VARIANT: small-caps
+}
+INPUT.Btn_02
+{
+    BORDER-RIGHT: thin outset;
+    PADDING-RIGHT: 0px;
+    BORDER-TOP: thin outset;
+    PADDING-LEFT: 0px;
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 7pt;
+    PADDING-BOTTOM: 0px;
+    BORDER-LEFT: thin outset;
+    COLOR: #333366;
+    PADDING-TOP: 0px;
+    BORDER-BOTTOM: thin outset;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    HEIGHT: 18px;
+    BACKGROUND-COLOR: #dde7f1;
+    FONT-VARIANT: small-caps
+}
+TABLE.FinReports_01A
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 10pt;
+    WIDTH: 450px;
+    COLOR: #336699;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    HEIGHT: 150px;
+    TEXT-ALIGN: left;
+    BACKGROUND-COLOR: #f5f5fa;	
+}
+TABLE.AnReports_01A
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 10pt;
+    WIDTH: 450px;
+    COLOR: #336699;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    HEIGHT: 150px;
+    TEXT-ALIGN: left
+}
+TH.FreeText_03
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 9pt;
+    COLOR: #000000;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    TEXT-ALIGN: justify
+}
+TABLE.Main_02_D
+{
+    BACKGROUND-POSITION: left top;
+    BACKGROUND-IMAGE: url(../Images/BGrounds/CrgTrack_01.gif);
+    WIDTH: 225px;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 145px;
+    BACKGROUND-COLOR: #ffffff
+}
+TABLE.BhumLogin_02
+{
+    BACKGROUND-POSITION: center top;
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 8pt;
+    BACKGROUND-IMAGE: url(../Images/BGrounds/BhumLog_01_A.gif);
+    TEXT-TRANSFORM: none;
+    WIDTH: 305px;
+    BACKGROUND-REPEAT: no-repeat;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    HEIGHT: 250px
+}
+TH.Common_01_A
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 8pt;
+    COLOR: #336699;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    BACKGROUND-COLOR: #cbd5ee;
+    TEXT-ALIGN: left
+}
+TH.Common_01_B
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 8pt;
+    WIDTH: 2px;
+    COLOR: #336699;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    BACKGROUND-COLOR: #ffffff;
+    TEXT-ALIGN: center
+}
+TH.Common_01_C
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 9pt;
+    COLOR: #ffffff;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    BACKGROUND-COLOR: #6699cc;
+    TEXT-ALIGN: left
+}
+TH.Common_02_C
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 9pt;
+    TEXT-TRANSFORM: capitalize;
+    COLOR: #ffffff;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    BACKGROUND-COLOR: #6699cc;
+    TEXT-ALIGN: left;
+    FONT-VARIANT: small-caps
+}
+TH.Common_03_C
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 9pt;
+    TEXT-TRANSFORM: capitalize;
+    COLOR: #ffffff;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    BACKGROUND-COLOR: #b4b4b4;
+    TEXT-ALIGN: left;
+    FONT-VARIANT: small-caps
+}
+TH.Alt_01_B
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 8pt;
+    TEXT-TRANSFORM: capitalize;
+    COLOR: #000000;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    HEIGHT: 40px;
+    BACKGROUND-COLOR: #e9eff5;
+    TEXT-ALIGN: left;
+    FONT-VARIANT: small-caps
+}
+TH.Alt_01_A
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 8pt;
+    TEXT-TRANSFORM: capitalize;
+    COLOR: #000000;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    HEIGHT: 40px;
+    BACKGROUND-COLOR: #cbd5ee;
+    TEXT-ALIGN: left;
+    FONT-VARIANT: small-caps
+}
+TH.Alt_01_R
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 8pt;
+    TEXT-TRANSFORM: capitalize;
+    COLOR: #ffffff;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    HEIGHT: 40px;
+    BACKGROUND-COLOR: #ff0000;
+    TEXT-ALIGN: left;
+    FONT-VARIANT: small-caps
+}
+TH.Alt_02_B
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 8pt;
+    COLOR: #000000;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    HEIGHT: 20px;
+    BACKGROUND-COLOR: #e9eff5;
+    TEXT-ALIGN: left
+}
+TH.Alt_02_A
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 8pt;
+    TEXT-TRANSFORM: capitalize;
+    COLOR: #0000bb;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    HEIGHT: 20px;
+    BACKGROUND-COLOR: #cbd5ee;
+    TEXT-ALIGN: left;
+    FONT-VARIANT: small-caps
+}
+TH.Alt_02_R
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 8pt;
+    TEXT-TRANSFORM: capitalize;
+    COLOR: #c45258;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    HEIGHT: 20px;
+    BACKGROUND-COLOR: #ffb496;
+    TEXT-ALIGN: left;
+    FONT-VARIANT: small-caps
+}
+TH.Alt_03_B
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 8pt;
+    TEXT-TRANSFORM: capitalize;
+    COLOR: #000000;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    HEIGHT: 40px;
+    BACKGROUND-COLOR: #e9eff5;
+    TEXT-ALIGN: left
+}
+TH.Alt_03_A
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 8pt;
+    TEXT-TRANSFORM: capitalize;
+    COLOR: #000000;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    HEIGHT: 40px;
+    BACKGROUND-COLOR: #cbd5ee;
+    TEXT-ALIGN: left
+}
+TH.Blank_01
+{
+    HEIGHT: 8px;
+    BACKGROUND-COLOR: transparent
+}
+TEXTAREA.Common_01_A
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 8pt;
+    TEXT-TRANSFORM: none;
+    COLOR: #000000;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    BACKGROUND-COLOR: #ffffff;
+    FONT-VARIANT: small-caps
+}
+TABLE.Bhum_Home_01
+{
+    PADDING-RIGHT: 1px;
+    PADDING-LEFT: 1px;
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 10pt;
+    BACKGROUND-IMAGE: url(../Images/BGrounds/Bhum_Home_01.gif);
+    PADDING-BOTTOM: 1px;
+    WIDTH: 172px;
+    COLOR: #0000bb;
+    PADDING-TOP: 4px;
+    BACKGROUND-REPEAT: no-repeat;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    HEIGHT: 102px
+}
+TABLE.MofAGM_01
+{
+    BORDER-RIGHT: #b0e0e6 thin solid;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin solid;
+    BACKGROUND-IMAGE: url(../Images/Headers/MofAGM_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 580px;
+    BORDER-BOTTOM: #b0e0e6 thin solid;
+    BACKGROUND-REPEAT: no-repeat;
+    HEIGHT: 425px;
+    BACKGROUND-COLOR: #f5f5fa;
+    TEXT-ALIGN: left
+}
+
+TABLE.MofAGM_01A
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 10pt;
+    WIDTH: 450px;
+    COLOR: #336699;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    HEIGHT: 150px;
+    TEXT-ALIGN: left
+}
+
+TABLE.Announce_01
+{
+    BORDER-RIGHT: #b0e0e6 thin solid;
+    BACKGROUND-POSITION: left top;
+    BORDER-TOP: #b0e0e6 thin solid;
+    BACKGROUND-IMAGE: url(../Images/Headers/Announce_01.jpg);
+    BORDER-LEFT: #b0e0e6 thin solid;
+    WIDTH: 580px;
+    HEIGHT: 450px;
+    BORDER-BOTTOM: #b0e0e6 thin solid;
+    BACKGROUND-REPEAT: no-repeat;
+    BACKGROUND-COLOR: #f5f5fa;
+    TEXT-ALIGN: left
+}
+
+TABLE.Announce_01A
+{
+    FONT-WEIGHT: lighter;
+    FONT-SIZE: 10pt;
+    WIDTH: 450px;
+    COLOR: #336699;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    HEIGHT: 150px;
+    TEXT-ALIGN: left
+}
+
+
+TH.TimeLine_01
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 10pt;
+    WIDTH: 100px;
+    COLOR: #0000ff;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    HEIGHT: 10px;
+    BACKGROUND-COLOR: #c4cee2
+}
+TH.TimeLine_02
+{
+    FONT-WEIGHT: bolder;
+    FONT-SIZE: 10pt;
+    WIDTH: 100px;
+    COLOR: #0000ff;
+    FONT-FAMILY: 'Microsoft Sans Serif';
+    HEIGHT: 10px;
+    BACKGROUND-COLOR: #dde7fb
+}

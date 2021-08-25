@@ -1,0 +1,12 @@
+td.td_table_display_detail{
+            border-left: none;
+            border-top: 1px solid #dcdcdc;
+            border-right: 1px solid #dcdcdc;
+            border-bottom: none;
+}
+td.td_table_display_detail_last{
+            border-left: none;
+            border-top: 1px solid #dcdcdc;
+            border-right: none;
+            border-bottom: none;
+}
