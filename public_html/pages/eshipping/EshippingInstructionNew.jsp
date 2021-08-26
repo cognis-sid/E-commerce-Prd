@@ -317,7 +317,7 @@
                           <div class="form-row">
                             <div class="form-group col-md-4">
                               <label for="shipperNameAndAddress"><bean:message key="eShipping_Instructions.Shipper_Name_Address"/></label>
-                              <input type="text" class="form-control" name="shipperName" value="${feserv06.shipperName }" id="shipperName" maxlength='70'  onkeydown="changeField('btnBrowseNotifyPartyName');"  onblur="changeUpper(this)"  />
+                              <input type="text" class="form-control" name="shipperName" value="${feserv06.shipperName }" id="shipperName" maxlength='45'  onkeydown="changeField('btnBrowseNotifyPartyName');"  onblur="changeUpper(this)"  />
                               <input type="text" class="form-control mt-2" name="shipperAddress1" id="shipperAddress1" maxlength='35' value="${feserv06.shipperAddress1 }" onkeydown="changeField('notifyPartyAddress1');" onblur="changeUpper(this)"  />
                               <input type="text" class="form-control mt-2" name="shipperAddress2" id="shipperAddress2" value="${feserv06.shipperAddress2 }" maxlength='35'  onkeydown="changeField('notifyPartyAddress2');" onblur="changeUpper(this)"    />
                               <input type="text" class="form-control mt-2" name="shipperAddress3" id="shipperAddress3" maxlength='35' value="${feserv06.shipperAddress3}" onkeydown="changeField('notifyPartyAddress3');"  onblur="changeUpper(this)"   />
@@ -326,7 +326,7 @@
                             <div class="form-group col-md-4">
                               <label for="consigneeNameAndAddress"><bean:message key="eShipping_Instructions.Consignee_Name_Address"/></label>
                               <div class="input-group">
-                                <input type="text" class="form-control" name="consigneeName" value="${feserv06.consigneeName }" required="required" id="consigneeName" maxlength='70' onkeydown="changeField('shipperAddress1');"  onblur="changeUpper(this)" style="background-color : #ffb3b3" />
+                                <input type="text" class="form-control" name="consigneeName" value="${feserv06.consigneeName }" required="required" id="consigneeName" maxlength='45' onkeydown="changeField('shipperAddress1');"  onblur="changeUpper(this)" style="background-color : #ffb3b3" />
                                <div class="input-group-prepend cursor-pointer">
                                   <div class="input-group-text" id="btnBrowseConsigneeName" href="javascript:void(0)"
                                 onclick="openCustomerData(this,'consigneeName', 'consigneeAddress1', 'consigneeAddress2', 'consigneeAddress3', 'consigneeAddress4');"><i class="fas fa-search" data-toggle="tooltip"
@@ -341,7 +341,7 @@
                             <div class="form-group col-md-4">
                               <label for="notifyPartyNameAndAddress"><bean:message key="eShipping_Instructions.Notify_Party_Name_Address"/></label>
                               <div class="input-group">
-                                <input type="text" class="form-control" name="notifyPartyName" required="required" id="notifyPartyName" value="${feserv06.notifyPartyName }" maxlength='70'   onkeydown="changeField('consigneeAddress1');" onblur="changeUpper(this)" style="background-color : #ffb3b3" />
+                                <input type="text" class="form-control" name="notifyPartyName" required="required" id="notifyPartyName" value="${feserv06.notifyPartyName }" maxlength='45'   onkeydown="changeField('consigneeAddress1');" onblur="changeUpper(this)" style="background-color : #ffb3b3" />
                                  <div class="input-group-prepend cursor-pointer">
                                   <div class="input-group-text" id="btnBrowseNotifyPartyName" href="javascript:void(0)"
                                 	  onclick="openCustomerData(this,'notifyPartyName', 'notifyPartyAddress1', 'notifyPartyAddress2', 'notifyPartyAddress3', 'notifyPartyAddress4');"><i class="fas fa-search" data-toggle="tooltip"
