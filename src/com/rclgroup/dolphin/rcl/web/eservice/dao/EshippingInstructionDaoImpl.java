@@ -2548,6 +2548,17 @@ class CustmerMapper implements RowMapper {
 			
 			return flag;
 		}
+		
+		@Override
+		public String checkBookingRatetypeValidation(String bookingNo) {
+			System.out.println("checkSiEditFlaf() called....."+bookingNo); 
+			
+			String CHECK_BOOKING_RATETYPE_QUERY="select special_handling from SEALINER.BKP032 where bcbkno='"+bookingNo+"'";
+			System.out.println("query "+CHECK_BOOKING_RATETYPE_QUERY);
+			String flag=(String) getJdbcTemplate().queryForObject(CHECK_BOOKING_RATETYPE_QUERY, Object.class);
+			
+			return flag;
+		}
 
 		@Override
 		public String getBookingPartyFromCamCustomer(EshippingInstructionUim form) {
@@ -2682,6 +2693,8 @@ class CustmerMapper implements RowMapper {
 			}
 		 
 		 }
+
+		
 
 		
 }

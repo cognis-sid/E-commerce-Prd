@@ -372,9 +372,11 @@ function onEshippingInstructionLoad(bookingNo) {
 	}*/
 	var url = SHIPPING_INSTRUTION;
 	esiStatusCode = document.getElementById("statusValidater").value;
-	if(esiStatusCode=="E")
+	if(esiStatusCode=="N" || esiStatusCode=="" || esiStatusCode=="New"){
+		checkRateTImeValidation(bookingNo, esiStatusCode,url);
+	}else if(esiStatusCode=="E"){
 		checkSiEditFlag(bookingNo, esiStatusCode,url);
-	else{
+	}else{
 		document.forms[0].action = url + '?esiStatusCode=' + esiStatusCode + '&bookingNo=' + bookingNo + '&flag=booking&mode=select';
 		document.forms[0].submit();
 	}
@@ -392,7 +394,7 @@ function checkSiEditFlag(bookingNo, esiStatusCode,url) {
 		dataType: 'text',
 		success: function(result) {
 		debugger;
-			if (result == 'AVA') {
+			if (result == 'R') {
 				loading(true);
 				swal({
 					title: "Booking information has been changed.Click Ok to Remove old SI Data ",
@@ -408,6 +410,32 @@ function checkSiEditFlag(bookingNo, esiStatusCode,url) {
 
 						}
 					});
+			} else {
+				document.forms[0].action = url + '?esiStatusCode=' + esiStatusCode + '&bookingNo=' + bookingNo + '&flag=booking&mode=select';
+				document.forms[0].submit();
+			}
+
+		}, error: function(error) {
+			loading(true);
+			alert(error);
+		}
+	});
+}
+
+function checkRateTImeValidation(bookingNo, esiStatusCode,url) {
+	debugger;
+	//var checkResult="";
+	$.ajax({
+		method: "POST",
+		async: true,
+		url: CHECK_BOOKING_RATETYPE_CHECK,
+		data: { bookingNo: bookingNo },
+		dataType: 'text',
+		success: function(result) {
+		debugger;
+			if (result == 'D1') {
+					loading(true);
+					swal("Please send SI to local agency for manually create draft B/L");
 			} else {
 				document.forms[0].action = url + '?esiStatusCode=' + esiStatusCode + '&bookingNo=' + bookingNo + '&flag=booking&mode=select';
 				document.forms[0].submit();

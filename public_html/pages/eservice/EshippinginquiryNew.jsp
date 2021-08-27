@@ -39,8 +39,9 @@
     	var ON_LOAD_BOOKING							     = '<%=com.niit.control.web.JSPUtils.getActionMappingURL("/sexn010SearchBtn", pageContext) %>';
     	var ON_GENERATE_PDF							     = '<%=com.niit.control.web.JSPUtils.getActionMappingURL("/sexn006pdfgenerater", pageContext) %>';
     	var CHECK_SI_EDIT_FLAG							 = '<%=com.niit.control.web.JSPUtils.getActionMappingURL("/sexn012siEditBooking", pageContext) %>';
+    	var CHECK_BOOKING_RATETYPE_CHECK				 = '<%=com.niit.control.web.JSPUtils.getActionMappingURL("/sexn012BookingRateTypeCheck", pageContext) %>';
     	var CHECK_EDIT_CONTAINER				         = '<%=com.niit.control.web.JSPUtils.getActionMappingURL("/sexn012EditBookingContainerBooking", pageContext) %>';
-    	var ON_CANCEL_BOOKING_SI 						= '<%=com.niit.control.web.JSPUtils.getActionMappingURL("/sexn002Cancel", pageContext) %>';
+    	var ON_CANCEL_BOOKING_SI 						 = '<%=com.niit.control.web.JSPUtils.getActionMappingURL("/sexn002Cancel", pageContext) %>';
     </script>
     
     <script language="JavaScript">

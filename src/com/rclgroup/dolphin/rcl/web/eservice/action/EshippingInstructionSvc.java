@@ -111,6 +111,7 @@ public class EshippingInstructionSvc extends BaseAction {
 	public static final String ON_LOAD_SHIPPING_INQ = "onLoadShippingInquery";
 	public static final String SHIPPING_INQ_MORE_DATA = "onLoadShippingInqueryMoreData";
 	public static final String CHECK_SI_EDIT_FLAG	  = "checkSiEditFlag";
+	public static final String CHECK_BOOKING_RATE_TYPE_CHECK= "checkBookingRateTypeCheck";
 	public static final String VALIDATE_CONTAINER_NO  ="validateContainerNo";
 	// @06 END
 	public static String NULL_DATA = "null";
@@ -178,6 +179,8 @@ public class EshippingInstructionSvc extends BaseAction {
 				this.getPDFData(form, actionForm, request, response);
 			} else if (CHECK_SI_EDIT_FLAG.equals(pageAction)) {
 				forwardPage = this.getCheckSiEditFlag(form, request, response);
+			} else if (CHECK_BOOKING_RATE_TYPE_CHECK.equals(pageAction)) {
+				forwardPage = this.getCheckBookingRateType(form, request, response);
 			}else if (VALIDATE_CONTAINER_NO.equals(pageAction)) {
 				forwardPage = this.getValidateContainerNo(form, request, response);
 			}
@@ -186,6 +189,7 @@ public class EshippingInstructionSvc extends BaseAction {
 		}
 		return forwardPage;
 	}
+	
 	// @20 END
 
 	private String getValidateContainerNo(EshippingInstructionUim form, HttpServletRequest request,
@@ -227,6 +231,22 @@ public class EshippingInstructionSvc extends BaseAction {
 		return null;
 	}
 
+	private String getCheckBookingRateType(EshippingInstructionUim form, HttpServletRequest request,
+			HttpServletResponse response) {
+		 System.out.println("getCheckSiEditFlag() called ..");
+		  try {
+		  EshippingInstructionDao objDao = getDao();
+		  System.out.println("booking no. "+form.getBookingNo());
+		  String flag = objDao.checkBookingRatetypeValidation(form.getBookingNo());
+		  System.out.println(flag);
+		  response.getWriter().print(flag);
+		  }catch (Exception e) {
+			 e.printStackTrace();
+		  }
+		  
+		return null;
+	}
+	
 	private String getBookingAndShippingCancel(EshippingInstructionUim form, HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 		String forwardPage = FAILURE;

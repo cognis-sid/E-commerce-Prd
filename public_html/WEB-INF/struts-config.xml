@@ -752,6 +752,12 @@
                 <forward name="failure" path="rcl.ezl.sexn010.page"></forward>
         </action>
         
+         <action path="/sexn012BookingRateTypeCheck"
+          type="com.rclgroup.dolphin.rcl.web.eservice.action.EshippingInstructionSvc" parameter="checkBookingRateTypeCheck"
+                name="feserv06" validate="false" scope="session">
+                <forward name="success" path="rcl.ezl.sexn010.page"></forward>
+                <forward name="failure" path="rcl.ezl.sexn010.page"></forward>
+        </action>
 <!-- end -->
 
         <action path="/serv006SaveAsDraft"

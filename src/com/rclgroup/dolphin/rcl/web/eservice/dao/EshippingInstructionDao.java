@@ -600,4 +600,6 @@ import java.util.Map;
 
 	public void getFirstLegVesselDtl(EshippingInstructionUim objForm);
 
+	public String checkBookingRatetypeValidation(String bookingNo);
+
  }
