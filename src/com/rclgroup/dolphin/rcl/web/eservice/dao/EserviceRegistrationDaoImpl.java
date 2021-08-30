@@ -14,6 +14,7 @@
  ------------------------------------------------------*/
 package com.rclgroup.dolphin.rcl.web.eservice.dao;
 
+import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Collections;
@@ -509,9 +510,12 @@ public class EserviceRegistrationDaoImpl extends AncestorJdbcDao implements Eser
         String                                  representedCompanyFlag  = null;
         EserviceContractPartyPortPairMod        mod                     = null;
         List<EserviceContractPartyPortPairMod>  contractPartyList       = null;
+		Connection 								connection 				= null;
         /*End @01*/
 
         try{
+        	connection=getJdbcTemplate().getDataSource().getConnection();
+        	connection.setAutoCommit(false);
             if(mapParams != null && !mapParams.isEmpty()){
             	// this for if user selected E-Rate then we need to send e-booking 
             	
@@ -572,8 +576,8 @@ public class EserviceRegistrationDaoImpl extends AncestorJdbcDao implements Eser
                
                 storeProcedure = daoOrl.getStoreProcedure(PCR_ESV_REGISTER.PRR_ESV_LOGIN, null, arrParam);
                 
-                PRR_ESV_LOGIN login = new PRR_ESV_LOGIN(getJdbcTemplate(),arrParam,mapParams.get(P_I_V.CUST_CODE),SFU_HACK_POST_GRE);
-            //   PRR_ESV_LOGIN_ORACLE loginOrcl = new PRR_ESV_LOGIN_ORACLE(this.jdbcTemplateOrcl.getDataSourceOrcl(),arrParam);
+                PRR_ESV_LOGIN login = new PRR_ESV_LOGIN( arrParam,mapParams.get(P_I_V.CUST_CODE),SFU_HACK_POST_GRE );
+            //  PRR_ESV_LOGIN_ORACLE loginOrcl = new PRR_ESV_LOGIN_ORACLE(this.jdbcTemplateOrcl.getDataSourceOrcl(),arrParam);
                                        
             //    if(storeProcedure != null){
             //       resultMap = storeProcedure.execute();
@@ -581,7 +585,7 @@ public class EserviceRegistrationDaoImpl extends AncestorJdbcDao implements Eser
             //              errorMsg = RutMessage.MSG002;
                                         
 						
-						  if(true) { String result = login.executeDbProcedure();
+						  if(true) { String result = login.executeDbProcedure(connection);
 						  try {
 							  storeProcedure.execute();
 						  
@@ -647,7 +651,9 @@ public class EserviceRegistrationDaoImpl extends AncestorJdbcDao implements Eser
             }else{
                 errorMsg = RutMessage.MSG003;
             }
+         connection.commit();
         }catch(Exception ex){
+        	connection.rollback();
             errorMsg = ex.getMessage();
             throw ex;
         }finally{

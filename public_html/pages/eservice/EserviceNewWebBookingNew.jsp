@@ -347,7 +347,7 @@ var ON_EMPTY_PICK_UP_DEPO_DATA
                               <input type="hidden" class="form-control" name="ccPicMail" id="ccPicMail"  value="${feserv01.ccPicMail }"/>
                               <input type="hidden" class="form-control" name="bccPicMail" id="bccPicMail"  value="${feserv01.bccPicMail }"/>
                               <input type="text" class="form-control" name="email" value="${sessionScope.sUserAccountBean.mailId}"
-                                readonly="readonly"/>	
+                                readonly="readonly" />	
                             </div>
                           </div>
                           <div class="form-row">
@@ -370,7 +370,7 @@ var ON_EMPTY_PICK_UP_DEPO_DATA
                           </div>
                           <div class="form-group">
                             <label for="inputAdditionalMailReciepients"><bean:message key="web_booking.Additional_Mail_Recipients" /> </label>
-                            <textarea class="form-control" name="additionalMailRecipeints" id="additionalMailRecipeints"  placeholder="use Space to separate Mail id." onchange="validateMultipleEmails(this)"  rows="4">${feserv01.additionalMailRecipeints}</textarea>
+                            <textarea class="form-control" name="additionalMailRecipeints" id="additionalMailRecipeints" maxlength='500' placeholder="use Space to separate Mail id." onchange="validateMultipleEmails(this)"  rows="4">${feserv01.additionalMailRecipeints}</textarea>
                           </div>
                           <hr>
                           <div class="float-right">
@@ -393,7 +393,7 @@ var ON_EMPTY_PICK_UP_DEPO_DATA
 			        				<c:forEach var="listValue" items="${feserv01.originCountryValues}" varStatus="loopCounter" >
 										<c:if test="${listValue.code != '' }">
 										<input type="hidden" name="originCountry" id="originCountry"   class="form-control" value="${listValue.code }" >		    
-										<input type="text" name="originCountryName" id="originCountryName"   class="form-control" value="${listValue.name }" >
+										<input type="text" name="originCountryName" id="originCountryName"   class="form-control" value="${listValue.name }" readonly >
 										</c:if>
 									</c:forEach>
                             </div>
@@ -402,7 +402,7 @@ var ON_EMPTY_PICK_UP_DEPO_DATA
 									<c:forEach var="listValue" items="${feserv01.destinationCountryValues}" varStatus="loopCounter">
 										<c:if test="${listValue.code != ''}">
 										<input type="hidden" name="destinationCountry" id="destinationCountry"   class="form-control" value="${listValue.code }" >		    
-										<input type="text" name="destinationCountryName" id="destinationCountryName"  class="form-control" value="${listValue.name }" >
+										<input type="text" name="destinationCountryName" id="destinationCountryName"  class="form-control" value="${listValue.name }" readonly >
 										</c:if>
 									</c:forEach>
                             </div>

@@ -30,4 +30,6 @@ public interface LoginDao {
 	
 	public UserAccountBean getInternalUserPassword(String userId, String email);
 
+	public UserMod getErrorType(String userId, String email,UserMod form);
+
 }

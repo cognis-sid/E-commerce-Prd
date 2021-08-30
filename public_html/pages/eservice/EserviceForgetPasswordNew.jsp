@@ -168,6 +168,10 @@ ${userUim.password}
 						 window.location.href=LOGOUT_URL;
 					});
 	    	 }
+	    	 var fail='${userUim.msg}';
+	    	 if(fail.length != 0){
+	    		 swal("Message",fail,"info");
+	    	 }
  		});</script>
 </body>
 </html>

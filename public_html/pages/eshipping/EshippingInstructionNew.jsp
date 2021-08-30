@@ -254,7 +254,7 @@
                               <label for="inputBookingNumber"><bean:message key="eShipping_Instructions.Booking_Number"/></label><i class="fa fa-asterisk" aria-hidden="true" style="color:red;"></i>
                               <div class="input-group">
                                 <input type="text" class="form-control" required="required" name="bookingNo" id="bookingNo" 
-                                value="${feserv06.bookingNo}" maxlength='17'  onkeydown="gotoToSearchBookingEsi(this)"  >
+                                value="${feserv06.bookingNo}" maxlength='17'  onkeydown="gotoToSearchBookingEsi(this)" readonly >
                               </div>
                             </div>
                             <div class="form-group  col-md-4">
@@ -283,7 +283,7 @@
                               <input type="hidden" class="form-control" name="toPicMail" id="toPicMail"  value="${feserv06.toPicMail }"/>
                               <input type="hidden" class="form-control" name="ccPicMail" id="ccPicMail"  value="${feserv06.ccPicMail }"/>
                               <input type="hidden" class="form-control" name="bccPicMail" id="bccPicMail"  value="${feserv06.bccPicMail }"/>
-                              <input type="text" class="form-control" name="email" id="email"  value="${feserv06.email }" onchange="validateMultipleEmails(this,'Mail')"/>
+                              <input type="text" class="form-control" name="email" id="email"  maxlength='80'  value="${feserv06.email }" onchange="validateMultipleEmails(this,'Mail')"/>
                             </div>
                           </div>
                           <div class="form-row">
@@ -297,7 +297,7 @@
                             </div>
                             <div class="form-group  col-md-4">
                               <label for="additionalMail"><bean:message key="eShipping_Instructions.Additional_Mail_Recipients"/></label>
-                              <input type="text" class="form-control" name="additionalEmail" id="additionalEmail" value="${feserv06.additionalEmail }" maxlength='250' onchange="validateMultipleEmails(this,'Mail')"/>
+                              <input type="text" class="form-control" name="additionalEmail" id="additionalEmail" value="${feserv06.additionalEmail }" maxlength='500' onchange="validateMultipleEmails(this,'Mail')"/>
                             </div>
                           </div>
                           <hr>
@@ -392,7 +392,7 @@
                             </div>
                             <div class="form-group col-md-6">
                               <label for="input_PlaceOfIssue"><bean:message key="eShipping_Instructions.Place_Of_Issue"/></label>
-                              <input type="text" class="form-control" name="placeDateOfIssue" id="placeDateOfIssue" value="${feserv06.placeDateOfIssue }" maxlength='50' onblur="changeUpper(this)"  >
+                              <input type="text" class="form-control" name="placeDateOfIssue" id="placeDateOfIssue" value="${feserv06.placeDateOfIssue }" maxlength='50' onblur="changeUpper(this)" readonly >
                             </div>
                           </div>
                           <div class="form-row">
@@ -400,23 +400,23 @@
                               <label for="input_PortOfLanding"><bean:message key="eShipping_Instructions.Port_Of_Landing"/></label>
                               <input type="hidden" name="fromTerminal" value="${feserv06.fromTerminal }"/>
                               <input type="hidden" name="polNo" value="${feserv06.polNo }"/>
-                              <input type="text" class="form-control" name="pol" id="pol" maxlength="50" value="${feserv06.pol}" onblur="changeUpper(this)"  >
+                              <input type="text" class="form-control" name="pol" id="pol" maxlength="50" value="${feserv06.pol}" onblur="changeUpper(this)" readonly >
                             </div>
                             <div class="form-group col-md-6">
                               <label for="input_PortOfDischarge"><bean:message key="eShipping_Instructions.Port_Of_Discharge"/></label>
                               <input type="hidden" name="toTerminal" value="${feserv06.toTerminal }"/>
                               <input type="hidden" name="podNo" value="${feserv06.podNo }"/>
-                              <input type="text" class="form-control" name="pod" id="pod" maxlength="50" value="${feserv06.pod}" onblur="changeUpper(this)"  >
+                              <input type="text" class="form-control" name="pod" id="pod" maxlength="50" value="${feserv06.pod}" onblur="changeUpper(this)" readonly >
                             </div>
                           </div>
                           <div class="form-row">
                             <div class="form-group col-md-6">
                               <label for="input_PlaceOfReceipt"><bean:message key="eShipping_Instructions.Place_Of_Receipt"/></label>
-                              <input type="text" class="form-control" name="placeOfReceipt" id="placeOfReceipt" maxlength="50" value="${feserv06.placeOfReceipt }" onblur="chaneUpper(this)"  >
+                              <input type="text" class="form-control" name="placeOfReceipt" id="placeOfReceipt" maxlength="50" value="${feserv06.placeOfReceipt }" onblur="chaneUpper(this)" readonly >
                             </div>
                             <div class="form-group col-md-6">
                               <label for="input_PlaceOfDelivery"><bean:message key="eShipping_Instructions.Place_Of_Delivery"/></label>
-                              <input type="text" class="form-control" name="placeOfDelivery" id="placeOfDelivery" maxlength="50" value="${feserv06.placeOfDelivery }" onblur="changeUpper(this)"  >
+                              <input type="text" class="form-control" name="placeOfDelivery" id="placeOfDelivery" maxlength="50" value="${feserv06.placeOfDelivery }" onblur="changeUpper(this)" readonly >
                             </div>
                           </div>
                           <hr>
@@ -737,7 +737,7 @@
 			                                        </div> 
 			                                     </div>
 			                                     <div class="input-group mt-2">
-			                                        <input type="text" class="form-control" name="grossCargoMeasurement" id="grossCargoMeasurement" value="${cargoDetails.grossCargoMeasurement }"
+			                                        <input type="text" class="form-control" name="grossCargoMeasurement" id="grossCargoMeasurement" value="${cargoDetails.grossCargoMeasurement }" maxlength='15' 
 			                                          placeholder="0.000" onblur="putMask_NumberEX(this, 14, 4)"   onchange="onChangeEquipmentToCommodity(false);" onclick="hideMask_Number(this);">
 			                                         <div class="input-group-prepend cursor-pointer">
 			                                          <div class="input-group-text"

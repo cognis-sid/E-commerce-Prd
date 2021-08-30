@@ -1,27 +1,28 @@
 package com.rclgroup.dolphin.rcl.web.procedure.user;
 
+import java.sql.Connection;
+import java.sql.Statement;
 import java.util.Map;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 
 public class PRR_ESV_LOGIN {
 	private String SFU_HACK_POST_GRE;
-	private JdbcTemplate jdbcTemplate;
 	private Map map;
 	private String[][] param;
 	private String customerCode;
-	public PRR_ESV_LOGIN(JdbcTemplate jdbcTemplate, String[][] param,String customerCode,String SFU_HACK_POST_GRE) {
-		this.jdbcTemplate = jdbcTemplate;
+	public PRR_ESV_LOGIN(String[][] param,String customerCode,String SFU_HACK_POST_GRE) {
 		this.param = param;
 		this.customerCode = customerCode;
 		this.SFU_HACK_POST_GRE= SFU_HACK_POST_GRE;
 	}
 
-	public String executeDbProcedure() throws Exception {
+	public String executeDbProcedure(Connection connection) throws Exception {
+		Statement stm 				  =     null;
 		
-        String P_I_V_FIRST_NAME       =      param[0][3];
-        String P_I_V_LAST_NAME        =      param[1][3];
-        String P_I_V_EMAIL            =      param[2][3];
+        String P_I_V_FIRST_NAME       =     param[0][3];
+        String P_I_V_LAST_NAME        =     param[1][3];
+        String P_I_V_EMAIL            =     param[2][3];
         String P_I_V_USR_ID           =     param[3][3];     
         String P_I_V_PASSWORD         =     param[4][3];     
         String P_I_V_CMP_NAME         =     param[5][3];     
@@ -148,11 +149,12 @@ public class PRR_ESV_LOGIN {
 				+ "'"+getRate+"'  ,"
 				+ "'"+webBooking+"','"+vgm+"')";
 		
-		jdbcTemplate.update(sqlQry);
+		//jdbcTemplate.update(sqlQry);
 		String sqlQry2 =" INSERT INTO SEALINER.ESM_USER_PWD (USER_ID, PWD) VALUES (UPPER(LTRIM(RTRIM('"+P_I_V_USR_ID+"'))),'"+ P_I_V_PASSWORD+"')";
 	//	jdbcTemplate.update(sqlQry2);
-		
-		
+		stm = connection.createStatement();
+		int countQury = stm.executeUpdate(sqlQry2);
+	 	stm.close();
 
 		String sqlQry3 = "INSERT INTO SEALINER.PR_PRSN_ROLE (SYSLVL1,SYSLVL2,SYSLVL3,PRSN_LOG_ID,ROLE_CD,PERSON_ROLE_ID,DESCR,AUSR,ADAT,CUSR,CDAT,RCST)"+
 	   "(SELECT 'R','*','***',UPPER(LTRIM(RTRIM('"+P_I_V_USR_ID+"'))),ROLE_CD,0,DESCR,'WEBREGIST',now(),NULL,NULL,'S'"+

@@ -193,7 +193,7 @@
                             <label for="inputEmailAddress">
                               <bean:message key="registration.E-Mail_Address" /><span class="mandatory">*</span>
                             </label>
-                            <input type="email"  class="form-control" name="email" id="userInfoMod_email" value="${userUim.email}" data-parsley-trigger="change" required="required"  />
+                            <input type="email"  class="form-control" name="email" id="userInfoMod_email" maxlength='250' value="${userUim.email}" data-parsley-trigger="change" required="required"  />
                           </div>
                           <div class="form-group ">
                             <label for="inputRepeatEmailAddress ">
@@ -343,7 +343,7 @@
                               <label for="inputCity ">
                                 <bean:message key="registration.City"/>
                               </label>
-                              <input type="text" class="form-control" required="required" name="city" id="inputCity" value="${userUim.city}" onblur="changeUpper(this)"  />
+                              <input type="text" class="form-control" required="required" name="city" id="inputCity"  maxlength="25" value="${userUim.city}" onblur="changeUpper(this)"  />
                             </div>
                             <div class="form-group col-md-3 ">
                               <label for="inputState ">
@@ -375,13 +375,13 @@
                                 <label for="inputCity ">
                                   <bean:message key="registration.Phone_Number"/>
                                 </label>
-                                <input type="text" class="form-control " name="phoneNo" id="phoneNo" value="${userUim.phoneNo}"  onchange="checkNumeric(this,'Phone No')" required="required"/>
+                                <input type="text" class="form-control " name="phoneNo" id="phoneNo" value="${userUim.phoneNo}" maxlength="17"  onchange="checkNumeric(this,'Phone No')" required="required"/>
                               </div>
                               <div class="form-group col-md-6 ">
                                 <label for="inputCity ">
                                   <bean:message key="registration.FAX_Number"/>
                                 </label>
-                                <input type="text" class="form-control" name="faxNo" id="faxNo" value="${userUim.faxNo}"  onchange="checkNumeric(this,'Fax No')" />
+                                <input type="text" class="form-control" name="faxNo" id="faxNo" value="${userUim.faxNo}" maxlength="17"  onchange="checkNumeric(this,'Fax No')" />
                               </div>
                             </div>
                           </div>

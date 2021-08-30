@@ -3201,7 +3201,7 @@ public class EshippingInstructionSvc extends BaseAction {
 		} finally {
 			System.out.println("[EshippingInstructionSvc][setParamsDetailsTmpForSave][End]");
 		}
-		return mapParam;
+		return null;
 	}
 
 	/**

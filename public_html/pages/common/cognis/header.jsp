@@ -314,5 +314,69 @@ var serverUrl = '<%=protocal+"://" + strServerName + ":" + strServerPort%>';
 		document.forms[0].action = ON_VGM_LOAD;
 	    document.forms[0].submit();
 	}
+  
+  
+  
+  $(document).ready(function(){
+	  
+	  $('input' ).on('keyup', function() {
+		  debugger;
+          console.log($(this).val()+"KEYUP");
+          
+          if($(this).val().charAt($(this).val().length-1).match("^[a-zA-Z0-9!@#$&()\\-_'`.+,/\"]*$") || $(this).val()==""){
+			  return true;
+		  }else{
+			  $(this).val($(this).val().substring(0, $(this).val().length-1)) ;
+			  showBarMessageNew("Non English character will not allowed.");
+			  return false;
+		  }
+      });
+	  
+	  $('input').on('change', function() {
+		  debugger;
+		  var temp =$(this).val();
+
+		 for(var l=0;l<temp.length;l++){
+			 if(!temp.charAt(l).match("^[a-zA-Z0-9!@#$&()\\-_'`.+,/\"]*$")){
+				 $(this).val("");
+				 showBarMessageNew("Non English character will not allowed.");
+				 return false;
+			 } 
+		 }
+	    });
+	  
+	  $('textarea' ).on('keyup', function() {
+		  debugger;
+          console.log($(this).val()+"KEYUP text area");
+          if($(this).val().charAt($(this).val().length-1).match("^[a-zA-Z0-9!@#$&()\\-_'`.+,/\"]*$") || $(this).val()==""){
+			  return true;
+		  }else{
+			  $(this).val($(this).val().substring(0, $(this).val().length-1)) ;
+			  showBarMessageNew("Non English character will not allowed.");
+			  return false;
+		  }
+      });
+	  
+	  $('textarea').on('change', function() {
+	        console.log($(this).val()+"CHANGE text area");
+	        debugger;
+			  var temp =$(this).val();
+
+			 for(var l=0;l<temp.length;l++){
+				 if(!temp.charAt(l).match("^[a-zA-Z0-9!@#$&()\\-_'`.+,/\"]*$")){
+					 $(this).val("");
+					 showBarMessageNew("Non English character will not allowed.");
+					 return false;
+				 } 
+			 }
+	    });
+	  
+    });
+  
+  
+  
+  
+  
+  
 </script>
  

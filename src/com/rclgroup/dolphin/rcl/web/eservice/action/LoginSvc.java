@@ -142,6 +142,8 @@ public class LoginSvc extends BaseAction implements GlobalConstants {
 			 * email,userId);
 			 */
 
+		}else {
+			 dao.getErrorType(userId, email,form);
 		}
 		if (userAcc != null)
 			forwardPage = SUCCESS;

@@ -189,20 +189,20 @@
                               <label for="inputFirstName">
                                 <bean:message key="registration.First_Name" /><span class="mandatory">*</span>
                               </label>
-                              <input type="text" class="form-control" name="firstName" id="firstName" placeholder='<bean:message key="registration.Enter_first_name"/>'  onkeypress="clearMsg();" required  /> 
+                              <input type="text" class="form-control" name="firstName" id="firstName" maxlength='98' placeholder='<bean:message key="registration.Enter_first_name"/>'  onkeypress="clearMsg();" required  /> 
                             </div>
                             <div class="form-group col-md-6">
                               <label for="inputLastName">
                                 <bean:message key="registration.Last_Name" /><span class="mandatory">*</span>
                               </label>
-                              <input type="text" class="form-control" name="lastName" id="lastName" placeholder='<bean:message key="registration.Enter_last_name"/>'  onkeypress="clearMsg();" required="required"  /> 
+                              <input type="text" class="form-control" name="lastName" id="lastName" maxlength='98' placeholder='<bean:message key="registration.Enter_last_name"/>'  onkeypress="clearMsg();" required="required"  /> 
                             </div>
                           </div>
                           <div class="form-group">
                             <label for="inputEmailAddress">
                               <bean:message key="registration.E-Mail_Address" /><span class="mandatory">*</span>
                             </label>
-                            <input type="email"  class="form-control" name="userInfoMod.email" id="userInfoMod_email"  placeholder='<bean:message key="registration.Enter_email_address"/>' data-parsley-trigger="change" required="required"  />
+                            <input type="email"  class="form-control" name="userInfoMod.email" id="userInfoMod_email" maxlength='250' placeholder='<bean:message key="registration.Enter_email_address"/>' data-parsley-trigger="change" required="required"  />
                           </div>
                           <div class="form-group ">
                             <label for="inputRepeatEmailAddress ">
@@ -267,7 +267,7 @@
                             <label for="companyName ">
                               <bean:message key="registration.Company_Name"/>
                             </label>
-                            <input type="text" required="required" class="form-control " placeholder='<bean:message key="registration.Enter_company_name"/>' name="userInfoMod.cmpName" id="companyName"  />
+                            <input type="text" required="required" class="form-control " maxlength='80' placeholder='<bean:message key="registration.Enter_company_name"/>' name="userInfoMod.cmpName" id="companyName"  />
                           </div>
                           <div class="form-group ">
                             <label for="companyName " style="color:#18bc9c;">
@@ -313,7 +313,7 @@
                               <label for="inputCity ">
                                 <bean:message key="registration.City"/>
                               </label>
-                              <input type="text" class="form-control" placeholder='<bean:message key="registration.Enter_city_name"/>' required="required" name="userInfoMod.city" id="inputCity" onblur="changeUpper(this)" />
+                              <input type="text" class="form-control" placeholder='<bean:message key="registration.Enter_city_name"/>' required="required" maxlength="25" name="userInfoMod.city" id="inputCity" onblur="changeUpper(this)" />
                             </div>
                             <div class="form-group col-md-3 ">
                               <label for="inputState ">
@@ -343,7 +343,7 @@
                                <label for="inputCity ">
                                  <bean:message key="registration.FAX_Number"/>
                                </label>
-                               <input type="text" class="form-control" placeholder='<bean:message key="registration.Enter_fax_number"/>' name="userInfoMod.faxNo" id="faxNo" maxlength="9" onchange="checkNumeric(this,'Fax NO.')" />
+                               <input type="text" class="form-control" placeholder='<bean:message key="registration.Enter_fax_number"/>' name="userInfoMod.faxNo" id="faxNo" maxlength="17" onchange="checkNumeric(this,'Fax NO.')" />
                              </div>
                            </div>
                           

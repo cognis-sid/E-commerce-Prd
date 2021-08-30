@@ -373,7 +373,7 @@ function onEshippingInstructionLoad(bookingNo) {
 	var url = SHIPPING_INSTRUTION;
 	esiStatusCode = document.getElementById("statusValidater").value;
 	if(esiStatusCode=="N" || esiStatusCode=="" || esiStatusCode=="New"){
-		checkRateTImeValidation(bookingNo, esiStatusCode,url);
+		checkRateTypeValidation(bookingNo, esiStatusCode,url);
 	}else if(esiStatusCode=="E"){
 		checkSiEditFlag(bookingNo, esiStatusCode,url);
 	}else{
@@ -422,7 +422,7 @@ function checkSiEditFlag(bookingNo, esiStatusCode,url) {
 	});
 }
 
-function checkRateTImeValidation(bookingNo, esiStatusCode,url) {
+function checkRateTypeValidation(bookingNo, esiStatusCode,url) {
 	debugger;
 	//var checkResult="";
 	$.ajax({
@@ -435,7 +435,8 @@ function checkRateTImeValidation(bookingNo, esiStatusCode,url) {
 		debugger;
 			if (result == 'D1') {
 					loading(true);
-					swal("Please send SI to local agency for manually create draft B/L");
+				var msg=	'DG shipment, eService does not allow to create SI.  \n  Please send SI to local agency for manually create draft B/L';
+					swal(msg);
 			} else {
 				document.forms[0].action = url + '?esiStatusCode=' + esiStatusCode + '&bookingNo=' + bookingNo + '&flag=booking&mode=select';
 				document.forms[0].submit();

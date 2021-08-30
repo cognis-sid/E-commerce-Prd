@@ -1713,6 +1713,7 @@ public class SchedulerJob extends TimerTask {
 		Map<String, String> emptyDepo = new HashMap<String, String>();
 		Map<String, String> emptyDepoDate = new HashMap<String, String>();
 		String[] words = line.split("'");
+		String special_handling_value="N";
 
 		for (String w : words) {
 			
@@ -1854,6 +1855,9 @@ public class SchedulerJob extends TimerTask {
 					emptyDepoDate.put(containerSizeType, word[1].replace("392:", "").replace(":102", ""));
 				}
 			}
+			if (w.startsWith("DGS") && checkFoEquipt) {
+				special_handling_value="D1";
+			}
 		}
 
 		Set<String> eqptSet = sizeTypMap.keySet();
@@ -1866,7 +1870,7 @@ public class SchedulerJob extends TimerTask {
 			eqn.setLaden(String.valueOf(ledanSumMap.get(st)));
 			eqn.setMt("0");
 			eqn.setGrossContainerWeight(grossWaightMap.get(st));
-			eqn.setCargoType("N"); // TODO Need to map
+			eqn.setCargoType(special_handling_value);  
 			eqn.setSpecialCargo(""); // TODO Need to map
 			eqn.setPodStatus("L"); // TODO Need to map
 			eqn.setPolStatus("L"); // TODO Need to map

@@ -178,14 +178,15 @@ public class LoginDaoImpl extends AncestorJdbcDao implements LoginDao {
 	}
 
 	public UserAccountBean getPassword(String userId, String email) {
-		String sqlQuery = "select pswd,user_name  from esm_user_login where user_id=upper('" + userId + "') and email_id1='" + email + "'";
+		String sqlQuery = "select pswd,user_name  from esm_user_login where user_id=upper('" + userId + "') and email_id1='" + email + "' and record_status='A'";
 
 		List<UserAccountBean> user = getJdbcTemplate().query(sqlQuery, new Object[] {}, new UserForgetMapper());
 
-		if (user.size() > 0)
+		if (user.size() > 0) {
 			return user.get(0);
-		else
+		}else {
 			return null;
+		}
 	}
 
 	public class UserForgetMapper extends JdbcRowMapper {
@@ -282,6 +283,47 @@ public class LoginDaoImpl extends AncestorJdbcDao implements LoginDao {
 		else
 			return null;
 	
+	}
+
+	@Override
+	public UserMod getErrorType(String userId, String email,UserMod form) {
+		 
+		String checkStatusQuery = "select pswd,user_name,record_status  from esm_user_login where user_id=upper('" + userId + "') and email_id1='" + email + "'";
+		
+		List<UserMod> user=getJdbcTemplate().query(checkStatusQuery, new UserErrorData());
+		
+		if (user.size() > 0) {
+			if( user.get(0).getStatus().equals("R")) {
+				form.setMsg("You account has Rejected please contact to RCL local agency.");
+			}else if(user.get(0).getStatus().equals("S")) {
+				form.setMsg("You account has Suspended please contact to RCL local agency.");
+			}else if(user.get(0).getStatus().equals("N")) {
+				form.setMsg("You account has Cancel please contact to RCL local agency.");
+			}else if(!user.get(0).getStatus().equals("") || user.get(0).getStatus()!= null) {
+				form.setMsg("You account has not Approved please contact to RCL local agency.");
+			}
+			return form;
+		}else {
+			form.setMsg("User id and Mail id doesn't match");
+			return form;
+		}
+	}
+	
+	public class UserErrorData extends JdbcRowMapper {
+
+		public UserMod mapRow(ResultSet rs, int row) throws SQLException {
+			UserMod obj = new UserMod();
+
+			try {
+			obj.setPassword(EncryptDecryptUtil.convertHexToString(rs.getString("pswd")));
+			obj.setUserName(rs.getString("user_name"));
+			obj.setStatus(rs.getString("record_status"));
+			}catch (Exception e) {
+					e.printStackTrace();
+			}
+			return obj;
+		}
+
 	}
 	
 }
