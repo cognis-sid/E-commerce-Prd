@@ -593,7 +593,7 @@ function getOceanFreight(containerSize){
 			row["currency"] ="USD";
 			row["guidelineCurrency"] ="USD";
 			row["seqNo"]=Math.round(Math.random()*100000)
-			g_getRate.resultContent.push(g_getRate.resultContent)
+			g_getRate.resultContent.push(row)
 	 }
 	return maxRateHeader[containerSize].maxRate;	
 }
