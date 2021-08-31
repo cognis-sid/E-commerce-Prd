@@ -323,7 +323,7 @@ var serverUrl = '<%=protocal+"://" + strServerName + ":" + strServerPort%>';
 		  debugger;
           console.log($(this).val()+"KEYUP");
           
-          if($(this).val().charAt($(this).val().length-1).match("^[a-zA-Z0-9!@#$&()\\-_'`.+,/\"]*$") || $(this).val()==""){
+          if($(this).val().charAt($(this).val().length-1).match("^[a-zA-Z0-9!@#$&*()\\][_'`.+,/\" ;:?|=%}{><-^]") || $(this).val()==""){
 			  return true;
 		  }else{
 			  $(this).val($(this).val().substring(0, $(this).val().length-1)) ;
@@ -337,7 +337,7 @@ var serverUrl = '<%=protocal+"://" + strServerName + ":" + strServerPort%>';
 		  var temp =$(this).val();
 
 		 for(var l=0;l<temp.length;l++){
-			 if(!temp.charAt(l).match("^[a-zA-Z0-9!@#$&()\\-_'`.+,/\"]*$")){
+			 if(!temp.charAt(l).match("^[a-zA-Z0-9!@#$&*()\\][_'`.+,/\" ;:?|=%}{><-^]")){
 				 $(this).val("");
 				 showBarMessageNew("Non English character will not allowed.");
 				 return false;
@@ -348,7 +348,7 @@ var serverUrl = '<%=protocal+"://" + strServerName + ":" + strServerPort%>';
 	  $('textarea' ).on('keyup', function() {
 		  debugger;
           console.log($(this).val()+"KEYUP text area");
-          if($(this).val().charAt($(this).val().length-1).match("^[a-zA-Z0-9!@#$&()\\-_'`.+,/\"]*$") || $(this).val()==""){
+          if($(this).val().charAt($(this).val().length-1).match("^[a-zA-Z0-9!@#$&*()\\][_'`.+,/\" ;:?|=%}{><-^]") || $(this).val()==""){
 			  return true;
 		  }else{
 			  $(this).val($(this).val().substring(0, $(this).val().length-1)) ;
@@ -363,7 +363,7 @@ var serverUrl = '<%=protocal+"://" + strServerName + ":" + strServerPort%>';
 			  var temp =$(this).val();
 
 			 for(var l=0;l<temp.length;l++){
-				 if(!temp.charAt(l).match("^[a-zA-Z0-9!@#$&()\\-_'`.+,/\"]*$")){
+				 if(!temp.charAt(l).match("^[a-zA-Z0-9!@#$&*()\\][_'`.+,/\" ;:?|=%}{><-^]")){
 					 $(this).val("");
 					 showBarMessageNew("Non English character will not allowed.");
 					 return false;
