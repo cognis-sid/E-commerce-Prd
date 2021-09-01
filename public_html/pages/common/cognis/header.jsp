@@ -337,7 +337,7 @@ var serverUrl = '<%=protocal+"://" + strServerName + ":" + strServerPort%>';
 		  var temp =$(this).val();
 
 		 for(var l=0;l<temp.length;l++){
-			 if(!temp.charAt(l).match("^[a-zA-Z0-9!@#$&*()\\][_'`.+,/\" ;:?|=%}{><^-~]")){
+			 if(!temp.charAt(l).match("^[a-zA-Z0-9!@#$&*()\\][_'`.+,/\" ;:?|=%}{><^~-]")){
 				 $(this).val("");
 				 showBarMessageNew("Non English character will not allowed.");
 				 return false;
