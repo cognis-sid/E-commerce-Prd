@@ -28,6 +28,8 @@ public class BookingThread extends Thread {
 		// TODO Auto-generated method stub
 
 		try {
+			System.out.println(uim.getBookingNo());
+			System.out.println(uim.getBookingRef());
 			Utilis.generateBookingXmlFile(uim, objDao, cutomeNmae);
 		} catch (Exception e) {
 			e.printStackTrace();

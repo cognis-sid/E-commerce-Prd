@@ -1855,7 +1855,8 @@ public class SchedulerJob extends TimerTask {
 					emptyDepoDate.put(containerSizeType, word[1].replace("392:", "").replace(":102", ""));
 				}
 			}
-			if (w.startsWith("DGS") && checkFoEquipt) {
+			
+			if (w.startsWith("DGS")) {
 				special_handling_value="D1";
 			}
 		}
