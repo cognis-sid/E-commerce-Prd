@@ -321,9 +321,7 @@ var serverUrl = '<%=protocal+"://" + strServerName + ":" + strServerPort%>';
 	  
 	  $('input' ).on('keyup', function() {
 		  debugger;
-          console.log($(this).val()+"KEYUP");
-          
-          if($(this).val().charAt($(this).val().length-1).match("^[a-zA-Z0-9!@#$&*()\\][_'`.+,/\" ;:?|=%}{><^-~]") || $(this).val()==""){
+          if($(this).val().charAt($(this).val().length-1).match("^[a-zA-Z0-9!@#$&*()\\][_'`.+,/\" ;:?|=%}{><^~-]") || $(this).val()==""){
 			  return true;
 		  }else{
 			  $(this).val($(this).val().substring(0, $(this).val().length-1)) ;
@@ -335,7 +333,6 @@ var serverUrl = '<%=protocal+"://" + strServerName + ":" + strServerPort%>';
 	  $('input').on('change', function() {
 		  debugger;
 		  var temp =$(this).val();
-
 		 for(var l=0;l<temp.length;l++){
 			 if(!temp.charAt(l).match("^[a-zA-Z0-9!@#$&*()\\][_'`.+,/\" ;:?|=%}{><^~-]")){
 				 $(this).val("");
@@ -345,31 +342,42 @@ var serverUrl = '<%=protocal+"://" + strServerName + ":" + strServerPort%>';
 		 }
 	    });
 	  
-	  /* $('textarea' ).on('keyup', function() {
+	   $('textarea' ).on('keyup', function() {
 		  debugger;
-          console.log($(this).val()+"KEYUP text area");
-          if($(this).val().charAt($(this).val().length-1).match("^[a-zA-Z0-9!@#$&*()\\][_'`.+,/\" ;:?|=%}{><^-~]") || $(this).val()==""){
+          if($(this).val().split('\n').join("").charAt($(this).val().split('\n').join("").length-1).match("^[a-zA-Z0-9!@#$&*()\\][_'`.+,/\" ;:?|=%}{><^~-]") || $(this).val()==""){
 			  return true;
 		  }else{
-			  $(this).val($(this).val().substring(0, $(this).val().length-1)) ;
-			  showBarMessageNew("Non English character will not allowed.");
-			  return false;
+			  if($(this)[0].id=="cargoDescription"){
+				  $(this).val("Shipper Name : \nCommodity :\nHS Code : \nCondition of Container (if any):\n");
+				  showBarMessageNew("Non English character will not allowed.");
+				  return false;  
+			  }else{
+				  $(this).val($(this).val().substring(0, $(this).val().length-1)) ;
+				  showBarMessageNew("Non English character will not allowed.");
+				  return false;
+			  }
 		  }
       });
 	  
 	  $('textarea').on('change', function() {
 	        console.log($(this).val()+"CHANGE text area");
 	        debugger;
-			  var temp =$(this).val();
+			  var temp =$(this).val().split('\n').join("");
 
 			 for(var l=0;l<temp.length;l++){
-				 if(!temp.charAt(l).match("^[a-zA-Z0-9!@#$&*()\\][_'`.+,/\" ;:?|=%}{><^-~]")){
-					 $(this).val("");
-					 showBarMessageNew("Non English character will not allowed.");
-					 return false;
+				 if(!temp.charAt(l).match("^[a-zA-Z0-9!@#$&*()\\][_'`.+,/\" ;:?|=%}{><^~-]")){
+					 if($(this)[0].id=="cargoDescription"){
+						  $(this).val("Shipper Name : \nCommodity :\nHS Code : \nCondition of Container (if any):\n");
+						  showBarMessageNew("Non English character will not allowed.");
+						  return false;  
+					  }else{
+						  $(this).val("");
+						  showBarMessageNew("Non English character will not allowed.");
+						  return false;
+					  }
 				 } 
 			 }
-	    }); */
+	    }); 
 	  
     });
   
